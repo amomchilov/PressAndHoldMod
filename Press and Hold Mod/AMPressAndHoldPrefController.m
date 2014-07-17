@@ -54,7 +54,7 @@
 - (void)addActionsToKeyboardButtons
 {
     DLog(@"");
-    for (NSView *view in _keyboardView.subviews) {
+    for (NSView *view in [(NSView*)_keyboardView.subviews[0] subviews]) {
         
         if ([view isKindOfClass:[NSButton class]]) {
             NSButton *button = (NSButton*)view;
