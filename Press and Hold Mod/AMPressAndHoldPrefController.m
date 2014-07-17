@@ -47,8 +47,22 @@
     
     
 	[_keyboardView addSubview: [vc view]];
+    
+    [self addActionsToKeyboardButtons];
 }
 
+- (void)addActionsToKeyboardButtons
+{
+    DLog(@"");
+    for (NSView *view in _keyboardView.subviews) {
+        
+        if ([view isKindOfClass:[NSButton class]]) {
+            NSButton *button = (NSButton*)view;
+            button.target = self;
+            button.action = @selector(virtualKeyPressed:);
+        }
+    }
+}
 - (IBAction) popUpButtonChanged:(id)sender {
     DLog(@"");
 	[self readPlistFileIntoTextField];
