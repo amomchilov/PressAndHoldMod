@@ -10,27 +10,6 @@
 
 @implementation AMKeyboardView
 
-- (id)initWithFrame:(NSRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        [self becomeFirstResponder];
-    }
-    DLog(@"self = %@", self);
-
-    return self;
-}
-
-//- (void)drawRect:(NSRect)dirtyRect {
-//	[super drawRect:dirtyRect];
-//	[[NSColor blackColor] set];
-//	NSRectFill(dirtyRect);
-//}
-
-- (BOOL) acceptsFirstResponder {
-    DLog(@"");
-	return YES;
-}
-
 - (void) keyDown:(NSEvent *)event {
     DLog(@"");
 	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);

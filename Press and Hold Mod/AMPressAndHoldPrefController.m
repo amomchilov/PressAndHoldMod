@@ -20,6 +20,7 @@
 {
     DLog(@"");
     [self setupModel];
+    [self setupKeyboardView];
 }
 
 - (void)setupModel
@@ -37,23 +38,19 @@
 		[self readPlistFileIntoTextField];
 	}
 }
-- (void) awakeFromNib {
-    DLog(@"self = %@", self);
 
-	
-	NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
+- (void)setupKeyboardView
+{
+    DLog(@"");
+    NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
                                                               bundle:[NSBundle bundleForClass:[self class]]];
-
+    
     
 	[_keyboardView addSubview: [vc view]];
-
-    
-	[_keyboardView becomeFirstResponder];
 }
 
 - (IBAction) popUpButtonChanged:(id)sender {
     DLog(@"");
-
 	[self readPlistFileIntoTextField];
 }
 
