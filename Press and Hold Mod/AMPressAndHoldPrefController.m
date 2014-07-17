@@ -7,8 +7,7 @@
 
 @implementation AMPressAndHoldPrefController
 
-- (id)initWithBundle:(NSBundle *)bundle
-{
+- (id)initWithBundle:(NSBundle *)bundle {
     DLog(@"")
     if (self = [super initWithBundle:bundle]){
         
@@ -16,15 +15,13 @@
     return self;
 }
 
-- (void)mainViewDidLoad
-{
+- (void)mainViewDidLoad {
     DLog(@"");
     [self setupModel];
     [self setupKeyboardView];
 }
 
-- (void)setupModel
-{
+- (void)setupModel {
     DLog(@"");
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
@@ -39,20 +36,17 @@
 	}
 }
 
-- (void)setupKeyboardView
-{
+- (void)setupKeyboardView {
     DLog(@"");
     NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
-                                                              bundle:[NSBundle bundleForClass:[self class]]];
-    
+                                                              bundle:[self bundle]];
     
 	[_keyboardView addSubview: [vc view]];
     
     [self addActionsToKeyboardButtons];
 }
 
-- (void)addActionsToKeyboardButtons
-{
+- (void)addActionsToKeyboardButtons {
     DLog(@"");
     for (NSView *view in [(NSView*)_keyboardView.subviews[0] subviews]) {
         
@@ -63,6 +57,7 @@
         }
     }
 }
+
 - (IBAction) popUpButtonChanged:(id)sender {
     DLog(@"");
 	[self readPlistFileIntoTextField];
@@ -75,8 +70,7 @@
 	[_textView setString: fileContents];
 }
 
-- (IBAction) virtualKeyPressed: (id) sender {
+- (void) virtualKeyPressed: (id) sender {
     DLog(@"%@ pressed", [(NSButton*)sender title]);
-
 }
 @end

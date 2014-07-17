@@ -17,7 +17,7 @@
         <window title="≪ do not localize ≫" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5" userLabel="PrefPane">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="176" y="715" width="668" height="612"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="668" height="612"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -30,6 +30,9 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="89I-io-sad"/>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="popUpButtonChanged:" target="-2" id="b4d-n1-efj"/>
+                        </connections>
                     </popUpButton>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-91-Nt8">
                         <rect key="frame" x="20" y="20" width="628" height="280"/>
