@@ -7,8 +7,25 @@
 
 @implementation AMPressAndHoldPrefController
 
-- (void) awakeFromNib {
-	//create new model object
+- (id)initWithBundle:(NSBundle *)bundle
+{
+    DLog(@"")
+    if (self = [super initWithBundle:bundle]){
+        
+    }
+    return self;
+}
+
+- (void)mainViewDidLoad
+{
+    DLog(@"");
+    [self setupModel];
+}
+
+- (void)setupModel
+{
+    DLog(@"");
+    //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
 	
 	//populate drop down menu with the array of human readable names.
@@ -19,22 +36,36 @@
 		[_popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
+}
+- (void) awakeFromNib {
+    DLog(@"self = %@", self);
+
 	
-	NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView" bundle:[NSBundle bundleForClass:[self class]]];
+	NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
+                                                              bundle:[NSBundle bundleForClass:[self class]]];
+
+    
 	[_keyboardView addSubview: [vc view]];
-	//[_keyboardView becomeFirstResponder];
+
+    
+	[_keyboardView becomeFirstResponder];
 }
 
 - (IBAction) popUpButtonChanged:(id)sender {
+    DLog(@"");
+
 	[self readPlistFileIntoTextField];
 }
 
 - (void) readPlistFileIntoTextField {
+    DLog(@"");
+
 	NSString *fileContents = [_model readPlistFileContentsForKey: [_popUpButton titleOfSelectedItem]];
 	[_textView setString: fileContents];
 }
 
 - (IBAction) virtualKeyPressed: (id) sender {
-	NSLog(@"%@", @"test");
+    DLog(@"%@ pressed", [(NSButton*)sender title]);
+
 }
 @end

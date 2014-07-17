@@ -4,9 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSPreferencePane">
+        <customObject id="-2" userLabel="File's Owner" customClass="AMPressAndHoldPrefController">
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="keyboardView" destination="OU1-pI-V8J" id="5ds-n3-ofB"/>
+                <outlet property="popUpButton" destination="qeY-Hb-EY3" id="dSh-bu-jXl"/>
+                <outlet property="textView" destination="fBq-3e-Gtc" id="3QX-Od-Zfb"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -27,9 +30,6 @@
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="89I-io-sad"/>
                         </popUpButtonCell>
-                        <connections>
-                            <action selector="popUpButtonChanged:" target="LaS-Z5-Ra9" id="wbT-Xr-laK"/>
-                        </connections>
                     </popUpButton>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-91-Nt8">
                         <rect key="frame" x="20" y="20" width="628" height="280"/>
@@ -60,21 +60,12 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU1-pI-V8J">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU1-pI-V8J" customClass="AMKeyboardView">
                         <rect key="frame" x="20" y="308" width="628" height="243"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>
             </view>
         </window>
-        <customObject id="LaS-Z5-Ra9" customClass="AMPressAndHoldPrefController">
-            <connections>
-                <outlet property="_window" destination="F0z-JX-Cv5" id="XLJ-Xg-sIj"/>
-                <outlet property="keyboardView" destination="OU1-pI-V8J" id="yHd-8y-kcl"/>
-                <outlet property="popUpButton" destination="qeY-Hb-EY3" id="oWp-ii-b4y"/>
-                <outlet property="testView" destination="OU1-pI-V8J" id="oR5-Tq-a69"/>
-                <outlet property="textView" destination="fBq-3e-Gtc" id="8OI-Fp-xUN"/>
-            </connections>
-        </customObject>
     </objects>
 </document>

@@ -15,6 +15,8 @@
     if (self = [super initWithFrame:frame]) {
         [self becomeFirstResponder];
     }
+    DLog(@"self = %@", self);
+
     return self;
 }
 
@@ -25,10 +27,12 @@
 //}
 
 - (BOOL) acceptsFirstResponder {
+    DLog(@"");
 	return YES;
 }
 
 - (void) keyDown:(NSEvent *)event {
+    DLog(@"");
 	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
 	NSButton *button = (NSButton *) [self viewWithTag:[event keyCode]];
 	if (button != nil /*&& button.state == NSOffState*/) {

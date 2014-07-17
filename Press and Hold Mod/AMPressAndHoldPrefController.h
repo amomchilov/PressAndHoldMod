@@ -9,7 +9,7 @@
 
 @property AMPressAndHoldPlistModel *model;
 
-@property (weak) IBOutlet NSView *keyboardView;
+@property (strong) IBOutlet NSView *keyboardView;
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
