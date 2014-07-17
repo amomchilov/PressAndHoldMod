@@ -10,6 +10,10 @@
 
 @implementation AMKeyboardView
 
+- (void) awakeFromNib {
+	[self becomeFirstResponder];
+}
+
 - (void) keyDown:(NSEvent *)event {
     DLog(@"");
 	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
