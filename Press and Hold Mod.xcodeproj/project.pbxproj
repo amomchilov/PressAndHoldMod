@@ -100,18 +100,11 @@
 		11FBAF141975C5FB00F52CAF /* Press and Hold Mod */ = {
 			isa = PBXGroup;
 			children = (
-				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
-				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
-				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
-				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
-				11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */,
-				11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */,
-				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
-				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
-				11FBAF8F1975FA8C00F52CAF /* AMKeyboardView.xib */,
-				11FBAF201975C5FB00F52CAF /* Press_and_Hold_Mod.xib */,
-				11FBAF1E1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff */,
-				11BA70FC1976082900499416 /* kb.jpg */,
+				D8F2C2FC1977984F00A7F18B /* Models */,
+				D8F2C2FA1977981300A7F18B /* Views */,
+				D8F2C2FB1977981E00A7F18B /* Nibs */,
+				D8F2C2F91977980400A7F18B /* Controllers */,
+				D8F2C2FD1977986500A7F18B /* Assets */,
 				11FBAF151975C5FB00F52CAF /* Supporting Files */,
 			);
 			path = "Press and Hold Mod";
@@ -125,6 +118,53 @@
 				11FBAF1A1975C5FB00F52CAF /* Press and Hold Mod-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8F2C2F91977980400A7F18B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
+				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D8F2C2FA1977981300A7F18B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
+				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D8F2C2FB1977981E00A7F18B /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				11FBAF8F1975FA8C00F52CAF /* AMKeyboardView.xib */,
+				11FBAF201975C5FB00F52CAF /* Press_and_Hold_Mod.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		D8F2C2FC1977984F00A7F18B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
+				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
+				11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */,
+				11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D8F2C2FD1977986500A7F18B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				11FBAF1E1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff */,
+				11BA70FC1976082900499416 /* kb.jpg */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
