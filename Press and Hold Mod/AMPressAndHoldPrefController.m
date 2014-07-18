@@ -52,7 +52,7 @@
 }
 
 - (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender {
-	DLog(@"%@", keyboard == self.keyboardView ? @"true" : @"false");
+	DLog(@"%@", [sender title]);
 }
 
 - (IBAction)showPopOver:(id)sender {

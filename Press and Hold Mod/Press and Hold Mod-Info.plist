@@ -25,9 +25,9 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Alexander Momchilov. All rights reserved.</string>
 	<key>NSMainNibFile</key>
-	<string>Press_and_Hold_Mod</string>
+	<string>AMPressAndHoldPrefPane</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>Press_and_Hold_Mod.tiff</string>
+	<string>PrefFile.icns</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>Press and Hold Mod</string>
 	<key>NSPrincipalClass</key>

@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11975EFC1979125700FDE23C /* PrefFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 11975EFB1979125700FDE23C /* PrefFile.icns */; };
 		11BA70F61975FF1A00499416 /* AMKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF8F1975FA8C00F52CAF /* AMKeyboardView.xib */; };
-		11BA70F71975FF1A00499416 /* Press_and_Hold_Mod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF201975C5FB00F52CAF /* Press_and_Hold_Mod.xib */; };
+		11BA70F71975FF1A00499416 /* AMPressAndHoldPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */; };
 		11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11BA70F8197606CE00499416 /* AMKeyboardView.h */; };
 		11BA70FB197606CE00499416 /* AMKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BA70F9197606CE00499416 /* AMKeyboardView.m */; };
-		11BA70FD1976082900499416 /* kb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11BA70FC1976082900499416 /* kb.jpg */; };
 		11FBAF0D1975C5FB00F52CAF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FBAF0C1975C5FB00F52CAF /* Cocoa.framework */; };
 		11FBAF0F1975C5FB00F52CAF /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11FBAF0E1975C5FB00F52CAF /* PreferencePanes.framework */; };
 		11FBAF191975C5FB00F52CAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF171975C5FB00F52CAF /* InfoPlist.strings */; };
 		11FBAF1D1975C5FB00F52CAF /* AMPressAndHoldPrefController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */; };
-		11FBAF1F1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF1E1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff */; };
 		11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */; };
 		11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */; };
 		11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */; };
@@ -24,9 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11975EFB1979125700FDE23C /* PrefFile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PrefFile.icns; sourceTree = "<group>"; };
 		11BA70F8197606CE00499416 /* AMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardView.h; sourceTree = "<group>"; };
 		11BA70F9197606CE00499416 /* AMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardView.m; sourceTree = "<group>"; };
-		11BA70FC1976082900499416 /* kb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kb.jpg; sourceTree = "<group>"; };
 		11FBAF091975C5FB00F52CAF /* Press and Hold Mod.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Press and Hold Mod.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11FBAF0C1975C5FB00F52CAF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		11FBAF0E1975C5FB00F52CAF /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -38,8 +37,7 @@
 		11FBAF1A1975C5FB00F52CAF /* Press and Hold Mod-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Press and Hold Mod-Prefix.pch"; sourceTree = "<group>"; };
 		11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMPressAndHoldPrefController.h; sourceTree = "<group>"; };
 		11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMPressAndHoldPrefController.m; sourceTree = "<group>"; };
-		11FBAF1E1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Press_and_Hold_Mod.tiff; sourceTree = "<group>"; };
-		11FBAF211975C5FB00F52CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Press_and_Hold_Mod.xib; sourceTree = "<group>"; };
+		11FBAF211975C5FB00F52CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AMPressAndHoldPrefPane.xib; sourceTree = "<group>"; };
 		11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPressAndHoldPlistModel.h; sourceTree = "<group>"; };
 		11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPressAndHoldPlistModel.m; sourceTree = "<group>"; };
 		11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLocaleUtility.h; sourceTree = "<group>"; };
@@ -142,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				11FBAF8F1975FA8C00F52CAF /* AMKeyboardView.xib */,
-				11FBAF201975C5FB00F52CAF /* Press_and_Hold_Mod.xib */,
+				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
 			);
 			name = Nibs;
 			sourceTree = "<group>";
@@ -161,8 +159,7 @@
 		D8F2C2FD1977986500A7F18B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				11FBAF1E1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff */,
-				11BA70FC1976082900499416 /* kb.jpg */,
+				11975EFB1979125700FDE23C /* PrefFile.icns */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -235,10 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BA70F61975FF1A00499416 /* AMKeyboardView.xib in Resources */,
-				11BA70FD1976082900499416 /* kb.jpg in Resources */,
-				11BA70F71975FF1A00499416 /* Press_and_Hold_Mod.xib in Resources */,
-				11FBAF1F1975C5FB00F52CAF /* Press_and_Hold_Mod.tiff in Resources */,
+				11BA70F71975FF1A00499416 /* AMPressAndHoldPrefPane.xib in Resources */,
 				11FBAF191975C5FB00F52CAF /* InfoPlist.strings in Resources */,
+				11975EFC1979125700FDE23C /* PrefFile.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,12 +273,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		11FBAF201975C5FB00F52CAF /* Press_and_Hold_Mod.xib */ = {
+		11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				11FBAF211975C5FB00F52CAF /* Base */,
 			);
-			name = Press_and_Hold_Mod.xib;
+			name = AMPressAndHoldPrefPane.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
