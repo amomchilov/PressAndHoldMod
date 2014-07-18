@@ -31,6 +31,6 @@
 	<key>NSPrefPaneIconLabel</key>
 	<string>Press and Hold Mod</string>
 	<key>NSPrincipalClass</key>
-	<string>Press_and_Hold_Mod</string>
+	<string>AMPressAndHoldPrefController</string>
 </dict>
 </plist>
