@@ -10,11 +10,11 @@
 
 @implementation AMKeyboardView
 
-- (void) awakeFromNib {
+- (void)awakeFromNib {
 	[self becomeFirstResponder];
 }
 
-- (void) keyDown:(NSEvent *)event {
+- (void)keyDown:(NSEvent *)event {
     DLog(@"");
 	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
 	NSButton *button = (NSButton *) [self viewWithTag:[event keyCode]];
@@ -24,13 +24,9 @@
 	}
 }
 
-- (IBAction)virtualKeyPressed:(id)sender {
-//	if ([sender isKindOfClass:[NSButton class]]) {
-//		NSButton *button = (NSButton*) sender;
-//		DLog(@"%@", [button title]);
-//	}
+- (IBAction)virtualKeyPressed:(NSButton *)sender {
 	DLog(@"%@", [sender title]);
+	[self.delegate keyboard:self didPressKey:sender];
 }
-
 
 @end

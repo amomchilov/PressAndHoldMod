@@ -4,19 +4,19 @@
 
 #import <PreferencePanes/PreferencePanes.h>
 #import "AMPressAndHoldPlistModel.h"
+#import "AMKeyboardView.h"
 
-@interface AMPressAndHoldPrefController : NSPreferencePane
+@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewDelegate>
 
 @property AMPressAndHoldPlistModel *model;
 
-@property (strong) IBOutlet NSView *keyboardView;
+@property (strong) IBOutlet AMKeyboardView *keyboardView;
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 @property (weak) IBOutlet NSPopover *popOver;
 
 - (IBAction) popUpButtonChanged: (id)sender;
 - (void) readPlistFileIntoTextField;
-- (IBAction) virtualKeyPressed: (id) sender;
 
 - (IBAction)showPopOver:(id)sender;
 

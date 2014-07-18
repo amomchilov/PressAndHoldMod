@@ -34,7 +34,8 @@
                                                               bundle:[self bundle]];
     
 	[_keyboardView addSubview: [vc view]];
-    
+    _keyboardView.delegate = self;
+	
     //[self addActionsToKeyboardButtons];
 }
 
@@ -62,8 +63,8 @@
 	[_textView setString: fileContents];
 }
 
-- (void) virtualKeyPressed: (id) sender {
-    DLog(@"%@ pressed", [(NSButton*)sender title]);
+- (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender {
+	DLog(@"%@", keyboard == _keyboardView ? @"true" : @"false");
 }
 
 - (IBAction)showPopOver:(id)sender {

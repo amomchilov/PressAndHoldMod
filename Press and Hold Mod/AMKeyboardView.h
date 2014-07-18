@@ -8,6 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol AMKeyboardViewDelegate;
+
+
 @interface AMKeyboardView : NSView
+
+@property (weak) id <AMKeyboardViewDelegate> delegate;
+
+@end
+
+
+
+@protocol AMKeyboardViewDelegate <NSObject>
+
+- (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender;
 
 @end
