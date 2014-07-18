@@ -23,4 +23,14 @@
 		//[button performSelector:@selector(performClick:) withObject:event afterDelay:0.5];
 	}
 }
+
+- (IBAction)virtualKeyPressed:(id)sender {
+//	if ([sender isKindOfClass:[NSButton class]]) {
+//		NSButton *button = (NSButton*) sender;
+//		DLog(@"%@", [button title]);
+//	}
+	DLog(@"%@", [sender title]);
+}
+
+
 @end
