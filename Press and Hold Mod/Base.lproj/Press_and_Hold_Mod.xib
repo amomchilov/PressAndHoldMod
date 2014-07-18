@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
                 <outlet property="keyboardView" destination="OU1-pI-V8J" id="5ds-n3-ofB"/>
+                <outlet property="popOver" destination="oGc-SK-614" id="y37-AY-7Uz"/>
+                <outlet property="popOverTest" destination="rMF-iv-aTy" id="ztK-kN-Ajn"/>
                 <outlet property="popUpButton" destination="qeY-Hb-EY3" id="dSh-bu-jXl"/>
                 <outlet property="textView" destination="fBq-3e-Gtc" id="3QX-Od-Zfb"/>
             </connections>
@@ -23,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qeY-Hb-EY3">
-                        <rect key="frame" x="18" y="568" width="633" height="26"/>
+                        <rect key="frame" x="18" y="568" width="509" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Vuu-fK-Rt8">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -67,8 +69,44 @@
                         <rect key="frame" x="20" y="308" width="628" height="243"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-iv-aTy">
+                        <rect key="frame" x="526" y="564" width="128" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Show Popover" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8RP-E4-4vQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showPopOver:" target="-2" id="41X-cN-hTR"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
+        <customView id="IUR-Vn-oHC">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxr-uQ-gQ3">
+                    <rect key="frame" x="54" y="40" width="55" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Popover" id="tfA-d1-AjA">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+        <popover behavior="t" id="oGc-SK-614">
+            <connections>
+                <outlet property="contentViewController" destination="CKE-K7-ekA" id="NtL-K5-23T"/>
+            </connections>
+        </popover>
+        <viewController id="CKE-K7-ekA" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="IUR-Vn-oHC" id="4Th-5e-1pw"/>
+            </connections>
+        </viewController>
     </objects>
 </document>

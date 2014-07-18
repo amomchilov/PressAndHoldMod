@@ -641,38 +641,5 @@
                 </button>
             </subviews>
         </customView>
-        <viewController id="jdK-SI-pf0" userLabel="Popover View Controller">
-            <connections>
-                <outlet property="view" destination="5A6-Rg-A5i" id="nNd-zJ-Sco"/>
-            </connections>
-        </viewController>
-        <popover behavior="t" id="z8z-wX-9Rg">
-            <connections>
-                <outlet property="contentViewController" destination="jdK-SI-pf0" id="cVJ-z5-Thg"/>
-            </connections>
-        </popover>
-        <customView id="5A6-Rg-A5i">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnv-9T-i1k">
-                    <rect key="frame" x="54" y="40" width="55" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Popover" id="i9a-Pa-jiY">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-            </subviews>
-        </customView>
-        <button verticalHuggingPriority="750" id="cBh-ra-dtq">
-            <rect key="frame" x="0.0" y="0.0" width="82" height="32"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EuX-tW-7zo">
-                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                <font key="font" metaFont="system"/>
-            </buttonCell>
-        </button>
     </objects>
 </document>

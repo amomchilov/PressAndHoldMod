@@ -12,9 +12,12 @@
 @property (strong) IBOutlet NSView *keyboardView;
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
+@property (weak) IBOutlet NSPopover *popOver;
 
 - (IBAction) popUpButtonChanged: (id)sender;
 - (void) readPlistFileIntoTextField;
 - (IBAction) virtualKeyPressed: (id) sender;
+
+- (IBAction)showPopOver:(id)sender;
 
 @end

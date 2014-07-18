@@ -7,14 +7,6 @@
 
 @implementation AMPressAndHoldPrefController
 
-- (id)initWithBundle:(NSBundle *)bundle {
-    DLog(@"")
-    if (self = [super initWithBundle:bundle]){
-        
-    }
-    return self;
-}
-
 - (void)mainViewDidLoad {
     DLog(@"");
     [self setupModel];
@@ -73,4 +65,9 @@
 - (void) virtualKeyPressed: (id) sender {
     DLog(@"%@ pressed", [(NSButton*)sender title]);
 }
+
+- (IBAction)showPopOver:(id)sender {
+	[_popOver showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
+}
+
 @end
