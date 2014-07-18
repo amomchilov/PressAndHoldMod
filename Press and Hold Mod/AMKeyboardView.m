@@ -11,7 +11,12 @@
 @implementation AMKeyboardView
 
 - (void)awakeFromNib {
-	[self becomeFirstResponder];
+	//[self becomeFirstResponder];
+}
+
+- (IBAction)virtualKeyPressed:(NSButton *)sender {
+	DLog(@"%@", [sender title]);
+	[self.delegate keyboard:self didPressKey:sender];
 }
 
 - (void)keyDown:(NSEvent *)event {
@@ -23,9 +28,7 @@
 	}
 }
 
-- (IBAction)virtualKeyPressed:(NSButton *)sender {
-	DLog(@"%@", [sender title]);
-	[self.delegate keyboard:self didPressKey:sender];
+- (BOOL)canBecomeFirstResponder {
+    return YES;
 }
-
 @end

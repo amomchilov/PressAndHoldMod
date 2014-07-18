@@ -7,7 +7,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="AMPressAndHoldPrefController">
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
-                <outlet property="keyboardView" destination="OU1-pI-V8J" id="5ds-n3-ofB"/>
+                <outlet property="keyboardPlaceHolder" destination="Lxr-DF-T88" id="5jp-mS-ZkN"/>
                 <outlet property="popOver" destination="oGc-SK-614" id="y37-AY-7Uz"/>
                 <outlet property="popOverTest" destination="rMF-iv-aTy" id="ztK-kN-Ajn"/>
                 <outlet property="popUpButton" destination="qeY-Hb-EY3" id="dSh-bu-jXl"/>
@@ -65,10 +65,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU1-pI-V8J" customClass="AMKeyboardView">
-                        <rect key="frame" x="20" y="308" width="628" height="243"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-iv-aTy">
                         <rect key="frame" x="526" y="564" width="128" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -80,6 +76,10 @@
                             <action selector="showPopOver:" target="-2" id="41X-cN-hTR"/>
                         </connections>
                     </button>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-DF-T88">
+                        <rect key="frame" x="20" y="308" width="628" height="243"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
                 </subviews>
             </view>
         </window>

@@ -29,27 +29,15 @@
 }
 
 - (void)setupKeyboardView {
-    DLog(@"");
     NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
                                                               bundle:[self bundle]];
-    
-	[self.keyboardView addSubview: [vc view]];
+	self.keyboardView = (AMKeyboardView *) [vc view];
     [self.keyboardView setDelegate: self];
+	//[self.keyboardView becomeFirstResponder];
 	
-    //[self addActionsToKeyboardButtons];
+	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
+	[self.mainView addSubview: self.keyboardView];
 }
-
-//- (void)addActionsToKeyboardButtons {
-//    DLog(@"");
-//    for (NSView *view in [(NSView*)self.keyboardView.subviews[0] subviews]) {
-//        
-//        if ([view isKindOfClass:[NSButton class]]) {
-//            NSButton *button = (NSButton*)view;
-//            button.target = self;
-//            button.action = @selector(virtualKeyPressed:);
-//        }
-//    }
-//}
 
 - (IBAction) popUpButtonChanged:(id)sender {
     DLog(@"");

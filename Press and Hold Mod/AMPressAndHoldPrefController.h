@@ -10,10 +10,11 @@
 
 @property AMPressAndHoldPlistModel *model;
 
-@property (strong) IBOutlet AMKeyboardView *keyboardView;
+@property (weak) IBOutlet NSView *keyboardPlaceHolder;
+@property (strong) AMKeyboardView *keyboardView;
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
-@property (unsafe_unretained) IBOutlet NSTextView *textView;
 @property (weak) IBOutlet NSPopover *popOver;
+@property (unsafe_unretained) IBOutlet NSTextView *textView;
 
 - (IBAction) popUpButtonChanged: (id)sender;
 - (void) readPlistFileIntoTextField;
