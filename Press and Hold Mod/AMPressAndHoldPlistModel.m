@@ -8,7 +8,7 @@
 
 - (id) init {
 	if (self = [super init]) {
-		_plistFiles = [[NSMutableDictionary alloc] init];
+		self.plistFiles = [[NSMutableDictionary alloc] init];
 		
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSPredicate *plistPredicate = [NSPredicate predicateWithFormat:@"SELF like %@", @"Keyboard*.plist"];
@@ -20,20 +20,20 @@
 			NSString *localeName = [AMLocaleUtility localeCodeToString: plistFileLocaleCode];
 			NSString *plistFilePath = [NSString stringWithFormat:@"%@%@", BASEPATH, plistFileName];
 			if (localeName)
-				[_plistFiles setObject: plistFilePath forKey:localeName];
+				[self.plistFiles setObject: plistFilePath forKey:localeName];
 			else if ([plistFileLocaleCode isEqual: @"default"])
-				[_plistFiles setObject:plistFilePath forKey:@"Default"];
+				[self.plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
 	}
 	return self;
 }
 
 - (NSArray *) sortedLanguageList {
-	return [_plistFiles keysSortedByValueUsingSelector: @selector(caseInsensitiveCompare:)];
+	return [self.plistFiles keysSortedByValueUsingSelector: @selector(caseInsensitiveCompare:)];
 }
 
 - (NSString *) readPlistFileContentsForKey: (NSString *) key {
-	NSString *plistPath = [_plistFiles objectForKey:key];
+	NSString *plistPath = [self.plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
 	return [NSString stringWithContentsOfFile:plistPath

@@ -16,14 +16,14 @@
 - (void)setupModel {
     DLog(@"");
     //create new model object
-	_model = [[AMPressAndHoldPlistModel alloc] init];
+	self.model = [[AMPressAndHoldPlistModel alloc] init];
 	
 	//populate drop down menu with the array of human readable names.
-	[_popUpButton addItemsWithTitles: [_model sortedLanguageList]];
+	[self.popUpButton addItemsWithTitles: [self.model sortedLanguageList]];
 	
 	//If the current locale is on the list, select it.
-	if ([[_model plistFiles] objectForKey:[AMLocaleUtility userLanguagePreference]]) {
-		[_popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
+	if ([[self.model plistFiles] objectForKey:[AMLocaleUtility userLanguagePreference]]) {
+		[self.popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
 }
@@ -33,15 +33,15 @@
     NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
                                                               bundle:[self bundle]];
     
-	[_keyboardView addSubview: [vc view]];
-    _keyboardView.delegate = self;
+	[self.keyboardView addSubview: [vc view]];
+    [self.keyboardView setDelegate: self];
 	
     //[self addActionsToKeyboardButtons];
 }
 
 //- (void)addActionsToKeyboardButtons {
 //    DLog(@"");
-//    for (NSView *view in [(NSView*)_keyboardView.subviews[0] subviews]) {
+//    for (NSView *view in [(NSView*)self.keyboardView.subviews[0] subviews]) {
 //        
 //        if ([view isKindOfClass:[NSButton class]]) {
 //            NSButton *button = (NSButton*)view;
@@ -59,16 +59,16 @@
 - (void) readPlistFileIntoTextField {
     DLog(@"");
 
-	NSString *fileContents = [_model readPlistFileContentsForKey: [_popUpButton titleOfSelectedItem]];
-	[_textView setString: fileContents];
+	NSString *fileContents = [self.model readPlistFileContentsForKey: [self.popUpButton titleOfSelectedItem]];
+	[self.textView setString: fileContents];
 }
 
 - (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender {
-	DLog(@"%@", keyboard == _keyboardView ? @"true" : @"false");
+	DLog(@"%@", keyboard == self.keyboardView ? @"true" : @"false");
 }
 
 - (IBAction)showPopOver:(id)sender {
-	[_popOver showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
+	[self.popOver showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
 }
 
 @end

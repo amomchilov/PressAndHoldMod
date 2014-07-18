@@ -18,9 +18,8 @@
     DLog(@"");
 	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
 	NSButton *button = (NSButton *) [self viewWithTag:[event keyCode]];
-	if (button != nil /*&& button.state == NSOffState*/) {
+	if (button) {
 		[button performClick:button];
-		//[button performSelector:@selector(performClick:) withObject:event afterDelay:0.5];
 	}
 }
 

@@ -21,4 +21,5 @@
 	NSString *userInputSource = [[NSLocale currentLocale] localeIdentifier];
 	return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:userInputSource];
 }
+
 @end
