@@ -14,8 +14,8 @@
 	//[self becomeFirstResponder];
 }
 
-- (IBAction)virtualKeyPressed:(NSButton *)sender {
-	[self.delegate keyboard:self didPressKey:sender];
+- (BOOL)canBecomeFirstResponder {
+    return YES;
 }
 
 - (void)keyDown:(NSEvent *)event {
@@ -25,9 +25,5 @@
 	if (button) {
 		[button performClick:button];
 	}
-}
-
-- (BOOL)canBecomeFirstResponder {
-    return YES;
 }
 @end

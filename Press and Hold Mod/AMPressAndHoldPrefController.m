@@ -29,10 +29,10 @@
 }
 
 - (void)setupKeyboardView {
-    NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
-                                                              bundle:[self bundle]];
-	self.keyboardView = (AMKeyboardView *) [vc view];
-    [self.keyboardView setDelegate: self];
+    self.keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
+																		 bundle:[self bundle]];
+    self.keyboardController.delegate = self;
+	self.keyboardView = [self.keyboardController view];
 	//[self.keyboardView becomeFirstResponder];
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
@@ -51,7 +51,7 @@
 	[self.textView setString: fileContents];
 }
 
-- (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender {
+- (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {
 	DLog(@"%@", [sender title]);
 }
 
