@@ -19,7 +19,7 @@
 @property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
-@property (strong) AMPopoverController *popoverController;
+@property AMPopoverController *popoverController;
 
 - (IBAction) popUpButtonChanged: (id)sender;
 - (void) readPlistFileIntoTextField;

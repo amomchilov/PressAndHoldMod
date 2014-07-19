@@ -20,12 +20,14 @@
 //}
 
 - (void) showWindow:(id)sender {
-	[super showWindow: sender];
 	if ([sender isKindOfClass: [NSView class]]) {
 		NSView *view = (NSView *) sender;
-		[self.window setFrameOrigin: view.frame.origin];
-		DLog("Weird positin is weird.");
+		NSRect f = [view.window convertRectToScreen:view.frame];
+		NSPoint p = NSMakePoint(f.origin.x + f.size.height, f.origin.y + f.size.height);
+		[self.window setFrameOrigin: p];
+		DLog(@"%@", NSStringFromRect(f));
 	}
+	[super showWindow: sender];
 }
 
 @end
