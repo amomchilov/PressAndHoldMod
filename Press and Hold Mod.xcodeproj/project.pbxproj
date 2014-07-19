@@ -10,6 +10,8 @@
 		110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */; };
 		110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */; };
 		11975EFC1979125700FDE23C /* PrefFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 11975EFB1979125700FDE23C /* PrefFile.icns */; };
+		11A407B31979E22800D16D7E /* AMKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A407B11979E22800D16D7E /* AMKeyboardViewController.h */; };
+		11A407B41979E22800D16D7E /* AMKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A407B21979E22800D16D7E /* AMKeyboardViewController.m */; };
 		11BA70F61975FF1A00499416 /* AMKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF8F1975FA8C00F52CAF /* AMKeyboardView.xib */; };
 		11BA70F71975FF1A00499416 /* AMPressAndHoldPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */; };
 		11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11BA70F8197606CE00499416 /* AMKeyboardView.h */; };
@@ -28,6 +30,8 @@
 		110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardViewController.h; sourceTree = "<group>"; };
 		110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardViewController.m; sourceTree = "<group>"; };
 		11975EFB1979125700FDE23C /* PrefFile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PrefFile.icns; sourceTree = "<group>"; };
+		11A407B11979E22800D16D7E /* AMKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardViewController.h; sourceTree = "<group>"; };
+		11A407B21979E22800D16D7E /* AMKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardViewController.m; sourceTree = "<group>"; };
 		11BA70F8197606CE00499416 /* AMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardView.h; sourceTree = "<group>"; };
 		11BA70F9197606CE00499416 /* AMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardView.m; sourceTree = "<group>"; };
 		11FBAF091975C5FB00F52CAF /* Press and Hold Mod.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Press and Hold Mod.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,8 +131,13 @@
 			children = (
 				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
 				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
+<<<<<<< HEAD
 				110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */,
 				110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */,
+=======
+				11A407B11979E22800D16D7E /* AMKeyboardViewController.h */,
+				11A407B21979E22800D16D7E /* AMKeyboardViewController.m */,
+>>>>>>> FETCH_HEAD
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,7 +188,11 @@
 			files = (
 				11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */,
 				11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */,
+<<<<<<< HEAD
 				110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */,
+=======
+				11A407B31979E22800D16D7E /* AMKeyboardViewController.h in Headers */,
+>>>>>>> FETCH_HEAD
 				11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +279,11 @@
 				11BA70FB197606CE00499416 /* AMKeyboardView.m in Sources */,
 				11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */,
 				11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */,
+<<<<<<< HEAD
 				110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */,
+=======
+				11A407B41979E22800D16D7E /* AMKeyboardViewController.m in Sources */,
+>>>>>>> FETCH_HEAD
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
