@@ -62,6 +62,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1131FEAA197A1BD500ADE59A /* AMKeyboardView */ = {
+			isa = PBXGroup;
+			children = (
+				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
+				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
+				110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */,
+				110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */,
+				1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */,
+			);
+			name = AMKeyboardView;
+			sourceTree = "<group>";
+		};
+		1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */ = {
+			isa = PBXGroup;
+			children = (
+				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
+				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
+				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
+			);
+			name = AMPressAndHoldPref;
+			sourceTree = "<group>";
+		};
 		11FBAEFE1975C5FB00F52CAF = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +124,9 @@
 		11FBAF141975C5FB00F52CAF /* Press and Hold Mod */ = {
 			isa = PBXGroup;
 			children = (
+				1131FEAA197A1BD500ADE59A /* AMKeyboardView */,
+				1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */,
 				D8F2C2FC1977984F00A7F18B /* Models */,
-				D8F2C2FA1977981300A7F18B /* Views */,
-				D8F2C2F91977980400A7F18B /* Controllers */,
-				D8F2C2FB1977981E00A7F18B /* Nibs */,
 				D8F2C2FD1977986500A7F18B /* Assets */,
 				11FBAF151975C5FB00F52CAF /* Supporting Files */,
 			);
@@ -120,35 +141,6 @@
 				11FBAF1A1975C5FB00F52CAF /* Press and Hold Mod-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D8F2C2F91977980400A7F18B /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
-				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
-				110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */,
-				110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		D8F2C2FA1977981300A7F18B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
-				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		D8F2C2FB1977981E00A7F18B /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */,
-				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
-			);
-			name = Nibs;
 			sourceTree = "<group>";
 		};
 		D8F2C2FC1977984F00A7F18B /* Models */ = {

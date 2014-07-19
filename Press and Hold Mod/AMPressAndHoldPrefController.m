@@ -45,8 +45,6 @@
 }
 
 - (void) readPlistFileIntoTextField {
-    DLog(@"");
-
 	NSString *fileContents = [self.model readPlistFileContentsForKey: [self.popUpButton titleOfSelectedItem]];
 	[self.textView setString: fileContents];
 }
