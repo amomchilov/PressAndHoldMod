@@ -8,16 +8,10 @@
 @implementation AMPressAndHoldPrefController
 
 - (void)mainViewDidLoad {
-    DLog(@"");
-    [self setupModel];
-    [self setupKeyboardView];
-}
-
-- (void)setupModel {
-    DLog(@"");
     //create new model object
 	self.model = [[AMPressAndHoldPlistModel alloc] init];
 	
+	/*****Setup main views*****/
 	//populate drop down menu with the array of human readable names.
 	[self.popUpButton addItemsWithTitles: [self.model sortedLanguageList]];
 	
@@ -26,9 +20,8 @@
 		[self.popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
-}
-
-- (void)setupKeyboardView {
+	
+	/*****Setup AMKeyboardView*****/
     self.keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
 																		 bundle:[self bundle]];
     self.keyboardController.delegate = self;
@@ -37,6 +30,9 @@
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
 	[self.mainView addSubview: self.keyboardView];
+	
+	/*****Setup AMPopover*****/
+	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
 }
 
 - (IBAction) popUpButtonChanged:(id)sender {
@@ -51,10 +47,16 @@
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {
 	DLog(@"%@", [sender title]);
+	[self.popover showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
 }
 
-- (IBAction)showPopOver:(id)sender {
-	[self.popOver showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
+- (IBAction)testButton1Pressed:(NSButton *)sender {
+	[self.popoverController showWindow: sender];
 }
+
+- (IBAction)testButton2Pressed:(NSButton *)sender {
+	[self.popoverController close];
+}
+
 
 @end

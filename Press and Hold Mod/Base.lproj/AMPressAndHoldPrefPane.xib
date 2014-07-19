@@ -8,9 +8,8 @@
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
                 <outlet property="keyboardPlaceHolder" destination="Lxr-DF-T88" id="5jp-mS-ZkN"/>
-                <outlet property="popOver" destination="oGc-SK-614" id="y37-AY-7Uz"/>
-                <outlet property="popOverTest" destination="rMF-iv-aTy" id="ztK-kN-Ajn"/>
                 <outlet property="popUpButton" destination="qeY-Hb-EY3" id="dSh-bu-jXl"/>
+                <outlet property="popover" destination="oGc-SK-614" id="JLD-c7-dOK"/>
                 <outlet property="textView" destination="fBq-3e-Gtc" id="3QX-Od-Zfb"/>
             </connections>
         </customObject>
@@ -25,7 +24,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qeY-Hb-EY3">
-                        <rect key="frame" x="18" y="568" width="509" height="26"/>
+                        <rect key="frame" x="18" y="568" width="389" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Vuu-fK-Rt8">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -65,21 +64,32 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-iv-aTy">
-                        <rect key="frame" x="526" y="564" width="128" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Show Popover" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8RP-E4-4vQ">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="showPopOver:" target="-2" id="41X-cN-hTR"/>
-                        </connections>
-                    </button>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-DF-T88">
                         <rect key="frame" x="20" y="308" width="628" height="243"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KSo-R7-m0w">
+                        <rect key="frame" x="406" y="565" width="124" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Test Button 1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VyH-9Z-ncL">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="testButton1Pressed:" target="-2" id="GbY-41-r0s"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5x-S5-9A2">
+                        <rect key="frame" x="530" y="564" width="124" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Test Button 2" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RWb-gv-mW7">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="testButton2Pressed:" target="-2" id="Dbn-1G-4tB"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>
