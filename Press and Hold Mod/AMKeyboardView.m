@@ -15,7 +15,7 @@
 }
 
 - (IBAction)virtualKeyPressed:(NSButton *)sender {
-	[self.delegate keyboard:self didPressKey:sender];
+	//[self.delegate keyboard:self didPressKey:sender];
 }
 
 - (void)keyDown:(NSEvent *)event {

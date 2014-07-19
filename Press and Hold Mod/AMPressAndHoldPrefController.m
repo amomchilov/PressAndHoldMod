@@ -29,10 +29,10 @@
 }
 
 - (void)setupKeyboardView {
-    NSViewController *vc = [[NSViewController alloc] initWithNibName:@"AMKeyboardView"
-                                                              bundle:[self bundle]];
+    AMKeyboardViewController *vc = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
+																	  bundle:[self bundle]];
+    vc.delegate = self;
 	self.keyboardView = (AMKeyboardView *) [vc view];
-    [self.keyboardView setDelegate: self];
 	//[self.keyboardView becomeFirstResponder];
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];

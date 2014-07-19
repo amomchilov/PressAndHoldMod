@@ -4,6 +4,7 @@
 
 #import <PreferencePanes/PreferencePanes.h>
 #import "AMPressAndHoldPlistModel.h"
+#import "AMKeyboardViewController.h"
 #import "AMKeyboardView.h"
 
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewDelegate>
