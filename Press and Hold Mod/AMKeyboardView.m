@@ -14,13 +14,13 @@
 	//[self becomeFirstResponder];
 }
 
-<<<<<<< HEAD
+
 - (BOOL)canBecomeFirstResponder {
     return YES;
-=======
+}
+
 - (IBAction)virtualKeyPressed:(NSButton *)sender {
 	//[self.delegate keyboard:self didPressKey:sender];
->>>>>>> FETCH_HEAD
 }
 
 - (void)keyDown:(NSEvent *)event {

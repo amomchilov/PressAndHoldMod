@@ -20,18 +20,8 @@
 @end
 
 
-
-<<<<<<< HEAD
 @protocol AMKeyboardViewDelegate <NSObject>
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender;
 
 @end
-=======
-
-@protocol AMKeyboardViewDelegate <NSObject>
-
-- (void) keyboard:(AMKeyboardView *) keyboard didPressKey:(NSButton *) sender;
-
-@end
->>>>>>> FETCH_HEAD
