@@ -4,6 +4,7 @@
 
 #import "AMPopoverController.h"
 
+
 @implementation AMPopoverController
 
 - (id)initWithWindow:(NSWindow *)window {
@@ -21,12 +22,12 @@
 
 - (void) showWindow:(id)sender {
 	if ([sender isKindOfClass: [NSView class]]) {
-		NSView *view = (NSView *) sender;
-		NSRect f = [view.window convertRectToScreen:view.frame];
-		NSPoint p = NSMakePoint(f.origin.x + f.size.height, f.origin.y + f.size.height);
-		[self.window setFrameOrigin: p];
-		DLog(@"%@", NSStringFromRect(f));
+		NSRect r = ((NSView *) sender).actualBounds;
+		r.origin.y += r.size.height;
+		[self.window setFrameOrigin: r.origin];
 	}
+	[self.window setOpaque: NO];
+	self.window.alphaValue = 0.5f;
 	[super showWindow: sender];
 }
 

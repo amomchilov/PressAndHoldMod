@@ -3,6 +3,7 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import <Cocoa/Cocoa.h>
+#import "NSView+ActualBounds.h"
 
 @interface AMPopoverController : NSWindowController
 

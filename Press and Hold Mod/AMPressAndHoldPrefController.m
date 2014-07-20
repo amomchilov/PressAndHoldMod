@@ -46,8 +46,9 @@
 }
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {
-	DLog(@"%@", [sender title]);
-	[self.popover showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
+	//DLog(@"%@", [sender title]);
+	//[self.popover showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
+	[self.popoverController showWindow: sender];
 }
 
 - (IBAction)testButton1Pressed:(NSButton *)sender {

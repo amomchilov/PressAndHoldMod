@@ -15,6 +15,8 @@
 		1131FEB4197B1C3500ADE59A /* AMPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131FEB1197B1C3500ADE59A /* AMPopoverController.h */; };
 		1131FEB5197B1C3500ADE59A /* AMPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131FEB2197B1C3500ADE59A /* AMPopoverController.m */; };
 		1131FEB6197B1C3500ADE59A /* AMPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */; };
+		1131FEBD197B7C8500ADE59A /* NSView+ActualBounds.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131FEBB197B7C8500ADE59A /* NSView+ActualBounds.h */; };
+		1131FEBE197B7C8500ADE59A /* NSView+ActualBounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131FEBC197B7C8500ADE59A /* NSView+ActualBounds.m */; };
 		11975EFC1979125700FDE23C /* PrefFile.icns in Resources */ = {isa = PBXBuildFile; fileRef = 11975EFB1979125700FDE23C /* PrefFile.icns */; };
 		11BA70F71975FF1A00499416 /* AMPressAndHoldPrefPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */; };
 		11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11BA70F8197606CE00499416 /* AMKeyboardView.h */; };
@@ -38,6 +40,8 @@
 		1131FEB1197B1C3500ADE59A /* AMPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopoverController.h; sourceTree = "<group>"; };
 		1131FEB2197B1C3500ADE59A /* AMPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopoverController.m; sourceTree = "<group>"; };
 		1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMPopoverView.xib; sourceTree = "<group>"; };
+		1131FEBB197B7C8500ADE59A /* NSView+ActualBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ActualBounds.h"; sourceTree = "<group>"; };
+		1131FEBC197B7C8500ADE59A /* NSView+ActualBounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ActualBounds.m"; sourceTree = "<group>"; };
 		11975EFB1979125700FDE23C /* PrefFile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PrefFile.icns; sourceTree = "<group>"; };
 		11BA70F8197606CE00499416 /* AMKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardView.h; sourceTree = "<group>"; };
 		11BA70F9197606CE00499416 /* AMKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardView.m; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				1131FEB1197B1C3500ADE59A /* AMPopoverController.h */,
 				1131FEB2197B1C3500ADE59A /* AMPopoverController.m */,
 				1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */,
+				1131FEBB197B7C8500ADE59A /* NSView+ActualBounds.h */,
+				1131FEBC197B7C8500ADE59A /* NSView+ActualBounds.m */,
 			);
 			name = AMPopover;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1131FEB4197B1C3500ADE59A /* AMPopoverController.h in Headers */,
+				1131FEBD197B7C8500ADE59A /* NSView+ActualBounds.h in Headers */,
 				1131FEAF197B1BA200ADE59A /* AMPopoverView.h in Headers */,
 				11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */,
 				11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */,
@@ -286,6 +293,7 @@
 				1131FEB5197B1C3500ADE59A /* AMPopoverController.m in Sources */,
 				11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */,
 				110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */,
+				1131FEBE197B7C8500ADE59A /* NSView+ActualBounds.m in Sources */,
 				1131FEB0197B1BA200ADE59A /* AMPopoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
