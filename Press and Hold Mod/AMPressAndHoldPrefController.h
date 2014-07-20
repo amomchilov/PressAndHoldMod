@@ -8,7 +8,7 @@
 #import "AMKeyboardView.h"
 #import "AMPopoverController.h"
 
-@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewDelegate>
+@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate>
 
 @property AMKeyboardViewController *keyboardController;
 @property AMPressAndHoldPlistModel *model;

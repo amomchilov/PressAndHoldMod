@@ -5,18 +5,18 @@
 #import <Cocoa/Cocoa.h>
 #import "AMKeyboardView.h"
 
-@protocol AMKeyboardViewDelegate;
+@protocol AMKeyboardViewControllerDelegate;
 
-@interface AMKeyboardViewController : NSViewController
+@interface AMKeyboardViewController : NSViewController <AMKeyboardViewDelegate>
 
-@property (weak) id <AMKeyboardViewDelegate> delegate;
+@property (weak) id <AMKeyboardViewControllerDelegate> delegate;
 
-- (IBAction)virtualKeyPressed:(NSButton *)sender;
+- (IBAction)virtualKeyClicked:(NSButton *)sender;
 
 @end
 
 
-@protocol AMKeyboardViewDelegate <NSObject>
+@protocol AMKeyboardViewControllerDelegate <NSObject>
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender;
 

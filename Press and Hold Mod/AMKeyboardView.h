@@ -8,7 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol AMKeyboardViewDelegate;
 
 @interface AMKeyboardView : NSView
+
+@property (weak) id <AMKeyboardViewDelegate> delegate;
+
+@end
+
+
+@protocol AMKeyboardViewDelegate <NSObject>
+
+- (void) keyboard:(NSView *) keyboard keyDown:(NSEvent *)event;
 
 @end

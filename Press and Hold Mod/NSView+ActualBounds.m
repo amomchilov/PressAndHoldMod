@@ -12,10 +12,11 @@
 
 - (NSRect) actualBounds {
 	NSRect r = [self.window convertRectToScreen:[self convertRect:self.bounds toView:nil]];
-	return NSMakeRect(r.origin.x + self.alignmentRectInsets.left,
-					  r.origin.y + self.alignmentRectInsets.bottom,
-					  r.size.width - self.alignmentRectInsets.left - self.alignmentRectInsets.right,
-					  r.size.height - self.alignmentRectInsets.bottom - self.alignmentRectInsets.top);
+	NSEdgeInsets insets = self.alignmentRectInsets;
+	return NSMakeRect(r.origin.x + insets.left,
+					  r.origin.y + insets.bottom,
+					  r.size.width - insets.left - insets.right,
+					  r.size.height - insets.bottom - insets.top);
 }
 
 @end

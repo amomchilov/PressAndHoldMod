@@ -13,13 +13,27 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [self.view becomeFirstResponder];
+		self.viewAsAMKeyboardView.delegate = self;
     }
     return self;
 }
 
-- (IBAction)virtualKeyPressed:(NSButton *)sender {
+- (AMKeyboardView *) viewAsAMKeyboardView {
+	return (AMKeyboardView *) self.view;
+}
+
+- (IBAction)virtualKeyClicked:(NSButton *)sender {
 	[self.delegate keyboard: self.view didPressKey:sender];
 	//[self.delegate keyboard:self didPressKey:sender];
+}
+
+
+- (void)keyboard:(NSView *)keyboard keyDown:(NSEvent *)event {
+	DLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
+	NSButton *button = (NSButton *) [self.viewAsAMKeyboardView viewWithTag:[event keyCode]];
+	if (button) {
+		[button performClick:button];
+	}
 }
 
 @end

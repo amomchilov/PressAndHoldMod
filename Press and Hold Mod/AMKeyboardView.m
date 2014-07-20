@@ -14,13 +14,8 @@
     return YES;
 }
 
-#warning TODO: delegate this to the controller
 - (void)keyDown:(NSEvent *)event {
-    DLog(@"");
-	NSLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
-	NSButton *button = (NSButton *) [self viewWithTag:[event keyCode]];
-	if (button) {
-		[button performClick:button];
-	}
+	[self.delegate keyboard: self keyDown: event];
 }
+
 @end

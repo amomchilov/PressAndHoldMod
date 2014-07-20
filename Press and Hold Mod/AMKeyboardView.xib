@@ -23,7 +23,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="mKz-VW-zBw"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="6jk-fd-d4q"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="122" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-ha-DTk">
@@ -34,7 +34,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="c9b-3u-uIN"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="1mo-2Z-onU"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="120" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-HO-r5I">
@@ -45,7 +45,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="IKN-uI-j2q"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Uhp-Z0-ogw"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="99" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-kU-olL">
@@ -56,7 +56,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="yXo-Dx-4XG"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="jhe-sP-N5o"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="96" translatesAutoresizingMaskIntoConstraints="NO" id="v4F-pc-8EA">
@@ -67,7 +67,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="7tK-qV-NPN"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="N6z-O9-dI3"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="118" translatesAutoresizingMaskIntoConstraints="NO" id="usp-HL-Fra">
@@ -78,7 +78,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="UAJ-bq-De0"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Oem-RT-QXc"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="97" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-bf-1MU">
@@ -89,7 +89,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="2hk-sQ-sHu"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="sZk-VX-fUb"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="98" translatesAutoresizingMaskIntoConstraints="NO" id="5B9-9S-kNP">
@@ -100,7 +100,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="cr2-Ul-91q"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Hzd-Vu-iWI"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="100" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Fc-1GW">
@@ -111,7 +111,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="rVR-kv-Urp"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="lmr-1A-dh5"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-54-r58">
@@ -122,7 +122,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="WhD-V9-7gO"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="GyY-pn-Ykx"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="109" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-5s-WAy">
@@ -133,7 +133,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="JuE-jh-Ls3"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="mkm-Mj-beG"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-ed-7IR">
@@ -144,7 +144,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="k1w-Ik-9Xc"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="KLH-cw-LYy"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="111" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-xx-2lc">
@@ -155,7 +155,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Mch-hr-bHP"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Hs4-Pg-EGh"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Iro-8A-syz">
@@ -166,7 +166,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Kpj-dc-e5e"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="leL-Kr-3fD"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="50" translatesAutoresizingMaskIntoConstraints="NO" id="wfx-Uu-Ftc">
@@ -177,7 +177,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="cWO-s7-e2E"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="UyG-hE-v6S"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-El-ACD">
@@ -188,7 +188,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="AqJ-F5-hXI"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="vWz-s1-bup"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-LI-OsD">
@@ -199,7 +199,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="OtI-C6-di8"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="9t9-Cx-uA4"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="xn9-fq-8Um">
@@ -210,7 +210,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Yk7-cf-a50"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Bi0-Om-rMD"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="21" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-7R-lgK">
@@ -221,7 +221,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="glY-Mc-ysm"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Tb7-ga-o27"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="23" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-66-tap">
@@ -232,7 +232,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="tNk-6J-yWX"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="E21-Aa-fw8"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="22" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-cw-fnd">
@@ -243,7 +243,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="eeV-GT-PIK"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="e2J-ti-tEU"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="26" translatesAutoresizingMaskIntoConstraints="NO" id="78n-rQ-neO">
@@ -254,7 +254,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="eFm-6X-Zah"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="EXS-AS-Gc7"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="adW-eD-Ew5">
@@ -265,7 +265,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="bqb-ES-uSB"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="XSA-mI-WNo"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="whm-uM-ghU">
@@ -276,7 +276,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="0VP-Be-ZeL"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="DVD-ub-3FE"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="29" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-MV-8uV">
@@ -287,7 +287,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="06k-6z-vBU"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Dy8-QO-Ntl"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-jH-FGY">
@@ -298,7 +298,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="4MJ-9s-Nwi"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="smI-Zs-wDg"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="24" translatesAutoresizingMaskIntoConstraints="NO" id="XZ5-i6-JRP">
@@ -309,7 +309,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="kcE-aU-0et"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="tMm-Cw-A6Q"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="SRs-bS-yhG">
@@ -320,7 +320,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="nnY-g3-2hD"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="NBo-2W-VLU"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-hH-0wA">
@@ -331,7 +331,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Y4z-Dy-ZFm"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="aB6-wf-CK7"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-W4-BR9">
@@ -342,7 +342,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="anV-Vu-gtx"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="ma0-xS-lI3"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="B1D-VZ-2pW">
@@ -353,7 +353,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="QJk-ex-agx"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="YIT-pl-Szc"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="17" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-qc-n2C">
@@ -364,7 +364,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="yAv-hH-EDU"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="XiK-56-CRb"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-dT-hBd">
@@ -375,7 +375,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="hBv-EW-RWH"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="zwx-oc-6Sz"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-Ui-Urd">
@@ -386,7 +386,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="2uG-bG-9qA"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="IwF-Jn-URM"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="34" translatesAutoresizingMaskIntoConstraints="NO" id="vHI-TT-Wfx">
@@ -397,7 +397,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="OkK-TY-vpa"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="zBg-np-ihA"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-xs-9kt">
@@ -408,7 +408,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="6hS-XS-0E6"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="ri7-wB-y6N"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="35" translatesAutoresizingMaskIntoConstraints="NO" id="WU0-hV-y6Z">
@@ -419,7 +419,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="JJG-p2-IWe"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="j8u-h6-AwG"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="hho-4W-uOl">
@@ -430,7 +430,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="3RO-kE-NXX"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="iVX-U4-4O5"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="30" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-Gi-G1W">
@@ -441,7 +441,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="6KU-WF-gxn"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="8xt-7p-NuT"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="42" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-lh-0Cm">
@@ -452,7 +452,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="GFw-4C-Cdi"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="hHU-IO-6Vd"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-5H-kM1">
@@ -463,7 +463,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="IDu-08-c2q"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="G78-Oh-jIa"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-xV-XUr">
@@ -474,7 +474,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="wfQ-V5-vwl"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="yXp-94-Rqq"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="duL-b6-rCJ">
@@ -485,7 +485,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="AQZ-1g-C1H"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="2q0-PL-wEb"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="3IA-wy-TuC">
@@ -496,7 +496,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Y8k-LF-CAf"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="TvM-JV-hqJ"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-rk-Zoq">
@@ -507,7 +507,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="tIW-XB-M2q"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="bKU-Xr-tc6"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-uk-ofJ">
@@ -518,7 +518,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="gKv-bh-Aql"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="s8N-gx-mW3"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="38" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-Sj-MGN">
@@ -529,7 +529,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Svk-Pt-EKL"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="oFR-SH-3Jf"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="40" translatesAutoresizingMaskIntoConstraints="NO" id="LOZ-X5-8Fg">
@@ -540,7 +540,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="5gf-ex-w7K"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="gmf-zK-eOF"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="37" translatesAutoresizingMaskIntoConstraints="NO" id="eie-Mh-MWn">
@@ -551,7 +551,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="r09-3w-9a5"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="umI-lx-iVx"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="41" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-pQ-Qj9">
@@ -562,7 +562,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="JjU-yw-oQc"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="MSK-rz-CLs"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="39" translatesAutoresizingMaskIntoConstraints="NO" id="5q6-tD-Dr4">
@@ -573,7 +573,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="oTb-cD-9Hd"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="tC1-e0-hFK"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-fZ-VJB">
@@ -584,7 +584,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="flo-tD-Oas"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="4b9-vd-jC9"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="hJx-Ae-XFh">
@@ -595,7 +595,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="WxN-cN-2Zv"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Vdl-dG-Xal"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="WPN-pe-7yQ">
@@ -606,7 +606,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="GrY-ZN-Kfh"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="giJ-c1-Ryc"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-84-RdW">
@@ -617,7 +617,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Kjh-36-oke"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Huy-q4-GMd"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-pt-N3w">
@@ -628,7 +628,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="wTZ-O5-PaV"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="bpo-AB-PN7"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="Rxu-u5-XXH">
@@ -639,7 +639,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="TQ1-VY-iOm"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Psl-Qa-EdW"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="46" translatesAutoresizingMaskIntoConstraints="NO" id="tB0-Yw-Xzp">
@@ -650,7 +650,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="wPF-fG-Oa2"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="GYZ-bK-mAo"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="43" translatesAutoresizingMaskIntoConstraints="NO" id="HvJ-q0-B2u">
@@ -661,7 +661,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="h2U-I0-o5T"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="gcz-Px-CKF"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="47" translatesAutoresizingMaskIntoConstraints="NO" id="UeH-uo-MOo">
@@ -672,7 +672,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="iWI-Xu-z14"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="nXA-6r-Qho"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="44" translatesAutoresizingMaskIntoConstraints="NO" id="Ylc-9Z-gkQ">
@@ -683,7 +683,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="kga-Jd-wds"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="OTe-Z5-zTa"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="48" translatesAutoresizingMaskIntoConstraints="NO" id="4bm-TE-He2">
@@ -694,7 +694,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="GMQ-bE-RqD"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="TyU-XD-NoI"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ypB-ge-FQB">
@@ -705,7 +705,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="M06-gU-D9d"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="waX-hB-Pbv"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gI7-dZ-KQK">
@@ -716,7 +716,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="SC3-hN-YY0"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="W8v-Me-5i1"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-e8-rfW">
@@ -727,7 +727,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="Tqf-Iy-4hJ"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="8cV-v7-W5f"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-wK-VxT">
@@ -738,7 +738,7 @@
                         <font key="font" size="10" name="AquaKana"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="6DL-8T-qPM"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="QpD-MB-2cS"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="51" translatesAutoresizingMaskIntoConstraints="NO" id="hQR-WY-aIw">
@@ -749,7 +749,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="yd2-Xn-2W7"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="BkA-Tf-RAn"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="49" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uh-uk5">
@@ -760,7 +760,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="cu6-fq-jqk"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Igb-9B-Nr3"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Tt-tF-IGp">
@@ -771,7 +771,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="h8w-1a-Spr"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="T0D-5Y-Q0F"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EFe-vX-FKd">
@@ -782,7 +782,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="mqg-br-own"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="tgY-0v-qVF"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xXT-zL-FQ7">
@@ -793,7 +793,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="pYT-4S-gff"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="yDp-Ea-SaA"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-Tv-OaF">
@@ -804,7 +804,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="hH3-hi-Qwl"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="wMO-aZ-dop"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u17-iU-C2P">
@@ -815,7 +815,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="srp-aK-jTK"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="4ta-rM-qcS"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-bS-s6Y">
@@ -826,7 +826,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="mfD-1O-n9R"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="Ovp-1J-kW9"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="123" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-oE-VaK">
@@ -837,7 +837,7 @@
                         <font key="font" size="10" name="HiraMinProN-W3"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="F2v-Og-Ka6"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="IKf-1l-6Ae"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="126" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-Dl-0YV">
@@ -848,7 +848,7 @@
                         <font key="font" size="10" name="STHeitiSC-Light"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="GuF-EZ-Mwa"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="klA-JW-emg"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="125" translatesAutoresizingMaskIntoConstraints="NO" id="u76-i9-juG">
@@ -859,7 +859,7 @@
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="UC7-YK-9a1"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="mbj-Ce-kl4"/>
                     </connections>
                 </button>
                 <button fixedFrame="YES" tag="124" translatesAutoresizingMaskIntoConstraints="NO" id="rst-lQ-zXI">
@@ -870,7 +870,7 @@
                         <font key="font" size="10" name="LucidaGrande"/>
                     </buttonCell>
                     <connections>
-                        <action selector="virtualKeyPressed:" target="-2" id="5CI-aX-fmt"/>
+                        <action selector="virtualKeyClicked:" target="-2" id="b9i-SP-Tu7"/>
                     </connections>
                 </button>
             </subviews>
