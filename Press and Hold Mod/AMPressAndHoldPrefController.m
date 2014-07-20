@@ -52,7 +52,7 @@
 }
 
 - (IBAction)testButton1Pressed:(NSButton *)sender {
-	[self.popoverController showWindow: sender];
+	[self.popover showRelativeToRect: sender.bounds ofView:sender preferredEdge:NSMinYEdge];
 }
 
 - (IBAction)testButton2Pressed:(NSButton *)sender {

@@ -24,12 +24,13 @@
 			else if ([plistFileLocaleCode isEqual: @"default"])
 				[self.plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
+		NSLog(@"%@", self.plistFiles);
 	}
 	return self;
 }
 
 - (NSArray *) sortedLanguageList {
-	return [self.plistFiles keysSortedByValueUsingSelector: @selector(caseInsensitiveCompare:)];
+	return [[self.plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
 - (NSString *) readPlistFileContentsForKey: (NSString *) key {

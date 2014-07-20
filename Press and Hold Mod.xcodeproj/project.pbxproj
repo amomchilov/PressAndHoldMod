@@ -91,6 +91,8 @@
 		1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */ = {
 			isa = PBXGroup;
 			children = (
+				1131FEAA197A1BD500ADE59A /* AMKeyboardView */,
+				1131FEAC197B1B5800ADE59A /* AMPopover */,
 				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
 				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
 				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
@@ -152,8 +154,6 @@
 		11FBAF141975C5FB00F52CAF /* Press and Hold Mod */ = {
 			isa = PBXGroup;
 			children = (
-				1131FEAC197B1B5800ADE59A /* AMPopover */,
-				1131FEAA197A1BD500ADE59A /* AMKeyboardView */,
 				1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */,
 				D8F2C2FC1977984F00A7F18B /* Models */,
 				D8F2C2FD1977986500A7F18B /* Assets */,
