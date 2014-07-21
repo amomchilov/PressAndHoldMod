@@ -10,8 +10,10 @@ static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.a
 @interface AMPressAndHoldPlistModel : NSObject
 
 @property NSMutableDictionary *plistFiles;
+@property NSString *activePlistFile;
 
 - (NSArray *) sortedLanguageList;
-- (NSString *) readPlistFileContentsForKey: (NSString *) key;
+- (NSString *) plistFileContentsForKey: (NSString *) key;
+- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey forPlistKey: (NSString *) plistKey;
 
 @end

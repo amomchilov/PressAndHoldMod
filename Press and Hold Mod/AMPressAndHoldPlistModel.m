@@ -33,13 +33,18 @@
 	return [[self.plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
-- (NSString *) readPlistFileContentsForKey: (NSString *) key {
+- (NSString *) plistFileContentsForKey: (NSString *) key {
 	NSString *plistPath = [self.plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
 	return [NSString stringWithContentsOfFile:plistPath
 							encoding:NSUTF8StringEncoding
 							error:nil];
+}
+
+- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey forPlistKey: (NSString *) plistKey {
+#warning TODO: implement this
+	return @[];
 }
 
 @end
