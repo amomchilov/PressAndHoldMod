@@ -7,10 +7,12 @@
 @implementation AMKeyboardView
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
 	[self becomeFirstResponder];
 }
 
 - (BOOL)acceptsFirstResponder {
+    [super acceptsFirstResponder];
     return YES;
 }
 

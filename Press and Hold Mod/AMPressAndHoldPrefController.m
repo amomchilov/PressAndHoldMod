@@ -55,6 +55,7 @@
 @implementation AMPressAndHoldPrefController
 
 - (void)mainViewDidLoad {
+    [super mainViewDidLoad];
     //create new model object
 	self.model = [[AMPressAndHoldPlistModel alloc] init];
 	
@@ -80,11 +81,13 @@
 	
 	/*****Setup AMPopover*****/
 	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
-    DLog(@"[self.mainView recursiveDescription]");
-    [self.mainView logHierarchy];
-    
+    self.initialKeyView = self.keyboardView;
 }
 
+- (void)didSelect
+{
+    [self.keyboardView.window makeFirstResponder:self.keyboardView];
+}
 - (IBAction) popUpButtonChanged:(id)sender {
     DLog(@"");
 	[self readPlistFileIntoTextField];
