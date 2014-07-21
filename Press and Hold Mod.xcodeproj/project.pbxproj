@@ -29,6 +29,8 @@
 		11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */; };
 		11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */; };
 		11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */; };
+		D82E97D3197CEE1400E45C07 /* NSView+ViewDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = D82E97D1197CEE1400E45C07 /* NSView+ViewDebugging.h */; };
+		D82E97D4197CEE1400E45C07 /* NSView+ViewDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E97D2197CEE1400E45C07 /* NSView+ViewDebugging.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPressAndHoldPlistModel.m; sourceTree = "<group>"; };
 		11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLocaleUtility.h; sourceTree = "<group>"; };
 		11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLocaleUtility.m; sourceTree = "<group>"; };
+		D82E97D1197CEE1400E45C07 /* NSView+ViewDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ViewDebugging.h"; sourceTree = "<group>"; };
+		D82E97D2197CEE1400E45C07 /* NSView+ViewDebugging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ViewDebugging.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		11FBAF141975C5FB00F52CAF /* Press and Hold Mod */ = {
 			isa = PBXGroup;
 			children = (
+				D82E97D0197CEDF700E45C07 /* Categories */,
 				1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */,
 				D8F2C2FC1977984F00A7F18B /* Models */,
 				D8F2C2FD1977986500A7F18B /* Assets */,
@@ -170,6 +175,15 @@
 				11FBAF1A1975C5FB00F52CAF /* Press and Hold Mod-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D82E97D0197CEDF700E45C07 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D82E97D1197CEE1400E45C07 /* NSView+ViewDebugging.h */,
+				D82E97D2197CEE1400E45C07 /* NSView+ViewDebugging.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		D8F2C2FC1977984F00A7F18B /* Models */ = {
@@ -200,6 +214,7 @@
 			files = (
 				1131FEB4197B1C3500ADE59A /* AMPopoverController.h in Headers */,
 				1131FEBD197B7C8500ADE59A /* NSView+ActualBounds.h in Headers */,
+				D82E97D3197CEE1400E45C07 /* NSView+ViewDebugging.h in Headers */,
 				1131FEAF197B1BA200ADE59A /* AMPopoverView.h in Headers */,
 				11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */,
 				11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */,
@@ -289,6 +304,7 @@
 			files = (
 				11FBAF1D1975C5FB00F52CAF /* AMPressAndHoldPrefController.m in Sources */,
 				11BA70FB197606CE00499416 /* AMKeyboardView.m in Sources */,
+				D82E97D4197CEE1400E45C07 /* NSView+ViewDebugging.m in Sources */,
 				11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */,
 				1131FEB5197B1C3500ADE59A /* AMPopoverController.m in Sources */,
 				11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */,

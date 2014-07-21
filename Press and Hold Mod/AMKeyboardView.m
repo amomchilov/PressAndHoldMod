@@ -11,7 +11,6 @@
 }
 
 - (BOOL)acceptsFirstResponder {
-    //[super acceptsFirstResponder];
     return YES;
 }
 
@@ -27,5 +26,11 @@
 
 - (void)allowKeyboardResignFirstResponse {
 	self.allowResignFirstResponder = YES;
+}
+
+- (BOOL)canBecomeKeyView
+{
+    DLog(@"");
+    return YES;
 }
 @end
