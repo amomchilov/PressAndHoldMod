@@ -13,6 +13,7 @@
 @interface AMKeyboardView : NSView
 
 @property (weak) id <AMKeyboardViewDelegate> delegate;
+@property BOOL allowResignFirstResponder;
 
 @end
 

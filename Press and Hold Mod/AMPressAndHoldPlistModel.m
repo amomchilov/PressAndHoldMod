@@ -24,7 +24,6 @@
 			else if ([plistFileLocaleCode isEqual: @"default"])
 				[self.plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
-		NSLog(@"%@", self.plistFiles);
 	}
 	return self;
 }

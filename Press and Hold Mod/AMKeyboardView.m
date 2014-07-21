@@ -7,12 +7,11 @@
 @implementation AMKeyboardView
 
 - (void)awakeFromNib {
-    [super awakeFromNib];
-	[self becomeFirstResponder];
+    self.allowResignFirstResponder = NO;
 }
 
 - (BOOL)acceptsFirstResponder {
-    [super acceptsFirstResponder];
+    //[super acceptsFirstResponder];
     return YES;
 }
 
@@ -20,4 +19,13 @@
 	[self.delegate keyboard: self keyDown: event];
 }
 
+- (BOOL) resignFirstResponder {
+	if (!self.allowResignFirstResponder)
+		[NSTimer scheduledTimerWithTimeInterval: 1 target: self selector:@selector(allowKeyboardResignFirstResponse) userInfo:nil repeats:NO];
+	return self.allowResignFirstResponder;
+}
+
+- (void)allowKeyboardResignFirstResponse {
+	self.allowResignFirstResponder = YES;
+}
 @end

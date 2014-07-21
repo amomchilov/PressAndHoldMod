@@ -12,7 +12,6 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self.view becomeFirstResponder];
 		self.viewAsAMKeyboardView.delegate = self;
     }
     return self;

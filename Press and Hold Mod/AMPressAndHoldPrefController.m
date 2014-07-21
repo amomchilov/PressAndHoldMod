@@ -73,7 +73,7 @@
     self.keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
 																		 bundle:[self bundle]];
     self.keyboardController.delegate = self;
-	self.keyboardView = [self.keyboardController view];
+	self.keyboardView = (AMKeyboardView *) [self.keyboardController view];
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
 	[self.mainView addSubview: self.keyboardView];
@@ -81,15 +81,32 @@
 	
 	/*****Setup AMPopover*****/
 	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
-    self.initialKeyView = self.keyboardView;
+    //self.initialKeyView = self.keyboardView;
+	
+	
+
+	[self.mainView logHierarchy];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval: 1 target: self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
-- (void)didSelect
-{
-    [self.keyboardView.window makeFirstResponder:self.keyboardView];
+- (void) tick {
+	DLog(@"tick: %@", self.mainView.window.firstResponder);
 }
+
+//Notifies the receiver that the main application has just displayed the preference pane’s main view.
+- (void)didSelect {
+	DLog(@"Before: %@", self.mainView.window.firstResponder);
+    [self.keyboardView.window makeFirstResponder:self.keyboardView];
+	DLog(@"After: %@", self.mainView.window.firstResponder);
+}
+
+//Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
+- (void) willUnselect {
+	[self.popoverController close];
+	[self.timer invalidate];
+}
+
 - (IBAction) popUpButtonChanged:(id)sender {
-    DLog(@"");
 	[self readPlistFileIntoTextField];
 }
 

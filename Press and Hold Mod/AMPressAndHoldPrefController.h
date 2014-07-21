@@ -15,7 +15,7 @@
 
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (weak) IBOutlet NSView *keyboardPlaceHolder;
-@property (strong) NSView *keyboardView;
+@property (strong) AMKeyboardView *keyboardView;
 @property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
@@ -24,4 +24,6 @@
 - (IBAction) popUpButtonChanged: (id)sender;
 - (void) readPlistFileIntoTextField;
 
+
+@property (strong) NSTimer *timer;
 @end
