@@ -34,15 +34,15 @@
 }
 
 - (NSString *) plistFileContentsForKey: (NSString *) key {
-	NSString *plistPath = [self.plistFiles objectForKey:key];
+	self.activePlistFilePath = [self.plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
-	return [NSString stringWithContentsOfFile:plistPath
+	return [NSString stringWithContentsOfFile:self.activePlistFilePath
 							encoding:NSUTF8StringEncoding
 							error:nil];
 }
 
-- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey forPlistKey: (NSString *) plistKey {
+- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey {
 #warning TODO: implement this
 	return @[];
 }

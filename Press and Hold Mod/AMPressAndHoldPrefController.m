@@ -77,6 +77,7 @@
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
 	[self.mainView addSubview: self.keyboardView];
 	[self.keyboardPlaceHolder removeFromSuperview];
+	
 	/*****Setup AMPopover*****/
 	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
     DLog(@"[self.mainView recursiveDescription]");
