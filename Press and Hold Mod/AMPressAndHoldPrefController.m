@@ -73,11 +73,10 @@
 																		 bundle:[self bundle]];
     self.keyboardController.delegate = self;
 	self.keyboardView = [self.keyboardController view];
-	//[self.keyboardView becomeFirstResponder];
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
 	[self.mainView addSubview: self.keyboardView];
-	
+	[self.keyboardPlaceHolder removeFromSuperview];
 	/*****Setup AMPopover*****/
 	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
     DLog(@"[self.mainView recursiveDescription]");
