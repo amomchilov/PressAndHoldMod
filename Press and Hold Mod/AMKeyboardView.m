@@ -10,7 +10,7 @@
 	[self becomeFirstResponder];
 }
 
-- (BOOL)canBecomeFirstResponder {
+- (BOOL)acceptsFirstResponder {
     return YES;
 }
 
