@@ -11,23 +11,23 @@
 
 - (void)mainViewDidLoad {
     //create new model object
-	self.model = [[AMPressAndHoldPlistModel alloc] init];
+	_model = [[AMPressAndHoldPlistModel alloc] init];
 	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of human readable names.
-	[self.popUpButton addItemsWithTitles: [self.model sortedLanguageList]];
+	[self.popUpButton addItemsWithTitles: [_model sortedLanguageList]];
 	
 	//If the current locale is on the list, select it.
-	if ([[self.model plistFiles] objectForKey:[AMLocaleUtility userLanguagePreference]]) {
+	if ([[_model plistFiles] objectForKey:[AMLocaleUtility userLanguagePreference]]) {
 		[self.popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
 	
 	/*****Setup AMKeyboardView*****/
-    self.keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
+    _keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
 																		 bundle:[self bundle]];
-    self.keyboardController.delegate = self;
-	self.keyboardView = (AMKeyboardView *) [self.keyboardController view];
+    _keyboardController.delegate = self;
+	self.keyboardView = (AMKeyboardView *) [_keyboardController view];
 	
 	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
     [self.keyboardPlaceHolder removeFromSuperview];
@@ -69,18 +69,19 @@
 }
 
 - (void) readPlistFileIntoTextField {
-	NSString *fileContents = [self.model plistFileContentsForKey: [self.popUpButton titleOfSelectedItem]];
+	_currentPlist = [self.popUpButton titleOfSelectedItem];
+	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
 	[self.textView setString: fileContents];
 }
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {
 	//DLog(@"%@", [sender title]);
-	//[self.popover showRelativeToRect: [sender bounds] ofView: sender preferredEdge: NSMinYEdge];
-	[self.popoverController showWindow: sender];
+	NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
+	[self.popoverController showWindow: sender withStringArray: stringArray];
 }
 
 - (IBAction)testButton1Pressed:(NSButton *)sender {
-	[self.popover showRelativeToRect: sender.bounds ofView:sender preferredEdge:NSMinYEdge];
+	[self.popover showRelativeToRect: sender.bounds ofView: sender preferredEdge: NSMinYEdge];
 }
 
 - (IBAction)testButton2Pressed:(NSButton *)sender {

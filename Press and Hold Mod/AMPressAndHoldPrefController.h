@@ -8,10 +8,12 @@
 #import "AMKeyboardView.h"
 #import "AMPopoverController.h"
 
-@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate>
-
-@property AMKeyboardViewController *keyboardController;
-@property AMPressAndHoldPlistModel *model;
+@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
+	AMKeyboardViewController *_keyboardController;
+	AMPressAndHoldPlistModel *_model;
+	
+	NSString *_currentPlist;
+}
 
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (weak) IBOutlet NSView *keyboardPlaceHolder;

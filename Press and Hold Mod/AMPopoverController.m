@@ -20,14 +20,31 @@
 //    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 //}
 
-- (void) showWindow:(id)sender {
+- (AMPopoverWindow *) mAMPopoverWindow {
+	return (AMPopoverWindow *) self.window;
+}
+
+- (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray {
 	if ([sender isKindOfClass: [NSView class]]) {
 		NSRect r = ((NSView *) sender).actualBounds;
 		r.origin.y += r.size.height;
 		[self.window setFrameOrigin: r.origin];
 	}
+	
+	NSMutableString *labelString = (NSMutableString *) @"AMPopoverWindow";
+	if (stringArray) {
+		labelString = [[NSMutableString alloc] init];
+		for (NSString *s in stringArray) {
+			NSString *as = [[NSString alloc] initWithFormat: @"%@ ", s];
+			[labelString appendString: as];
+		}
+	}
+	self.mAMPopoverWindow.label.stringValue = labelString;
+	
+	//debug
 	[self.window setOpaque: NO];
-	self.window.alphaValue = 0.5f;
+	self.window.alphaValue = 0.8f;
+	
 	[super showWindow: sender];
 }
 

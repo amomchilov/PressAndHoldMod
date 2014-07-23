@@ -3,8 +3,11 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import <Cocoa/Cocoa.h>
+#import "AMPopoverWindow.h"
 #import "NSView+ActualBounds.h"
 
 @interface AMPopoverController : NSWindowController
+
+- (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray;
 
 @end

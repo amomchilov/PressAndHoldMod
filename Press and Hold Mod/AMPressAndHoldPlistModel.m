@@ -8,7 +8,7 @@
 
 - (id) init {
 	if (self = [super init]) {
-		self.plistFiles = [[NSMutableDictionary alloc] init];
+		_plistFiles = [[NSMutableDictionary alloc] init];
 		
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSPredicate *plistPredicate = [NSPredicate predicateWithFormat:@"SELF like %@", @"Keyboard*.plist"];
@@ -20,9 +20,9 @@
 			NSString *localeName = [AMLocaleUtility localeCodeToString: plistFileLocaleCode];
 			NSString *plistFilePath = [NSString stringWithFormat:@"%@%@", BASEPATH, plistFileName];
 			if (localeName)
-				[self.plistFiles setObject: plistFilePath forKey:localeName];
+				[_plistFiles setObject: plistFilePath forKey:localeName];
 			else if ([plistFileLocaleCode isEqual: @"default"])
-				[self.plistFiles setObject:plistFilePath forKey:@"Default"];
+				[_plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
 	}
 	return self;
@@ -32,7 +32,7 @@
 	return [[self.plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
-- (NSString *) plistFileContentsForKey: (NSString *) key {
+- (NSString *) fileContentsForPlistKey: (NSString *) key {
 	self.activePlistFilePath = [self.plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
@@ -41,9 +41,21 @@
 							error:nil];
 }
 
-- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey {
-#warning TODO: implement this
-	return @[];
+- (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
+						CharacterKey: (NSString *) characterKey {
+	NSString *plistPath = [self.plistFiles objectForKey: plistKey];
+	NSDictionary *plistContents = [NSDictionary dictionaryWithContentsOfFile: plistPath];
+	
+	NSString *fullCharacterKey = [[NSString alloc] initWithFormat:@"Roman-Accent-%@", characterKey];
+	NSDictionary *characterDict = [plistContents objectForKey: fullCharacterKey];
+#warning is the below if necessary?
+	if (characterDict) {
+		NSString *keycaps = [characterDict objectForKey: @"Keycaps"];
+		NSArray *keycapsArray = [keycaps componentsSeparatedByString: @" "];
+		NSRange range = NSMakeRange(1, keycapsArray.count - 1); //to strip the first character
+		return [keycapsArray subarrayWithRange: range];
+	}
+	return nil;
 }
 
 @end

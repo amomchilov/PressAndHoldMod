@@ -13,7 +13,8 @@ static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.a
 @property NSString *activePlistFilePath;
 
 - (NSArray *) sortedLanguageList;
-- (NSString *) plistFileContentsForKey: (NSString *) key;
-- (NSArray *) arrayOfStringsForCharacterKey: (NSString *) CharacterKey;
+- (NSString *) fileContentsForPlistKey: (NSString *) plistKey;
+- (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
+						CharacterKey: (NSString *) characterKey;
 
 @end
