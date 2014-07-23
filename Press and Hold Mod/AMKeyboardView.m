@@ -18,19 +18,4 @@
 	[self.delegate keyboard: self keyDown: event];
 }
 
-- (BOOL) resignFirstResponder {
-	if (!self.allowResignFirstResponder)
-		[NSTimer scheduledTimerWithTimeInterval: 1 target: self selector:@selector(allowKeyboardResignFirstResponse) userInfo:nil repeats:NO];
-	return self.allowResignFirstResponder;
-}
-
-- (void)allowKeyboardResignFirstResponse {
-	self.allowResignFirstResponder = YES;
-}
-
-- (BOOL)canBecomeKeyView
-{
-    DLog(@"");
-    return YES;
-}
 @end
