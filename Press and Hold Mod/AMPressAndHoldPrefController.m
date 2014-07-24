@@ -3,7 +3,7 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import "AMPressAndHoldPrefController.h"
-#import "AMLocaleUtility.h"
+#import "AMLocaleUtilities.h"
 #import "NSView+ViewDebugging.h"
 
 
@@ -18,8 +18,8 @@
 	[self.popUpButton addItemsWithTitles: [_model sortedLanguageList]];
 	
 	//If the current locale is on the list, select it.
-	if ([[_model plistFiles] objectForKey:[AMLocaleUtility userLanguagePreference]]) {
-		[self.popUpButton selectItemWithTitle:[AMLocaleUtility userLanguagePreference]];
+	if ([[_model plistFiles] objectForKey:[AMLocaleUtilities userLanguagePreference]]) {
+		[self.popUpButton selectItemWithTitle:[AMLocaleUtilities userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
 	
@@ -61,7 +61,6 @@
 //Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
 - (void) willUnselect {
 	[self.popoverController close];
-	//	[self.timer invalidate];
 }
 
 - (IBAction) popUpButtonChanged:(id)sender {
@@ -75,9 +74,8 @@
 }
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {
-	//DLog(@"%@", [sender title]);
 	NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
-	[self.popoverController showWindow: sender withStringArray: stringArray];
+//	[self.popoverController showWindow: sender withStringArray: stringArray];
 }
 
 - (IBAction)testButton1Pressed:(NSButton *)sender {

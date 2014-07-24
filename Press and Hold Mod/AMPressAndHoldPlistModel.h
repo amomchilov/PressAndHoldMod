@@ -3,7 +3,7 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "AMLocaleUtility.h"
+#import "AMLocaleUtilities.h"
 
 static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/";
 

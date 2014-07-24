@@ -20,8 +20,8 @@
 //    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 //}
 
-- (AMPopoverWindow *) mAMPopoverWindow {
-	return (AMPopoverWindow *) self.window;
+- (AMPopoverPanel *) windowAsAMPopoverPanel {
+	return (AMPopoverPanel *) self.window;
 }
 
 - (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray {
@@ -39,11 +39,7 @@
 			[labelString appendString: as];
 		}
 	}
-	self.mAMPopoverWindow.label.stringValue = labelString;
-	
-	//debug
-	[self.window setOpaque: NO];
-	self.window.alphaValue = 0.8f;
+	self.windowAsAMPopoverPanel.label.stringValue = labelString;
 	
 	[super showWindow: sender];
 }

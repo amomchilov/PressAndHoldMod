@@ -17,7 +17,7 @@
 		
 		for (NSString *plistFileName in plistFileNames) {
 			NSString *plistFileLocaleCode = [plistFileName substringWithRange: NSMakeRange(9, plistFileName.length - 9 - 6)];
-			NSString *localeName = [AMLocaleUtility localeCodeToString: plistFileLocaleCode];
+			NSString *localeName = [AMLocaleUtilities localeCodeToString: plistFileLocaleCode];
 			NSString *plistFilePath = [NSString stringWithFormat:@"%@%@", BASEPATH, plistFileName];
 			if (localeName)
 				[_plistFiles setObject: plistFilePath forKey:localeName];
@@ -48,7 +48,6 @@
 	
 	NSString *fullCharacterKey = [[NSString alloc] initWithFormat:@"Roman-Accent-%@", characterKey];
 	NSDictionary *characterDict = [plistContents objectForKey: fullCharacterKey];
-#warning is the below if necessary?
 	if (characterDict) {
 		NSString *keycaps = [characterDict objectForKey: @"Keycaps"];
 		NSArray *keycapsArray = [keycaps componentsSeparatedByString: @" "];

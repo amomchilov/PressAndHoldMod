@@ -3,7 +3,7 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import <Cocoa/Cocoa.h>
-#import "AMPopoverWindow.h"
+#import "AMPopoverPanel.h"
 #import "NSView+ActualBounds.h"
 
 @interface AMPopoverController : NSWindowController

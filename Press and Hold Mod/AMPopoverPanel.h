@@ -4,8 +4,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AMPopoverWindow : NSWindow
+@interface AMPopoverPanel : NSPanel
 
 @property (weak) IBOutlet NSTextField *label;
+
 
 @end

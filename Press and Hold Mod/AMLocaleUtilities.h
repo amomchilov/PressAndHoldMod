@@ -3,11 +3,12 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import <Carbon/Carbon.h>
 
-@interface AMLocaleUtility : NSObject
+@interface AMLocaleUtilities : NSObject
 
 + (NSString *) localeCodeToString: (NSString *) localeCode;
 + (NSString *) userLanguagePreference;
 + (NSString *) userInputSourcePreference;
-
++ (NSString *) stringForKeyCode: (int)keycode;
 @end

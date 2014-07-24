@@ -11,6 +11,8 @@
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
 	AMKeyboardViewController *_keyboardController;
 	AMPressAndHoldPlistModel *_model;
+	__weak NSButton *_b1;
+	__weak NSButton *_b2;
 	
 	NSString *_currentPlist;
 }
@@ -28,4 +30,6 @@
 
 
 @property (strong) NSTimer *timer;
+@property (weak) IBOutlet NSButton *b1;
+@property (weak) IBOutlet NSButton *b2;
 @end

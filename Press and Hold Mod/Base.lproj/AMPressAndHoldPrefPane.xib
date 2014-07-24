@@ -7,6 +7,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="AMPressAndHoldPrefController">
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="b1" destination="KSo-R7-m0w" id="d90-Ch-Lmn"/>
+                <outlet property="b2" destination="G5x-S5-9A2" id="gFz-gj-tKS"/>
                 <outlet property="keyboardPlaceHolder" destination="Lxr-DF-T88" id="5jp-mS-ZkN"/>
                 <outlet property="popUpButton" destination="qeY-Hb-EY3" id="dSh-bu-jXl"/>
                 <outlet property="popover" destination="oGc-SK-614" id="JLD-c7-dOK"/>

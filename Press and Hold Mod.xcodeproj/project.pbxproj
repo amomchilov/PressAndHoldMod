@@ -10,8 +10,8 @@
 		110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */; };
 		110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */; };
 		1131FEA9197A1B4600ADE59A /* AMKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */; };
-		1131FEAF197B1BA200ADE59A /* AMPopoverWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131FEAD197B1BA200ADE59A /* AMPopoverWindow.h */; };
-		1131FEB0197B1BA200ADE59A /* AMPopoverWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131FEAE197B1BA200ADE59A /* AMPopoverWindow.m */; };
+		1131FEAF197B1BA200ADE59A /* AMPopoverPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131FEAD197B1BA200ADE59A /* AMPopoverPanel.h */; };
+		1131FEB0197B1BA200ADE59A /* AMPopoverPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131FEAE197B1BA200ADE59A /* AMPopoverPanel.m */; };
 		1131FEB4197B1C3500ADE59A /* AMPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1131FEB1197B1C3500ADE59A /* AMPopoverController.h */; };
 		1131FEB5197B1C3500ADE59A /* AMPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131FEB2197B1C3500ADE59A /* AMPopoverController.m */; };
 		1131FEB6197B1C3500ADE59A /* AMPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */; };
@@ -27,8 +27,8 @@
 		11FBAF1D1975C5FB00F52CAF /* AMPressAndHoldPrefController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */; };
 		11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */; };
 		11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */; };
-		11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */; };
-		11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */; };
+		11FBAF341975DCD500F52CAF /* AMLocaleUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 11FBAF321975DCD500F52CAF /* AMLocaleUtilities.h */; };
+		11FBAF351975DCD500F52CAF /* AMLocaleUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FBAF331975DCD500F52CAF /* AMLocaleUtilities.m */; };
 		D82E97D3197CEE1400E45C07 /* NSView+ViewDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = D82E97D1197CEE1400E45C07 /* NSView+ViewDebugging.h */; };
 		D82E97D4197CEE1400E45C07 /* NSView+ViewDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = D82E97D2197CEE1400E45C07 /* NSView+ViewDebugging.m */; };
 /* End PBXBuildFile section */
@@ -37,8 +37,8 @@
 		110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardViewController.h; sourceTree = "<group>"; };
 		110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardViewController.m; sourceTree = "<group>"; };
 		1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMKeyboardView.xib; sourceTree = "<group>"; };
-		1131FEAD197B1BA200ADE59A /* AMPopoverWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopoverWindow.h; sourceTree = "<group>"; };
-		1131FEAE197B1BA200ADE59A /* AMPopoverWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopoverWindow.m; sourceTree = "<group>"; };
+		1131FEAD197B1BA200ADE59A /* AMPopoverPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopoverPanel.h; sourceTree = "<group>"; };
+		1131FEAE197B1BA200ADE59A /* AMPopoverPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopoverPanel.m; sourceTree = "<group>"; };
 		1131FEB1197B1C3500ADE59A /* AMPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPopoverController.h; sourceTree = "<group>"; };
 		1131FEB2197B1C3500ADE59A /* AMPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPopoverController.m; sourceTree = "<group>"; };
 		1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMPopoverView.xib; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 		11FBAF211975C5FB00F52CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AMPressAndHoldPrefPane.xib; sourceTree = "<group>"; };
 		11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPressAndHoldPlistModel.h; sourceTree = "<group>"; };
 		11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPressAndHoldPlistModel.m; sourceTree = "<group>"; };
-		11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLocaleUtility.h; sourceTree = "<group>"; };
-		11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLocaleUtility.m; sourceTree = "<group>"; };
+		11FBAF321975DCD500F52CAF /* AMLocaleUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMLocaleUtilities.h; sourceTree = "<group>"; };
+		11FBAF331975DCD500F52CAF /* AMLocaleUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMLocaleUtilities.m; sourceTree = "<group>"; };
 		D82E97D1197CEE1400E45C07 /* NSView+ViewDebugging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ViewDebugging.h"; sourceTree = "<group>"; };
 		D82E97D2197CEE1400E45C07 /* NSView+ViewDebugging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ViewDebugging.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +107,8 @@
 		1131FEAC197B1B5800ADE59A /* AMPopover */ = {
 			isa = PBXGroup;
 			children = (
-				1131FEAD197B1BA200ADE59A /* AMPopoverWindow.h */,
-				1131FEAE197B1BA200ADE59A /* AMPopoverWindow.m */,
+				1131FEAD197B1BA200ADE59A /* AMPopoverPanel.h */,
+				1131FEAE197B1BA200ADE59A /* AMPopoverPanel.m */,
 				1131FEB1197B1C3500ADE59A /* AMPopoverController.h */,
 				1131FEB2197B1C3500ADE59A /* AMPopoverController.m */,
 				1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */,
@@ -191,8 +191,8 @@
 			children = (
 				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
 				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
-				11FBAF321975DCD500F52CAF /* AMLocaleUtility.h */,
-				11FBAF331975DCD500F52CAF /* AMLocaleUtility.m */,
+				11FBAF321975DCD500F52CAF /* AMLocaleUtilities.h */,
+				11FBAF331975DCD500F52CAF /* AMLocaleUtilities.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,9 +215,9 @@
 				1131FEB4197B1C3500ADE59A /* AMPopoverController.h in Headers */,
 				1131FEBD197B7C8500ADE59A /* NSView+ActualBounds.h in Headers */,
 				D82E97D3197CEE1400E45C07 /* NSView+ViewDebugging.h in Headers */,
-				1131FEAF197B1BA200ADE59A /* AMPopoverWindow.h in Headers */,
+				1131FEAF197B1BA200ADE59A /* AMPopoverPanel.h in Headers */,
 				11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */,
-				11FBAF341975DCD500F52CAF /* AMLocaleUtility.h in Headers */,
+				11FBAF341975DCD500F52CAF /* AMLocaleUtilities.h in Headers */,
 				110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */,
 				11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */,
 			);
@@ -307,10 +307,10 @@
 				D82E97D4197CEE1400E45C07 /* NSView+ViewDebugging.m in Sources */,
 				11FBAF311975C95E00F52CAF /* AMPressAndHoldPlistModel.m in Sources */,
 				1131FEB5197B1C3500ADE59A /* AMPopoverController.m in Sources */,
-				11FBAF351975DCD500F52CAF /* AMLocaleUtility.m in Sources */,
+				11FBAF351975DCD500F52CAF /* AMLocaleUtilities.m in Sources */,
 				110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */,
 				1131FEBE197B7C8500ADE59A /* NSView+ActualBounds.m in Sources */,
-				1131FEB0197B1BA200ADE59A /* AMPopoverWindow.m in Sources */,
+				1131FEB0197B1BA200ADE59A /* AMPopoverPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

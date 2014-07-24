@@ -7,19 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NSView+ViewDebugging.h"
+#import "AMLocaleUtilities.h"
 
 @protocol AMKeyboardViewDelegate;
 
 @interface AMKeyboardView : NSView
 
 @property (weak) id <AMKeyboardViewDelegate> delegate;
-@property BOOL allowResignFirstResponder;
 
 @end
-
 
 @protocol AMKeyboardViewDelegate <NSObject>
 
 - (void) keyboard:(NSView *) keyboard keyDown:(NSEvent *)event;
+- (void) keyboard:(NSView *) keyboard flagsChanged:(NSEvent *)event;
 
 @end

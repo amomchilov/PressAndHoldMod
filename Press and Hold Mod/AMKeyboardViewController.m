@@ -27,10 +27,13 @@
 }
 
 - (void)keyboard:(NSView *)keyboard keyDown:(NSEvent *)event {
-	DLog(@"Chars: %@ KeyCode: %hu", [event characters], [event keyCode]);
+	DLog(@"Chars: %@ KeyCode: %hu", event.characters, event.keyCode);
 	NSButton *button = (NSButton *) [self.viewAsAMKeyboardView viewWithTag:[event keyCode]];
-	if (button)
-		[button performClick:button];
+	if (button) [button performClick:button];
+}
+
+- (void) keyboard:(NSView *) keyboard flagsChanged:(NSEvent *)event {
+	
 }
 
 @end
