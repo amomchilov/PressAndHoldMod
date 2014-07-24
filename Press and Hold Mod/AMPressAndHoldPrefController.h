@@ -26,11 +26,10 @@
 
 @property AMPopoverController *popoverController;
 
-- (IBAction) popUpButtonChanged: (id)sender;
-- (void) readPlistFileIntoTextField;
+- (IBAction) popUpButtonChanged: (NSPopUpButton *)sender;
+- (void) inputSourceChanged;
+- (void) setCurrentInputSource: (NSString *) inputSource;
 
-
-@property (strong) NSTimer *timer;
 @property (weak) IBOutlet NSButton *b1;
 @property (weak) IBOutlet NSButton *b2;
 @end

@@ -12,16 +12,17 @@
 - (void)mainViewDidLoad {
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
+	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of human readable names.
 	[self.popUpButton addItemsWithTitles: [_model sortedLanguageList]];
 	
 	//If the current locale is on the list, select it.
-	if ([[_model plistFiles] objectForKey:[AMLocaleUtilities userLanguagePreference]]) {
-		[self.popUpButton selectItemWithTitle:[AMLocaleUtilities userLanguagePreference]];
-		[self readPlistFileIntoTextField];
-	}
-
+//	if ([[_model plistFiles] objectForKey:[AMLocaleUtilities userLanguagePreference]]) {
+//		[self.popUpButton selectItemWithTitle:[AMLocaleUtilities userLanguagePreference]];
+//		[self readPlistFileIntoTextField];
+//	}
+	[self inputSourceChanged];
 	/*****Setup AMKeyboardView*****/
     _keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
 																		 bundle:[self bundle]];
@@ -38,15 +39,10 @@
 	
 	/*****Listen for changes to the Input Source*****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
-														selector: @selector(keyBoardChanged)
+														selector: @selector(inputSourceChanged)
 															name: (NSString *)kTISNotifySelectedKeyboardInputSourceChanged
 														  object: nil];
-	[self.mainView logHierarchy];
-}
-
-
-- (void)keyBoardChanged {
-	[self.keyboardView updateKeyTitles];
+	//[self.mainView logHierarchy];
 }
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
@@ -72,14 +68,27 @@
 	[self.popoverController close];
 }
 
-- (IBAction) popUpButtonChanged:(id)sender {
-	[self readPlistFileIntoTextField];
+- (IBAction) popUpButtonChanged:(NSPopUpButton *)sender {
+	[self setCurrentInputSource: sender.titleOfSelectedItem];
 }
 
-- (void) readPlistFileIntoTextField {
-	_currentPlist = self.popUpButton.titleOfSelectedItem;
-	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
-	[self.textView setString: fileContents];
+- (void) inputSourceChanged {
+	NSString *inputSource = [AMLocaleUtilities userLanguagePreference];
+	[self setCurrentInputSource: inputSource];
+}
+
+- (void) setCurrentInputSource: (NSString *) inputSource {
+	DLog(@"%@", inputSource);
+	if ([[_model plistFiles] objectForKey: inputSource]) {
+		_currentPlist = inputSource;
+		
+		[self.popUpButton selectItemWithTitle: inputSource];
+		
+		NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
+		[self.textView setString: fileContents];
+		
+		[self.keyboardView updateKeyTitles];
+	}
 }
 
 - (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender {

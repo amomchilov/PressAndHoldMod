@@ -32,6 +32,10 @@
 	//[self.delegate keyboard:self didPressKey:sender];
 }
 
+- (void)keyboard:(NSView *)keyboard flagsChanged:(NSEvent *)event {
+	//stub for now
+}
+
 
 - (void) updateKeyTitles {
 	[self.viewAsAMKeyboardView updateKeyTitles];
