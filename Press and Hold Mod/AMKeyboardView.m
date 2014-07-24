@@ -7,14 +7,7 @@
 @implementation AMKeyboardView
 
 - (void)awakeFromNib {
-	for (NSView *v in self.subviews) {
-		if ([v isKindOfClass:[NSButton class]] && [self isCharacterForKeycode: (int) v.tag]) {
-			NSButton *b = (NSButton *) v;
-			NSString *s = [AMLocaleUtilities stringForKeyCode: (int) b.tag];
-			if (s) b.title = s;
-			else b.title = @"";
-		}
-	}
+	[self updateKeyTitles];
 }
 
 - (BOOL)acceptsFirstResponder {
@@ -32,6 +25,34 @@
 	}
 }
 
+- (void) flagsChanged:(NSEvent *)event {
+    if ((event.modifierFlags & NSShiftKeyMask) == NSShiftKeyMask) {
+        DLog(@"Shift: %i", event.keyCode);
+    }
+//    else if ((event.modifierFlags & NSFunctionKeyMask) == NSFunctionKeyMask) {
+//        DLog(@"Fn: %i", event.keyCode);
+//    }
+//    else if ((event.modifierFlags & NSControlKeyMask) == NSControlKeyMask) {
+//        DLog(@"Control: %i", event.keyCode);
+//    }
+//    else if ((event.modifierFlags & NSAlternateKeyMask) == NSAlternateKeyMask) {
+//        DLog(@"Option: %i", event.keyCode);
+//    }
+//    else if ((event.modifierFlags & NSCommandKeyMask) == NSCommandKeyMask) {
+//        DLog(@"Command: %i", event.keyCode);
+//    }
+}
+
+- (void) updateKeyTitles {
+	for (NSView *v in self.subviews) {
+		if ([v isKindOfClass:[NSButton class]] && [self isCharacterForKeycode: (int) v.tag]) {
+			NSButton *b = (NSButton *) v;
+			NSString *s = [AMLocaleUtilities stringForKeyCode: (int) b.tag];
+			if (s) b.title = s;
+			else b.title = @"";
+		}
+	}
+}
 
 - (BOOL) isCharacterForKeycode: (int) keycode {
 	if (0 <= keycode
@@ -72,23 +93,5 @@
  case 124:	//arrow - right
  case 125:	//arrow - down
  case 126:	//arrow - up*/
-
-- (void) flagsChanged:(NSEvent *)event {
-    if ((event.modifierFlags & NSShiftKeyMask) == NSShiftKeyMask) {
-        DLog(@"Shift: %i", event.keyCode);
-    }
-//    else if ((event.modifierFlags & NSFunctionKeyMask) == NSFunctionKeyMask) {
-//        DLog(@"Fn: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSControlKeyMask) == NSControlKeyMask) {
-//        DLog(@"Control: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSAlternateKeyMask) == NSAlternateKeyMask) {
-//        DLog(@"Option: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSCommandKeyMask) == NSCommandKeyMask) {
-//        DLog(@"Command: %i", event.keyCode);
-//    }
-}
 
 @end

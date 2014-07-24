@@ -21,19 +21,20 @@
 	return (AMKeyboardView *) self.view;
 }
 
-- (IBAction)virtualKeyClicked:(NSButton *)sender {
-	[self.delegate keyboard: self.view didPressKey:sender];
-	//[self.delegate keyboard:self didPressKey:sender];
-}
-
 - (void)keyboard:(NSView *)keyboard keyDown:(NSEvent *)event {
 	DLog(@"Chars: %@ KeyCode: %hu", event.characters, event.keyCode);
 	NSButton *button = (NSButton *) [self.viewAsAMKeyboardView viewWithTag:[event keyCode]];
 	if (button) [button performClick:button];
 }
 
-- (void) keyboard:(NSView *) keyboard flagsChanged:(NSEvent *)event {
-	
+- (IBAction)virtualKeyClicked:(NSButton *)sender {
+	[self.delegate keyboard: self.view didPressKey:sender];
+	//[self.delegate keyboard:self didPressKey:sender];
+}
+
+
+- (void) updateKeyTitles {
+	[self.viewAsAMKeyboardView updateKeyTitles];
 }
 
 @end

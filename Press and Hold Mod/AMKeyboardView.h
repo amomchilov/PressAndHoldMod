@@ -15,6 +15,8 @@
 @interface AMKeyboardView : NSView
 
 @property (weak) id <AMKeyboardViewDelegate> delegate;
+- (void) updateKeyTitles;
+- (BOOL) isCharacterForKeycode: (int) keycode;
 
 @end
 

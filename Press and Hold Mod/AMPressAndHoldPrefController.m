@@ -12,7 +12,6 @@
 - (void)mainViewDidLoad {
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
-	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of human readable names.
 	[self.popUpButton addItemsWithTitles: [_model sortedLanguageList]];
@@ -22,7 +21,7 @@
 		[self.popUpButton selectItemWithTitle:[AMLocaleUtilities userLanguagePreference]];
 		[self readPlistFileIntoTextField];
 	}
-	
+
 	/*****Setup AMKeyboardView*****/
     _keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
 																		 bundle:[self bundle]];
@@ -37,7 +36,17 @@
 	/*****Setup AMPopover*****/
 	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
 	
+	/*****Listen for changes to the Input Source*****/
+	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
+														selector: @selector(keyBoardChanged)
+															name: (NSString *)kTISNotifySelectedKeyboardInputSourceChanged
+														  object: nil];
 	[self.mainView logHierarchy];
+}
+
+
+- (void)keyBoardChanged {
+	[self.keyboardView updateKeyTitles];
 }
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
@@ -68,7 +77,7 @@
 }
 
 - (void) readPlistFileIntoTextField {
-	_currentPlist = [self.popUpButton titleOfSelectedItem];
+	_currentPlist = self.popUpButton.titleOfSelectedItem;
 	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
 	[self.textView setString: fileContents];
 }

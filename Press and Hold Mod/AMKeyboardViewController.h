@@ -12,6 +12,7 @@
 @property (weak) id <AMKeyboardViewControllerDelegate> delegate;
 
 - (IBAction)virtualKeyClicked:(NSButton *)sender;
+- (void) updateKeyTitles;
 
 @end
 
