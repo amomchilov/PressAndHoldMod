@@ -73,7 +73,7 @@
 }
 
 - (void) inputSourceChanged {
-	NSString *inputSource = [AMLocaleUtilities userLanguagePreference];
+	NSString *inputSource = [AMLocaleUtilities userInputSourcePreference];
 	[self setCurrentInputSource: inputSource];
 }
 
