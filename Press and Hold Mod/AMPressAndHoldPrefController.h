@@ -27,8 +27,7 @@
 @property AMPopoverController *popoverController;
 
 - (IBAction) popUpButtonChanged: (NSPopUpButton *)sender;
-- (void) inputSourceChanged;
-- (void) setCurrentInputSource: (NSString *) inputSource;
+- (void) updateInputSource;
 
 @property (weak) IBOutlet NSButton *b1;
 @property (weak) IBOutlet NSButton *b2;

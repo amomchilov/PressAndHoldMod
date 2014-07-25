@@ -17,12 +17,14 @@
 @property (weak) id <AMKeyboardViewDelegate> delegate;
 - (void) updateKeyTitles;
 - (BOOL) isCharacterForKeycode: (int) keycode;
+- (void) updateKeyTitleWithCaptitalization: (BOOL) capitalize;
 
 @end
 
 @protocol AMKeyboardViewDelegate <NSObject>
 
-- (void) keyboard:(NSView *) keyboard keyDown:(NSEvent *)event;
-- (void) keyboard:(NSView *) keyboard flagsChanged:(NSEvent *)event;
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender ForEvent:(NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard keyDown:(NSEvent *)event;
+- (void) keyboard:(AMKeyboardView *) keyboard flagsChanged:(NSEvent *)event;
 
 @end

@@ -8,7 +8,8 @@
 @interface AMLocaleUtilities : NSObject
 
 + (NSString *) localeCodeToString: (NSString *) localeCode;
++ (NSArray *) localeCodesToStrings: (NSArray *) localeCodes;
 + (NSString *) userLanguagePreference;
-+ (NSString *) userInputSourcePreference;
++ (NSArray *) userInputSourcePreferences;
 + (NSString *) stringForKeyCode: (int)keycode;
 @end

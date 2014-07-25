@@ -10,17 +10,22 @@
 	return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:localeCode];
 }
 
++ (NSArray *) localeCodesToStrings: (NSArray *) localeCodes {
+	NSMutableArray *result = [[NSMutableArray alloc] init];
+	for (NSString *s in localeCodes) {
+		[result addObject: [self localeCodeToString: s]];
+	}
+	return result;
+}
+
++ (NSArray *) userInputSourcePreferences {
+	NSArray *localeCodes = [NSLocale preferredLanguages];
+	return [self localeCodesToStrings: localeCodes];
+}
 
 + (NSString *) userLanguagePreference {
 	NSString *userInputSource = [[NSLocale currentLocale] localeIdentifier];
 	return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:userInputSource];
-}
-
-+ (NSString *) userInputSourcePreference {
-	NSArray *languages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
-	DLog(@"%@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-	NSString *primaryLanguage = [languages objectAtIndex:0];
-	return [self localeCodeToString: primaryLanguage];
 }
 
 /** magical code based off of shortcutrecorder */

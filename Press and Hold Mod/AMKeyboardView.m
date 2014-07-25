@@ -7,40 +7,14 @@
 @implementation AMKeyboardView
 
 - (void)awakeFromNib {
+	for (NSView *v in self.subviews) {
+		if ([v isKindOfClass:[NSButton class]]) {
+			NSButton *b = (NSButton *) v;
+			b.target = self;
+            b.action = @selector(virtualKeyDown:);
+		}
+	}
 	[self updateKeyTitles];
-}
-
-- (BOOL)acceptsFirstResponder {
-    return YES;
-}
-
-- (void)keyDown:(NSEvent *)event {
-	if ([self isCharacterForKeycode: event.keyCode]) {
-		//pass desired keyDown event to the delegate
-		[self.delegate keyboard: self keyDown: event];
-	}
-	else {
-		//pass undesired keyDown event to the nextResponder
-		[self.nextResponder keyDown:event];
-	}
-}
-
-- (void) flagsChanged:(NSEvent *)event {
-    if ((event.modifierFlags & NSShiftKeyMask) == NSShiftKeyMask) {
-        DLog(@"Shift: %i", event.keyCode);
-    }
-//    else if ((event.modifierFlags & NSFunctionKeyMask) == NSFunctionKeyMask) {
-//        DLog(@"Fn: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSControlKeyMask) == NSControlKeyMask) {
-//        DLog(@"Control: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSAlternateKeyMask) == NSAlternateKeyMask) {
-//        DLog(@"Option: %i", event.keyCode);
-//    }
-//    else if ((event.modifierFlags & NSCommandKeyMask) == NSCommandKeyMask) {
-//        DLog(@"Command: %i", event.keyCode);
-//    }
 }
 
 - (void) updateKeyTitles {
@@ -54,6 +28,16 @@
 	}
 }
 
+- (void) updateKeyTitleWithCaptitalization: (BOOL) capitalize {
+	for (NSView *v in self.subviews) {
+		if ([v isKindOfClass:[NSButton class]] && [self isCharacterForKeycode: (int) v.tag]) {
+			NSButton *b = (NSButton *) v;
+			if (capitalize) b.title = [b.title capitalizedString];
+			else b.title = [b.title lowercaseString];
+		}
+	}
+}
+
 - (BOOL) isCharacterForKeycode: (int) keycode {
 	if (0 <= keycode
 		&& keycode <= 50
@@ -62,6 +46,22 @@
 		&& keycode != 48
 		&& keycode != 49) return YES;
 	return NO;
+}
+
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
+
+- (void)virtualKeyDown:(NSButton *) sender {
+	[self.delegate keyboard: self virtualKeyDownFromButton: sender ForEvent: nil];
+}
+
+- (void)keyDown:(NSEvent *)event {
+	[self.delegate keyboard: self keyDown: event];
+}
+
+- (void) flagsChanged:(NSEvent *)event {
+	[self.delegate keyboard: self flagsChanged: event];
 }
 
 /*		case 36:	//enter

@@ -7,11 +7,17 @@
 
 @protocol AMKeyboardViewControllerDelegate;
 
-@interface AMKeyboardViewController : NSViewController <AMKeyboardViewDelegate>
+@interface AMKeyboardViewController : NSViewController <AMKeyboardViewDelegate> {
+	BOOL lastShiftState;
+	BOOL lastFnState;
+	BOOL lastControlState;
+	BOOL lastOptionState;
+	BOOL lastCommandState;
+}
 
 @property (weak) id <AMKeyboardViewControllerDelegate> delegate;
 
-- (IBAction)virtualKeyClicked:(NSButton *)sender;
+- (AMKeyboardView *) viewAsAMKeyboardView;
 - (void) updateKeyTitles;
 
 @end
@@ -19,6 +25,17 @@
 
 @protocol AMKeyboardViewControllerDelegate <NSObject>
 
-- (void) keyboard:(NSView *) keyboard didPressKey:(NSButton *) sender;
+@optional
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender ForEvent:(NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyShiftDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyShiftUp: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyFnDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyFnUp: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyControlDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyControlUp: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyOptionDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyOptionUp: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyCommandDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard KeyCommandUp: (NSEvent *) event;
 
 @end

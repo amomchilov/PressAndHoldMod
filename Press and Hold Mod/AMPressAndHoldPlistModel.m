@@ -21,8 +21,8 @@
 			NSString *plistFilePath = [NSString stringWithFormat:@"%@%@", BASEPATH, plistFileName];
 			if (localeName)
 				[_plistFiles setObject: plistFilePath forKey:localeName];
-			else if ([plistFileLocaleCode isEqual: @"default"])
-				[_plistFiles setObject:plistFilePath forKey:@"Default"];
+//			else if ([plistFileLocaleCode isEqual: @"default"])
+//				[_plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
 	}
 	return self;

@@ -20,11 +20,8 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="esc" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="G32-L8-wMn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="6jk-fd-d4q"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="122" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-ha-DTk">
                     <rect key="frame" x="43" y="215" width="45" height="30"/>
@@ -33,9 +30,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="1mo-2Z-onU"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="120" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-HO-r5I">
                     <rect key="frame" x="88" y="215" width="45" height="30"/>
@@ -44,9 +38,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Uhp-Z0-ogw"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="99" translatesAutoresizingMaskIntoConstraints="NO" id="Qos-kU-olL">
                     <rect key="frame" x="134" y="215" width="44" height="30"/>
@@ -55,9 +46,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="jhe-sP-N5o"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="96" translatesAutoresizingMaskIntoConstraints="NO" id="v4F-pc-8EA">
                     <rect key="frame" x="224" y="215" width="45" height="30"/>
@@ -66,9 +54,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="N6z-O9-dI3"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="118" translatesAutoresizingMaskIntoConstraints="NO" id="usp-HL-Fra">
                     <rect key="frame" x="179" y="215" width="45" height="30"/>
@@ -77,9 +62,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Oem-RT-QXc"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="97" translatesAutoresizingMaskIntoConstraints="NO" id="lJT-bf-1MU">
                     <rect key="frame" x="269" y="215" width="45" height="30"/>
@@ -88,9 +70,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="sZk-VX-fUb"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="98" translatesAutoresizingMaskIntoConstraints="NO" id="5B9-9S-kNP">
                     <rect key="frame" x="314" y="215" width="45" height="30"/>
@@ -99,9 +78,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Hzd-Vu-iWI"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="100" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-Fc-1GW">
                     <rect key="frame" x="359" y="215" width="45" height="30"/>
@@ -110,9 +86,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="lmr-1A-dh5"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-54-r58">
                     <rect key="frame" x="404" y="215" width="45" height="30"/>
@@ -121,9 +94,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="GyY-pn-Ykx"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="109" translatesAutoresizingMaskIntoConstraints="NO" id="8Xd-5s-WAy">
                     <rect key="frame" x="450" y="215" width="44" height="30"/>
@@ -132,9 +102,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="mkm-Mj-beG"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="Ioe-ed-7IR">
                     <rect key="frame" x="495" y="215" width="44" height="30"/>
@@ -143,9 +110,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="KLH-cw-LYy"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="111" translatesAutoresizingMaskIntoConstraints="NO" id="Ccd-xx-2lc">
                     <rect key="frame" x="540" y="215" width="45" height="30"/>
@@ -154,680 +118,494 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Hs4-Pg-EGh"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Iro-8A-syz">
                     <rect key="frame" x="585" y="215" width="45" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⏏" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LQD-T2-w4Y">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="leL-Kr-3fD"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="50" translatesAutoresizingMaskIntoConstraints="NO" id="wfx-Uu-Ftc">
                     <rect key="frame" x="-2" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="`" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NHh-Cm-bJb">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="UyG-hE-v6S"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-El-ACD">
                     <rect key="frame" x="42" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="1" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0H6-6L-SyS">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="vWz-s1-bup"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="19" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-LI-OsD">
                     <rect key="frame" x="85" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="2" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rfz-BM-ct5">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="9t9-Cx-uA4"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="20" translatesAutoresizingMaskIntoConstraints="NO" id="xn9-fq-8Um">
                     <rect key="frame" x="129" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="3" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eua-4l-T1c">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Bi0-Om-rMD"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="21" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-7R-lgK">
                     <rect key="frame" x="172" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="4" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wgh-Gy-RII">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Tb7-ga-o27"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="23" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-66-tap">
                     <rect key="frame" x="216" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="5" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1gw-Vs-rdx">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="E21-Aa-fw8"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="22" translatesAutoresizingMaskIntoConstraints="NO" id="ik9-cw-fnd">
                     <rect key="frame" x="260" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="6" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tyf-bw-Wli">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="e2J-ti-tEU"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="26" translatesAutoresizingMaskIntoConstraints="NO" id="78n-rQ-neO">
                     <rect key="frame" x="304" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="7" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aRx-WW-Ad7">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="EXS-AS-Gc7"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="28" translatesAutoresizingMaskIntoConstraints="NO" id="adW-eD-Ew5">
                     <rect key="frame" x="347" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="8" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qUG-mF-tuX">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="XSA-mI-WNo"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="25" translatesAutoresizingMaskIntoConstraints="NO" id="whm-uM-ghU">
                     <rect key="frame" x="390" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="9" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AmF-iH-MWb">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="DVD-ub-3FE"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="29" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-MV-8uV">
                     <rect key="frame" x="434" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="0" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vzq-05-pfL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Dy8-QO-Ntl"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="27" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-jH-FGY">
                     <rect key="frame" x="478" y="173" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="-" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HaV-iL-Ear">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="smI-Zs-wDg"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="24" translatesAutoresizingMaskIntoConstraints="NO" id="XZ5-i6-JRP">
                     <rect key="frame" x="521" y="173" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="=" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SNQ-Ge-boo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="tMm-Cw-A6Q"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="SRs-bS-yhG">
                     <rect key="frame" x="63" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="q" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yex-CA-PLx">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="NBo-2W-VLU"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="13" translatesAutoresizingMaskIntoConstraints="NO" id="KHB-hH-0wA">
                     <rect key="frame" x="107" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="w" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nof-xc-PUw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="aB6-wf-CK7"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-W4-BR9">
                     <rect key="frame" x="150" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="e" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EOK-Er-hbR">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="ma0-xS-lI3"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="B1D-VZ-2pW">
                     <rect key="frame" x="194" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="r" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JkM-Xq-tzq">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="YIT-pl-Szc"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="17" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-qc-n2C">
                     <rect key="frame" x="237" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="t" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7sb-sM-Dlj">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="XiK-56-CRb"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="16" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-dT-hBd">
                     <rect key="frame" x="281" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="y" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IAr-3a-Fcy">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="zwx-oc-6Sz"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="32" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-Ui-Urd">
                     <rect key="frame" x="325" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="u" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BsW-ku-SPZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="IwF-Jn-URM"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="34" translatesAutoresizingMaskIntoConstraints="NO" id="vHI-TT-Wfx">
                     <rect key="frame" x="369" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="i" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BkE-a2-eTc">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="zBg-np-ihA"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="31" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-xs-9kt">
                     <rect key="frame" x="412" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="o" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nfy-ty-YbT">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="ri7-wB-y6N"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="35" translatesAutoresizingMaskIntoConstraints="NO" id="WU0-hV-y6Z">
                     <rect key="frame" x="455" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="p" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a02-7v-TIM">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="j8u-h6-AwG"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="33" translatesAutoresizingMaskIntoConstraints="NO" id="hho-4W-uOl">
                     <rect key="frame" x="499" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="[" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eHF-a8-dOa">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="iVX-U4-4O5"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="30" translatesAutoresizingMaskIntoConstraints="NO" id="OMQ-Gi-G1W">
                     <rect key="frame" x="543" y="130" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="]" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="E9n-JL-BK6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="8xt-7p-NuT"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="42" translatesAutoresizingMaskIntoConstraints="NO" id="eP0-lh-0Cm">
                     <rect key="frame" x="586" y="130" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="\" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6PY-92-58g">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="hHU-IO-6Vd"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-5H-kM1">
                     <rect key="frame" x="74" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="a" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YqG-lg-oa3">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="G78-Oh-jIa"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="BA8-xV-XUr">
                     <rect key="frame" x="118" y="88" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="s" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n0Z-gY-a7f">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="yXp-94-Rqq"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="duL-b6-rCJ">
                     <rect key="frame" x="161" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="d" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bB9-qH-FZw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="2q0-PL-wEb"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="3IA-wy-TuC">
                     <rect key="frame" x="205" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="f" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xe1-ZT-1Dd">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="TvM-JV-hqJ"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="IXd-rk-Zoq">
                     <rect key="frame" x="248" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="g" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g7M-oH-AxO">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="bKU-Xr-tc6"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-uk-ofJ">
                     <rect key="frame" x="292" y="88" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="h" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Wer-hZ-bwm">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="s8N-gx-mW3"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="38" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-Sj-MGN">
                     <rect key="frame" x="336" y="88" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="j" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BO6-ES-LSB">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="oFR-SH-3Jf"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="40" translatesAutoresizingMaskIntoConstraints="NO" id="LOZ-X5-8Fg">
                     <rect key="frame" x="380" y="88" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="k" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K3j-Mx-WOB">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="gmf-zK-eOF"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="37" translatesAutoresizingMaskIntoConstraints="NO" id="eie-Mh-MWn">
                     <rect key="frame" x="423" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="l" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cVA-z1-ghW">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="umI-lx-iVx"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="41" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-pQ-Qj9">
                     <rect key="frame" x="466" y="88" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title=";" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fMW-0D-ZM3">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="MSK-rz-CLs"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="39" translatesAutoresizingMaskIntoConstraints="NO" id="5q6-tD-Dr4">
                     <rect key="frame" x="510" y="88" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="'" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2iq-fd-uDp">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="tC1-e0-hFK"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-fZ-VJB">
                     <rect key="frame" x="96" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="z" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="g9t-Vi-9Sh">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="4b9-vd-jC9"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="hJx-Ae-XFh">
                     <rect key="frame" x="140" y="45" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="x" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zzi-fW-gTL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Vdl-dG-Xal"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="WPN-pe-7yQ">
                     <rect key="frame" x="183" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="c" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dWS-VR-mpa">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="giJ-c1-Ryc"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="9" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-84-RdW">
                     <rect key="frame" x="227" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="v" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="arl-7I-YwN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Huy-q4-GMd"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="dqM-pt-N3w">
                     <rect key="frame" x="270" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="b" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lxh-uc-Gf9">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="bpo-AB-PN7"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="Rxu-u5-XXH">
                     <rect key="frame" x="314" y="45" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="n" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Tq-3O-dEA">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Psl-Qa-EdW"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="46" translatesAutoresizingMaskIntoConstraints="NO" id="tB0-Yw-Xzp">
                     <rect key="frame" x="358" y="45" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="m" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tgu-I1-8fb">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="GYZ-bK-mAo"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="43" translatesAutoresizingMaskIntoConstraints="NO" id="HvJ-q0-B2u">
                     <rect key="frame" x="402" y="45" width="43" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="," bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pev-z5-yo6">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="gcz-Px-CKF"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="47" translatesAutoresizingMaskIntoConstraints="NO" id="UeH-uo-MOo">
                     <rect key="frame" x="445" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="." bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VvJ-A2-PKw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="nXA-6r-Qho"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="44" translatesAutoresizingMaskIntoConstraints="NO" id="Ylc-9Z-gkQ">
                     <rect key="frame" x="488" y="45" width="44" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="/" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pCW-gM-1cP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="OTe-Z5-zTa"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="48" translatesAutoresizingMaskIntoConstraints="NO" id="4bm-TE-He2">
                     <rect key="frame" x="-2" y="130" width="65" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⇥" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dkD-K2-8HQ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="TyU-XD-NoI"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ypB-ge-FQB">
                     <rect key="frame" x="-2" y="88" width="76" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⇪" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cpd-HK-H6w">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="waX-hB-Pbv"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="56" translatesAutoresizingMaskIntoConstraints="NO" id="gI7-dZ-KQK">
                     <rect key="frame" x="-2" y="45" width="98" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⇧" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LR3-hZ-38H">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="W8v-Me-5i1"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="60" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-e8-rfW">
                     <rect key="frame" x="532" y="45" width="98" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⇧" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ePd-HH-k2j">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="8cV-v7-W5f"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="36" translatesAutoresizingMaskIntoConstraints="NO" id="9Iv-wK-VxT">
                     <rect key="frame" x="554" y="88" width="76" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⏎" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Aea-pa-bJM">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="10" name="AquaKana"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="QpD-MB-2cS"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="51" translatesAutoresizingMaskIntoConstraints="NO" id="hQR-WY-aIw">
                     <rect key="frame" x="565" y="173" width="65" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌫" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N4g-Ps-vfo">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="BkA-Tf-RAn"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="49" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uh-uk5">
                     <rect key="frame" x="183" y="-3" width="218" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" imagePosition="only" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rIn-Td-Vbj">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Igb-9B-Nr3"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="63" translatesAutoresizingMaskIntoConstraints="NO" id="4Tt-tF-IGp">
                     <rect key="frame" x="-2" y="-3" width="44" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="fn" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AMV-dN-2JT">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="T0D-5Y-Q0F"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="59" translatesAutoresizingMaskIntoConstraints="NO" id="EFe-vX-FKd">
                     <rect key="frame" x="41" y="-3" width="44" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌃" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jae-4l-anX">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="tgY-0v-qVF"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="58" translatesAutoresizingMaskIntoConstraints="NO" id="xXT-zL-FQ7">
                     <rect key="frame" x="85" y="-3" width="44" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌥" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TBu-Cu-Ka9">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="yDp-Ea-SaA"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="55" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-Tv-OaF">
                     <rect key="frame" x="129" y="-3" width="54" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌘" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1jD-yj-A0t">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="wMO-aZ-dop"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="54" translatesAutoresizingMaskIntoConstraints="NO" id="u17-iU-C2P">
                     <rect key="frame" x="401" y="-3" width="55" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌘" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="x2H-Vj-Nfn">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="4ta-rM-qcS"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="61" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-bS-s6Y">
                     <rect key="frame" x="455" y="-3" width="44" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="⌥" bezelStyle="regularSquare" imagePosition="overlaps" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PFV-NS-Ba2">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="Ovp-1J-kW9"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="123" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-oE-VaK">
                     <rect key="frame" x="499" y="-3" width="44" height="28"/>
@@ -836,9 +614,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="10" name="HiraMinProN-W3"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="IKf-1l-6Ae"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="126" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-Dl-0YV">
                     <rect key="frame" x="543" y="19" width="44" height="27"/>
@@ -847,9 +622,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="10" name="STHeitiSC-Light"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="klA-JW-emg"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="125" translatesAutoresizingMaskIntoConstraints="NO" id="u76-i9-juG">
                     <rect key="frame" x="543" y="-3" width="44" height="27"/>
@@ -858,9 +630,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="10"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="mbj-Ce-kl4"/>
-                    </connections>
                 </button>
                 <button fixedFrame="YES" tag="124" translatesAutoresizingMaskIntoConstraints="NO" id="rst-lQ-zXI">
                     <rect key="frame" x="586" y="-3" width="44" height="28"/>
@@ -869,9 +638,6 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="10" name="LucidaGrande"/>
                     </buttonCell>
-                    <connections>
-                        <action selector="virtualKeyClicked:" target="-2" id="b9i-SP-Tu7"/>
-                    </connections>
                 </button>
             </subviews>
         </customView>
