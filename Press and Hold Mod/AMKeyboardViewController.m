@@ -4,12 +4,9 @@
 
 #import "AMKeyboardViewController.h"
 
-@interface AMKeyboardViewController ()
-
-@end
-
 @implementation AMKeyboardViewController
 
+#pragma mark NSViewController methods
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		self.viewAsAMKeyboardView.delegate = self;
@@ -17,40 +14,25 @@
     return self;
 }
 
-- (AMKeyboardView *) viewAsAMKeyboardView {
-	return (AMKeyboardView *) self.view;
-}
-
-
-- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender ForEvent:(NSEvent *) event {
-	if (!event) {
-		event = [NSEvent keyEventWithType: NSKeyDown
-								 location: NSZeroPoint //
-							modifierFlags: 0 //
-								timestamp: [[NSProcessInfo processInfo] systemUptime]
-							 windowNumber: sender.window.windowNumber
-								  context: sender.window.graphicsContext
-							   characters: sender.title
-			  charactersIgnoringModifiers: @""
-								isARepeat: NO
-								  keyCode: sender.tag];
-	}
+#pragma mark AMKeyboardViewDelegate methods
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender {
+	NSEvent *event = [NSEvent keyEventWithType: NSKeyDown
+									  location: NSZeroPoint //
+								 modifierFlags: 0 //
+									 timestamp: [[NSProcessInfo processInfo] systemUptime]
+								  windowNumber: sender.window.windowNumber
+									   context: sender.window.graphicsContext
+									characters: sender.title
+				   charactersIgnoringModifiers: @""
+									 isARepeat: NO
+									   keyCode: sender.tag];
 	if ([self.delegate respondsToSelector:@selector(keyboard:virtualKeyDownFromButton:ForEvent:)])
 		[self.delegate keyboard: self.viewAsAMKeyboardView virtualKeyDownFromButton: sender ForEvent: event];
 }
 
 - (void)keyboard:(AMKeyboardView *)keyboard keyDown:(NSEvent *)event {
-	
-	if ([self.viewAsAMKeyboardView isCharacterForKeycode: event.keyCode]) {
-		//handle desired keyDown event
-		//DLog(@"Chars: %@ KeyCode: %hu", event.characters, event.keyCode);
-		NSLog(@"%@", event);
-		[self performClickForKeyCode: event.keyCode];
-	}
-	else {
-		//pass undesired keyDown event to the nextResponder
-		[self.viewAsAMKeyboardView.nextResponder keyDown:event];
-	}
+	//NSLog(@"%@", event);
+	[self performClickForKeyCode: event.keyCode];
 }
 
 - (void)keyboard:(AMKeyboardView *)keyboard flagsChanged:(NSEvent *)event {
@@ -126,6 +108,11 @@
 	}
 	
 	[self performClickForKeyCode: event.keyCode];
+}
+
+#pragma mark Other methods
+- (AMKeyboardView *) viewAsAMKeyboardView {
+	return (AMKeyboardView *) self.view;
 }
 
 - (void) performClickForKeyCode: (int) keycode {

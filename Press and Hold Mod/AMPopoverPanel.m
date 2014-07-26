@@ -6,6 +6,7 @@
 
 @implementation AMPopoverPanel
 
+#pragma mark NSWindow methods
 - (void) setContentView:(NSView *)aView {
 //    aView.wantsLayer = YES;
 //    aView.layer.frame = aView.frame;
@@ -14,6 +15,13 @@
 //	aView.layer.opacity = 0.8;
 //
 	[super setContentView:aView];
+}
+
+- (BOOL) canBecomeKeyWindow { return YES; }
+
+#pragma mark NSResponder methods
+- (void)cancelOperation:(id)sender {
+	[self.delegate popOver: self cancelOperation: sender];
 }
 
 @end

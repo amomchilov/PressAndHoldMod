@@ -9,6 +9,7 @@
 
 @implementation AMPressAndHoldPrefController
 
+#pragma mark NSPreferencePane methods
 - (void)mainViewDidLoad {
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
@@ -71,11 +72,31 @@
 	[self.popoverController close];
 }
 
-- (void) inputSourceChanged {
+#pragma mark AMKeyboardViewControllerDelegate methods
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *)sender ForEvent:(NSEvent *)event {
+	NSLog(@"%@", event);
+	if ([AMLocaleUtilities isCharacterForKeycode: event.keyCode]) {
+		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
+		[self.popoverController showWindow: sender withStringArray: stringArray];
+	}
+}
+
+#pragma mark IBActions
+- (IBAction) popUpButtonChanged:(NSPopUpButton *)sender {
 	[self updateInputSource];
 }
 
-- (IBAction) popUpButtonChanged:(NSPopUpButton *)sender {
+#pragma mark IBActions (testing)
+- (IBAction)testButton1Pressed:(NSButton *)sender {
+	[self.popover showRelativeToRect: sender.bounds ofView: sender preferredEdge: NSMinYEdge];
+}
+
+- (IBAction)testButton2Pressed:(NSButton *)sender {
+	[self.popoverController close];
+}
+
+#pragma mark Other methods
+- (void) inputSourceChanged {
 	[self updateInputSource];
 }
 
@@ -83,22 +104,8 @@
 	_currentPlist = self.popUpButton.titleOfSelectedItem;
 	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
 	[self.textView setString: fileContents];
-		
+	
 	[self.keyboardView updateKeyTitles];
-}
-
-- (void) keyboard:(NSView *) keyboard virtualKeyDownFromButton:(NSButton *)sender ForEvent:(NSEvent *)event {
-	NSLog(@"%@", event);
-	//	NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
-//	[self.popoverController showWindow: sender withStringArray: stringArray];
-}
-
-- (IBAction)testButton1Pressed:(NSButton *)sender {
-	[self.popover showRelativeToRect: sender.bounds ofView: sender preferredEdge: NSMinYEdge];
-}
-
-- (IBAction)testButton2Pressed:(NSButton *)sender {
-	[self.popoverController close];
 }
 
 

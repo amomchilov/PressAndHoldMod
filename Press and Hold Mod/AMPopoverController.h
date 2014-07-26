@@ -6,7 +6,7 @@
 #import "AMPopoverPanel.h"
 #import "NSView+ActualBounds.h"
 
-@interface AMPopoverController : NSWindowController
+@interface AMPopoverController : NSWindowController <AMPopoverPanelDelegate>
 
 - (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray;
 

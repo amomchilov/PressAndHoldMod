@@ -4,9 +4,18 @@
 
 #import <Cocoa/Cocoa.h>
 
+@protocol AMPopoverPanelDelegate;
+
 @interface AMPopoverPanel : NSPanel
 
+@property (weak) id <AMPopoverPanelDelegate> delegate;
 @property (weak) IBOutlet NSTextField *label;
 
+
+@end
+
+@protocol AMPopoverPanelDelegate <NSObject>
+
+- (void) popOver:(AMPopoverPanel *)popOver cancelOperation:(id)sender;
 
 @end

@@ -12,4 +12,6 @@
 + (NSString *) userLanguagePreference;
 + (NSArray *) userInputSourcePreferences;
 + (NSString *) stringForKeyCode: (int)keycode;
++ (BOOL) isCharacterForKeycode: (int) keycode;
+
 @end

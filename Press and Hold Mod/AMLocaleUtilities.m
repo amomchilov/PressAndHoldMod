@@ -67,4 +67,17 @@
 	if (err) return nil;
 	return [NSString stringWithCharacters:chars length:1];
 }
+
+
+
++ (BOOL) isCharacterForKeycode: (int) keycode {
+	if (0 <= keycode
+		&& keycode <= 50
+		&& keycode != 10
+		&& keycode != 36
+		&& keycode != 48
+		&& keycode != 49) return YES;
+	return NO;
+}
+
 @end
