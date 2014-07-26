@@ -57,7 +57,6 @@
 	[self.mainView.window performSelector:@selector(makeFirstResponder:)
 							   withObject:self.keyboardView
 							   afterDelay:0.0];
-	[self.keyboardView updateKeyTitles];
 }
 
 //- (void) observeValueForKeyPath:(NSString *)keyPath
@@ -105,7 +104,7 @@
 	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
 	[self.textView setString: fileContents];
 	
-	[self.keyboardView updateKeyTitles];
+	[_keyboardController updateKeyTitlesWithModifiers: 0];
 }
 
 

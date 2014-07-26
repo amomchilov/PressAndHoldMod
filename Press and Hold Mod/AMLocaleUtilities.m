@@ -28,13 +28,34 @@
 	return [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:userInputSource];
 }
 
+/**Fuck this ancient API.*/
++ (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags {
+	int result = 0;
+	if (eventModifierFlags & NSShiftKeyMask) {
+		result |= shiftKey;
+		NSLog(@"Shift");
+	}
+	if (eventModifierFlags & NSControlKeyMask) {
+		result |= controlKey;
+		NSLog(@"Control");
+	}
+	if (eventModifierFlags & NSAlternateKeyMask) {
+		result |= optionKey;
+		NSLog(@"Option");
+	}
+	if (eventModifierFlags & NSCommandKeyMask) {
+		result |= cmdKey;
+		NSLog(@"Command");
+	}
+	return result;
+}
+
 /** magical code based off of shortcutrecorder */
-+ (NSString *) stringForKeyCode: (int)keycode {
++ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int)modifiers {
 	if (keycode < 0) return nil;
 	TISInputSourceRef tisSource = TISCopyCurrentKeyboardInputSource();
 	if (!tisSource) return nil;
 	
-	UInt32 keysDown = 0;
 	CFDataRef layoutData = (CFDataRef)TISGetInputSourceProperty(tisSource, kTISPropertyUnicodeKeyLayoutData);
 	
 	CFRelease(tisSource);
@@ -49,14 +70,14 @@
 	if (!layoutData) return nil;
 	
 	const UCKeyboardLayout *keyLayout = (const UCKeyboardLayout *)CFDataGetBytePtr(layoutData);
-	
+	modifiers = (modifiers >> 8) & 0xFF;
+	UInt32 keysDown = 0;
 	UniCharCount length = 4, realLength;
 	UniChar chars[4];
-	
 	OSStatus err = UCKeyTranslate(keyLayout,
 								  keycode,
 								  kUCKeyActionDisplay,
-								  0,
+								  modifiers,
 								  LMGetKbdType(),
 								  kUCKeyTranslateNoDeadKeysBit,
 								  &keysDown,
@@ -67,8 +88,6 @@
 	if (err) return nil;
 	return [NSString stringWithCharacters:chars length:1];
 }
-
-
 
 + (BOOL) isCharacterForKeycode: (int) keycode {
 	if (0 <= keycode

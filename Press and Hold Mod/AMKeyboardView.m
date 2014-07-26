@@ -15,7 +15,7 @@
             b.action = @selector(virtualKeyDown:);
 		}
 	}
-	[self updateKeyTitles];
+	[self updateKeyTitlesWithModifiers: 0];
 }
 
 #pragma mark NSResponder methods
@@ -34,23 +34,15 @@
 	[self.delegate keyboard: self virtualKeyDownFromButton: sender];
 }
 
-- (void) updateKeyTitles {
+- (void) updateKeyTitlesWithModifiers:(int) modifiers {
+	int legacyModifiers = [AMLocaleUtilities convertCocoaFlagsToCarbonForFlags: modifiers];
+	NSLog(@"%i", legacyModifiers);
 	for (NSView *v in self.subviews) {
 		if ([v isKindOfClass:[NSButton class]] && [AMLocaleUtilities isCharacterForKeycode: (int) v.tag]) {
 			NSButton *b = (NSButton *) v;
-			NSString *s = [AMLocaleUtilities stringForKeyCode: (int) b.tag];
+			NSString *s = [AMLocaleUtilities stringForKeyCode: (int) b.tag WithModifiers:legacyModifiers];
 			if (s) b.title = s;
 			else b.title = @"";
-		}
-	}
-}
-
-- (void) updateKeyTitleWithCaptitalization: (BOOL) capitalize {
-	for (NSView *v in self.subviews) {
-		if ([v isKindOfClass:[NSButton class]] && [AMLocaleUtilities isCharacterForKeycode: (int) v.tag]) {
-			NSButton *b = (NSButton *) v;
-			if (capitalize) b.title = [b.title capitalizedString];
-			else b.title = [b.title lowercaseString];
 		}
 	}
 }

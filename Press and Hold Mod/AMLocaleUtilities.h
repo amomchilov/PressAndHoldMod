@@ -11,7 +11,10 @@
 + (NSArray *) localeCodesToStrings: (NSArray *) localeCodes;
 + (NSString *) userLanguagePreference;
 + (NSArray *) userInputSourcePreferences;
-+ (NSString *) stringForKeyCode: (int)keycode;
+
++ (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags;
++ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int)modifiers;
+
 + (BOOL) isCharacterForKeycode: (int) keycode;
 
 @end

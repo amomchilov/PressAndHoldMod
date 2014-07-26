@@ -18,7 +18,7 @@
 @property (weak) id <AMKeyboardViewControllerDelegate> delegate;
 
 - (AMKeyboardView *) viewAsAMKeyboardView;
-- (void) updateKeyTitles;
+- (void) updateKeyTitlesWithModifiers:(int) modifiers;
 
 @end
 

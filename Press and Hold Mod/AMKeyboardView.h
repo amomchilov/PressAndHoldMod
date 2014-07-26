@@ -15,8 +15,7 @@
 @interface AMKeyboardView : NSView
 
 @property (weak) id <AMKeyboardViewDelegate> delegate;
-- (void) updateKeyTitles;
-- (void) updateKeyTitleWithCaptitalization: (BOOL) capitalize;
+- (void) updateKeyTitlesWithModifiers:(int) modifiers;
 
 @end
 
