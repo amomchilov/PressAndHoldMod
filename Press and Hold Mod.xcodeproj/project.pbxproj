@@ -105,6 +105,8 @@
 				1131FEAC197B1B5800ADE59A /* AMPopover */,
 				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
 				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
+				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
+				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
 				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
 			);
 			name = AMPressAndHoldPref;
@@ -173,7 +175,6 @@
 			children = (
 				1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */,
 				D82E97D0197CEDF700E45C07 /* Categories */,
-				D8F2C2FC1977984F00A7F18B /* Models */,
 				119797C119820F2C00E87F71 /* Utilities */,
 				D8F2C2FD1977986500A7F18B /* Assets */,
 				11FBAF151975C5FB00F52CAF /* Supporting Files */,
@@ -200,15 +201,6 @@
 				1131FEBC197B7C8500ADE59A /* NSView+ActualBounds.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		D8F2C2FC1977984F00A7F18B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
-				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		D8F2C2FD1977986500A7F18B /* Assets */ = {
