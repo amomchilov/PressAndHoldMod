@@ -73,8 +73,8 @@
 
 #pragma mark AMKeyboardViewControllerDelegate methods
 - (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *)sender ForEvent:(NSEvent *)event {
-	NSLog(@"%@", event);
 	if ([AMLocaleUtilities isCharacterForKeycode: event.keyCode]) {
+		NSLog(@"%@", event);
 		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
 		[self.popoverController showWindow: sender withStringArray: stringArray];
 	}
@@ -104,7 +104,7 @@
 	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
 	[self.textView setString: fileContents];
 	
-	[_keyboardController updateKeyTitlesWithModifiers: 0];
+	[_keyboardController rebuildKeyLayout];
 }
 
 

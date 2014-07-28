@@ -15,7 +15,7 @@
             b.action = @selector(virtualKeyDown:);
 		}
 	}
-	[self updateKeyTitlesWithModifiers: 0];
+	[self.delegate keyboard: self updateKeyTitlesWithModifiers: 0];
 }
 
 #pragma mark NSResponder methods
@@ -32,18 +32,5 @@
 #pragma mark Other methods
 - (void)virtualKeyDown:(NSButton *) sender {
 	[self.delegate keyboard: self virtualKeyDownFromButton: sender];
-}
-
-- (void) updateKeyTitlesWithModifiers:(int) modifiers {
-	int legacyModifiers = [AMLocaleUtilities convertCocoaFlagsToCarbonForFlags: modifiers];
-	NSLog(@"%i", legacyModifiers);
-	for (NSView *v in self.subviews) {
-		if ([v isKindOfClass:[NSButton class]] && [AMLocaleUtilities isCharacterForKeycode: (int) v.tag]) {
-			NSButton *b = (NSButton *) v;
-			NSString *s = [AMLocaleUtilities stringForKeyCode: (int) b.tag WithModifiers:legacyModifiers];
-			if (s) b.title = s;
-			else b.title = @"";
-		}
-	}
 }
 @end

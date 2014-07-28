@@ -13,7 +13,7 @@
 + (NSArray *) userInputSourcePreferences;
 
 + (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags;
-+ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int)modifiers;
++ (NSString *) stringForKeyCode: (int)keycode WithNSEventModifiers:(int)modifiers;
 
 + (BOOL) isCharacterForKeycode: (int) keycode;
 

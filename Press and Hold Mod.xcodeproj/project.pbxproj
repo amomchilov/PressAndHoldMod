@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1106AEAF1985C2D5003B5FBD /* AMKeyboardModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1106AEAD1985C2D5003B5FBD /* AMKeyboardModel.h */; };
+		1106AEB01985C2D5003B5FBD /* AMKeyboardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1106AEAE1985C2D5003B5FBD /* AMKeyboardModel.m */; };
 		110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */; };
 		110F4391197A0E8E00923AC3 /* AMKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */; };
 		1131FEA9197A1B4600ADE59A /* AMKeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1106AEAD1985C2D5003B5FBD /* AMKeyboardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardModel.h; sourceTree = "<group>"; };
+		1106AEAE1985C2D5003B5FBD /* AMKeyboardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardModel.m; sourceTree = "<group>"; };
 		110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMKeyboardViewController.h; sourceTree = "<group>"; };
 		110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMKeyboardViewController.m; sourceTree = "<group>"; };
 		1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMKeyboardView.xib; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
 				110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */,
 				110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */,
+				1106AEAD1985C2D5003B5FBD /* AMKeyboardModel.h */,
+				1106AEAE1985C2D5003B5FBD /* AMKeyboardModel.m */,
 				1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */,
 			);
 			name = AMKeyboardView;
@@ -227,6 +233,7 @@
 				11FBAF301975C95E00F52CAF /* AMPressAndHoldPlistModel.h in Headers */,
 				11FBAF341975DCD500F52CAF /* AMLocaleUtilities.h in Headers */,
 				110F4390197A0E8E00923AC3 /* AMKeyboardViewController.h in Headers */,
+				1106AEAF1985C2D5003B5FBD /* AMKeyboardModel.h in Headers */,
 				11BA70FA197606CE00499416 /* AMKeyboardView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1106AEB01985C2D5003B5FBD /* AMKeyboardModel.m in Sources */,
 				11FBAF1D1975C5FB00F52CAF /* AMPressAndHoldPrefController.m in Sources */,
 				11BA70FB197606CE00499416 /* AMKeyboardView.m in Sources */,
 				D82E97D4197CEE1400E45C07 /* NSView+ViewDebugging.m in Sources */,

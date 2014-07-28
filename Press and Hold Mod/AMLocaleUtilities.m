@@ -31,27 +31,15 @@
 /**Fuck this ancient API.*/
 + (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags {
 	int result = 0;
-	if (eventModifierFlags & NSShiftKeyMask) {
-		result |= shiftKey;
-		NSLog(@"Shift");
-	}
-	if (eventModifierFlags & NSControlKeyMask) {
-		result |= controlKey;
-		NSLog(@"Control");
-	}
-	if (eventModifierFlags & NSAlternateKeyMask) {
-		result |= optionKey;
-		NSLog(@"Option");
-	}
-	if (eventModifierFlags & NSCommandKeyMask) {
-		result |= cmdKey;
-		NSLog(@"Command");
-	}
+	if (eventModifierFlags & NSShiftKeyMask) result |= shiftKey;
+	if (eventModifierFlags & NSControlKeyMask) result |= controlKey;
+	if (eventModifierFlags & NSAlternateKeyMask) result |= optionKey;
+	if (eventModifierFlags & NSCommandKeyMask) result |= cmdKey;
 	return result;
 }
 
 /** magical code based off of shortcutrecorder */
-+ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int)modifiers {
++ (NSString *) stringForKeyCode: (int)keycode WithNSEventModifiers:(int)modifiers {
 	if (keycode < 0) return nil;
 	TISInputSourceRef tisSource = TISCopyCurrentKeyboardInputSource();
 	if (!tisSource) return nil;
@@ -70,7 +58,7 @@
 	if (!layoutData) return nil;
 	
 	const UCKeyboardLayout *keyLayout = (const UCKeyboardLayout *)CFDataGetBytePtr(layoutData);
-	modifiers = (modifiers >> 8) & 0xFF;
+	modifiers = ([self convertCocoaFlagsToCarbonForFlags: modifiers] >> 8) & 0xFF;
 	UInt32 keysDown = 0;
 	UniCharCount length = 4, realLength;
 	UniChar chars[4];

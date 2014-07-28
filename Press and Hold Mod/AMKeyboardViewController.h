@@ -4,10 +4,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AMKeyboardView.h"
+#import "AMKeyboardModel.h"
 
 @protocol AMKeyboardViewControllerDelegate;
 
 @interface AMKeyboardViewController : NSViewController <AMKeyboardViewDelegate> {
+	AMKeyboardModel *_model;
 	BOOL lastShiftState;
 	BOOL lastFnState;
 	BOOL lastControlState;
@@ -18,6 +20,7 @@
 @property (weak) id <AMKeyboardViewControllerDelegate> delegate;
 
 - (AMKeyboardView *) viewAsAMKeyboardView;
+- (void) rebuildKeyLayout;
 - (void) updateKeyTitlesWithModifiers:(int) modifiers;
 
 @end
