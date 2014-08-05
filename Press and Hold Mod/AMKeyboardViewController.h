@@ -5,6 +5,7 @@
 #import <Cocoa/Cocoa.h>
 #import "AMKeyboardView.h"
 #import "AMKeyboardModel.h"
+#import "AMModifierButton.h"
 
 @protocol AMKeyboardViewControllerDelegate;
 
@@ -22,6 +23,7 @@
 - (AMKeyboardView *) viewAsAMKeyboardView;
 - (void) rebuildKeyLayout;
 - (void) updateKeyTitlesWithModifiers:(int) modifiers;
+- (void) setModifierState: (BOOL) state ForEvent: (NSEvent *)event;
 
 @end
 

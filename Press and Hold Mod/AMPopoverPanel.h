@@ -8,6 +8,7 @@
 
 @interface AMPopoverPanel : NSPanel
 
+#warning delegate naming conflict
 @property (weak) id <AMPopoverPanelDelegate> delegate;
 @property (weak) IBOutlet NSTextField *label;
 

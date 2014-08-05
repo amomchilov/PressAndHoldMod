@@ -28,9 +28,12 @@
 
 - (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray {
 	if ([sender isKindOfClass: [NSView class]]) {
-		NSRect r = ((NSView *) sender).actualBounds;
-		r.origin.y += r.size.height;
-		[self.window setFrameOrigin: r.origin];
+		NSRect senderRect = ((NSView *) sender).actualBounds;
+		NSRect popupRect = NSMakeRect(senderRect.origin.x,
+									  senderRect.origin.y + senderRect.size.height,
+									  5 + 26 * (stringArray.count + 1),
+									  46);
+		[self.window setFrame: popupRect display: YES];
 	}
 	
 	NSMutableString *labelString = (NSMutableString *) @"AMPopoverWindow";

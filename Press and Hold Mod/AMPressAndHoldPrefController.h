@@ -21,7 +21,6 @@
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
 @property (weak) IBOutlet NSView *keyboardPlaceHolder;
 @property (strong) AMKeyboardView *keyboardView;
-@property (weak) IBOutlet NSPopover *popover;
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
 @property AMPopoverController *popoverController;

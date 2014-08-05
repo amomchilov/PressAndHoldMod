@@ -50,21 +50,21 @@
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
 - (void)didSelect {
-//	[self.mainView.window addObserver:self
-//						   forKeyPath:@"firstResponder"
-//							  options:NSKeyValueObservingOptionNew
-//							  context:NULL];
+	[self.mainView.window addObserver:self
+						   forKeyPath:@"firstResponder"
+							  options:NSKeyValueObservingOptionNew
+							  context:NULL];
 	[self.mainView.window performSelector:@selector(makeFirstResponder:)
 							   withObject:self.keyboardView
 							   afterDelay:0.0];
 }
 
-//- (void) observeValueForKeyPath:(NSString *)keyPath
-//					   ofObject:(id)object
-//						 change:(NSDictionary *)change
-//						context:(void *)context {
-//	NSLog(@"New FR: %@", [change objectForKey: NSKeyValueChangeNewKey]);
-//}
+- (void) observeValueForKeyPath:(NSString *)keyPath
+					   ofObject:(id)object
+						 change:(NSDictionary *)change
+						context:(void *)context {
+	NSLog(@"New FR: %@", [change objectForKey: NSKeyValueChangeNewKey]);
+}
 
 //Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
 - (void) willUnselect {
@@ -87,7 +87,6 @@
 
 #pragma mark IBActions (testing)
 - (IBAction)testButton1Pressed:(NSButton *)sender {
-	[self.popover showRelativeToRect: sender.bounds ofView: sender preferredEdge: NSMinYEdge];
 }
 
 - (IBAction)testButton2Pressed:(NSButton *)sender {

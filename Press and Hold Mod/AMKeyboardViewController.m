@@ -19,7 +19,9 @@
 - (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender {
 	int modifiers = 0;
 	if (lastShiftState) modifiers |= NSShiftKeyMask;
+	if (lastFnState) modifiers |= NSFunctionKeyMask;
 	if (lastOptionState) modifiers |= NSAlternateKeyMask;
+	if (lastCommandState) modifiers |= NSCommandKeyMask;
 	
 	NSEvent *event =
 	[NSEvent keyEventWithType: NSKeyDown
@@ -45,33 +47,39 @@
 	//DLog("%lu", (unsigned long)event.modifierFlags);
     if ((event.modifierFlags & NSShiftKeyMask) && !lastShiftState) { //shift down
 		lastShiftState = true;
+		[self setModifierState: YES ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyShiftDown:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyShiftDown: event];
     }
 	else if (!(event.modifierFlags & NSShiftKeyMask) && lastShiftState) { //shift raised
 		lastShiftState = false;
+		[self setModifierState: NO ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyShiftUp:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyShiftUp: event];
 	}
 	
 	else if ((event.modifierFlags & NSFunctionKeyMask) && !lastFnState) {
 		lastFnState = true;
+		[self setModifierState: YES ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyFnDown:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyFnDown: event];
 	}
 	else if (!(event.modifierFlags & NSFunctionKeyMask) && lastFnState) {
 		lastFnState = false;
+		[self setModifierState: NO ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyFnUp:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyFnUp: event];
 	}
 	
 	else if ((event.modifierFlags & NSControlKeyMask) && !lastControlState) {
 		lastControlState = true;
+		[self setModifierState: YES ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyControlDown:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyControlDown: event];
 	}
 	else if (!(event.modifierFlags & NSControlKeyMask) && lastControlState) {
 		lastControlState = false;
+		[self setModifierState: NO ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyControlUp:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyControlUp: event];
 	}
@@ -79,30 +87,34 @@
 	
 	else if ((event.modifierFlags & NSAlternateKeyMask) && !lastOptionState) {
 		lastOptionState = true;
+		[self setModifierState: YES ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyOptionDown:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyOptionDown: event];
 	}
 	else if (!(event.modifierFlags & NSAlternateKeyMask) && lastOptionState) {
 		lastOptionState = false;
+		[self setModifierState: NO ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyOptionUp:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyOptionUp: event];
 	}
 	
 	else if ((event.modifierFlags & NSCommandKeyMask) && !lastCommandState) {
 		lastCommandState = true;
+		[self setModifierState: YES ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyCommandDown:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyCommandDown: event];
 	}
 	else if (!(event.modifierFlags & NSCommandKeyMask) && lastCommandState) {
 		lastCommandState = false;
+		[self setModifierState: NO ForEvent: event];
 		if ([self.delegate respondsToSelector:@selector(keyboard:KeyCommandUp:)])
 			[self.delegate keyboard: self.viewAsAMKeyboardView KeyCommandUp: event];
 	}
 
 	else DLog("Other");
 	
-	[self updateKeyTitlesWithModifiers: event.modifierFlags];
-	[self performClickForKeyCode: event.keyCode];
+	[self updateKeyTitlesWithModifiers: (int) event.modifierFlags];
+	//[self performClickForKeyCode: event.keyCode];
 }
 
 - (void) keyboard:(AMKeyboardView *) keyboard updateKeyTitlesWithModifiers:(int) modifiers {
@@ -117,6 +129,11 @@
 - (void) performClickForKeyCode: (int) keycode {
 	NSButton *button = (NSButton *) [self.viewAsAMKeyboardView viewWithTag: keycode];
 	if (button) [button performClick:button];
+}
+
+- (void) setModifierState:(BOOL) state ForEvent:(NSEvent *)event {
+	AMModifierButton *button = (AMModifierButton *) [self.viewAsAMKeyboardView viewWithTag: event.keyCode];
+	if (button) [button setMouseEnabledAndState: state];
 }
 
 - (void) rebuildKeyLayout {
