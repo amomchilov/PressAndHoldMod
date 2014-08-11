@@ -5,6 +5,9 @@
 #import <Foundation/Foundation.h>
 #import "AMLocaleUtilities.h"
 
+extern const int characterKeyCodes[47];
+extern const int modifierKeyCodes[8];
+
 @interface AMKeyboardModel : NSObject
 
 @property NSDictionary *keyLayouts;

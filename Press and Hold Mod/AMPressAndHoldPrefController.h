@@ -10,6 +10,7 @@
 #import "AMPopoverController.h"
 
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
+	AMPopoverController *_popoverController;
 	AMKeyboardViewController *_keyboardController;
 	AMPressAndHoldPlistModel *_model;
 	__weak NSButton *_b1;
@@ -19,13 +20,15 @@
 }
 
 @property (weak) IBOutlet NSPopUpButton *popUpButton;
+
 @property (weak) IBOutlet NSView *keyboardPlaceHolder;
 @property (strong) AMKeyboardView *keyboardView;
+
 @property (unsafe_unretained) IBOutlet NSTextView *textView;
 
-@property AMPopoverController *popoverController;
-
 - (IBAction) popUpButtonChanged: (NSPopUpButton *)sender;
+
+- (void) resignKeyWindow;
 - (void) updateInputSource;
 
 @property (weak) IBOutlet NSButton *b1;

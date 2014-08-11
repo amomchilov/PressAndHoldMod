@@ -36,15 +36,14 @@
 		[self.window setFrame: popupRect display: YES];
 	}
 	
-	NSMutableString *labelString = (NSMutableString *) @"AMPopoverWindow";
 	if (stringArray) {
-		labelString = [[NSMutableString alloc] init];
+		NSMutableString *labelString = [NSMutableString stringWithCapacity: 18];
 		for (NSString *s in stringArray) {
-			NSString *as = [[NSString alloc] initWithFormat: @"%@ ", s];
-			[labelString appendString: as];
+			[labelString appendFormat: @"%@ ", s];
 		}
+		DLog(@"%lu", labelString.length);
+		self.windowAsAMPopoverPanel.label.stringValue = labelString;
 	}
-	self.windowAsAMPopoverPanel.label.stringValue = labelString;
 	
 	[super showWindow: sender];
 }

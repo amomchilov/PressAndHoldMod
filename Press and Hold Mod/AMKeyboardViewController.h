@@ -23,7 +23,8 @@
 - (AMKeyboardView *) viewAsAMKeyboardView;
 - (void) rebuildKeyLayout;
 - (void) updateKeyTitlesWithModifiers:(int) modifiers;
-- (void) setModifierState: (BOOL) state ForEvent: (NSEvent *)event;
+- (void) setModifierState:(BOOL) state ForKeyCode:(int) keycode;
+- (void) resetModifierKeyStates;
 
 @end
 

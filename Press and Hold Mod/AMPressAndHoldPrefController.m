@@ -38,45 +38,38 @@
 	[self.mainView addSubview: self.keyboardView];
 	
 	/*****Setup AMPopover*****/
-	self.popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
+	_popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
 
 	/*****Observe Input Source Changes*****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
-														selector: @selector(inputSourceChanged)
+														selector: @selector(updateInputSource)
 															name: (NSString *)kTISNotifySelectedKeyboardInputSourceChanged
 														  object: nil];
-	//[self.mainView logHierarchy];
+	/*****Observe changes to the popup's key window status *****/
+	[[NSNotificationCenter defaultCenter] addObserver: self
+											 selector: @selector(resignKeyWindow)
+												 name: NSWindowDidResignKeyNotification
+											   object: _popoverController.window];
 }
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
 - (void)didSelect {
-	[self.mainView.window addObserver:self
-						   forKeyPath:@"firstResponder"
-							  options:NSKeyValueObservingOptionNew
-							  context:NULL];
 	[self.mainView.window performSelector:@selector(makeFirstResponder:)
 							   withObject:self.keyboardView
 							   afterDelay:0.0];
 }
 
-- (void) observeValueForKeyPath:(NSString *)keyPath
-					   ofObject:(id)object
-						 change:(NSDictionary *)change
-						context:(void *)context {
-	NSLog(@"New FR: %@", [change objectForKey: NSKeyValueChangeNewKey]);
-}
-
 //Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
 - (void) willUnselect {
-	[self.popoverController close];
+	[_popoverController close];
 }
 
 #pragma mark AMKeyboardViewControllerDelegate methods
 - (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *)sender ForEvent:(NSEvent *)event {
 	if ([AMLocaleUtilities isCharacterForKeycode: event.keyCode]) {
-		NSLog(@"%@", event);
+		//NSLog(@"%@", event);
 		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
-		[self.popoverController showWindow: sender withStringArray: stringArray];
+		[_popoverController showWindow: sender withStringArray: stringArray];
 	}
 }
 
@@ -90,12 +83,13 @@
 }
 
 - (IBAction)testButton2Pressed:(NSButton *)sender {
-	[self.popoverController close];
+	[_popoverController close];
 }
 
 #pragma mark Other methods
-- (void) inputSourceChanged {
-	[self updateInputSource];
+- (void) resignKeyWindow {
+	[_popoverController close];
+	[_keyboardController resetModifierKeyStates];
 }
 
 - (void) updateInputSource {
