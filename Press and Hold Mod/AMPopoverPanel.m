@@ -57,7 +57,8 @@
 
 #pragma mark NSResponder methods
 - (void)cancelOperation:(id)sender {
-	[self close];
+	if ([self.delegate respondsToSelector:@selector(windowShouldClose:)]
+		&& [self.delegate windowShouldClose:self]) [self close];
 }
 
 @end

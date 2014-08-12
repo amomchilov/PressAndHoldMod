@@ -10,7 +10,7 @@
 //#pragma mark NSWindowController methods
 //- (id)initWithWindow:(NSWindow *)window {
 //    if (self = [super initWithWindow:window]) {
-//        // Initialization code here.
+//        DLog(@"%@", self);
 //    }
 //    return self;
 //}
@@ -48,6 +48,11 @@
 	}
 	
 	[super showWindow: sender];
+}
+
+- (BOOL) windowShouldClose:(id)sender {
+	DLog(@"test");
+	return YES;
 }
 
 @end
