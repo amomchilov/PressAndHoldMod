@@ -29,11 +29,11 @@
 - (void) showWindow:(id)sender withStringArray: (NSArray*) stringArray {
 	if ([sender isKindOfClass: [NSView class]]) {
 		NSRect senderRect = ((NSView *) sender).actualBounds;
-		NSRect popupRect = NSMakeRect(senderRect.origin.x,
+		NSRect frameRect = NSMakeRect(senderRect.origin.x,
 									  senderRect.origin.y + senderRect.size.height,
-									  5 + 26 * (stringArray.count + 1),
-									  46);
-		[self.window setFrame: popupRect display: YES];
+									  3 + 26 * (stringArray.count/* + 1*/), //width needs work.
+									  45);
+		[self.window setFrame: frameRect display: YES];
 	}
 	
 	if (stringArray) {
@@ -41,8 +41,10 @@
 		for (NSString *s in stringArray) {
 			[labelString appendFormat: @"%@ ", s];
 		}
-		DLog(@"%lu", labelString.length);
 		self.windowAsAMPopoverPanel.label.stringValue = labelString;
+	}
+	else {
+		//default case
 	}
 	
 	[super showWindow: sender];
@@ -50,7 +52,7 @@
 
 - (void) popOver:(AMPopoverPanel *)popOver cancelOperation:(id)sender {
 	[self.window close];
-#warning should use performClose
+	#warning should use performClose
 }
 
 @end
