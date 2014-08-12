@@ -43,7 +43,7 @@
 - (BOOL) canBecomeKeyWindow { return YES; }
 
 - (void) setFrame:(NSRect)frameRect display:(BOOL)flag {
-	int insetWidth = -(_padding+_borderWidth); //negative inset is a psuedo outset
+	int insetWidth = -(_padding + _borderWidth); //negative inset is a psuedo outset
 	frameRect = NSInsetRect(frameRect, insetWidth, insetWidth);
 	switch (_arrowEdge) {
 		case NSMaxXEdge: frameRect.origin.x -= _padding; break;
@@ -57,7 +57,7 @@
 
 #pragma mark NSResponder methods
 - (void)cancelOperation:(id)sender {
-	[self.delegate popOver: self cancelOperation: sender];
+	[self close];
 }
 
 @end

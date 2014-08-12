@@ -7,13 +7,13 @@
 
 @implementation AMPopoverController
 
-#pragma mark NSWindowController methods
-- (id)initWithWindow:(NSWindow *)window {
-    if (self = [super initWithWindow:window]) {
-        // Initialization code here.
-    }
-    return self;
-}
+//#pragma mark NSWindowController methods
+//- (id)initWithWindow:(NSWindow *)window {
+//    if (self = [super initWithWindow:window]) {
+//        // Initialization code here.
+//    }
+//    return self;
+//}
 
 //- (void)windowDidLoad {
 //    [super windowDidLoad];
@@ -48,11 +48,6 @@
 	}
 	
 	[super showWindow: sender];
-}
-
-- (void) popOver:(AMPopoverPanel *)popOver cancelOperation:(id)sender {
-	[self.window close];
-	#warning should use performClose
 }
 
 @end

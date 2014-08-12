@@ -8,11 +8,13 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
+	//[[NSGraphicsContext currentContext] setShouldAntialias: NO];
+	
 	NSRect bounds = self.bounds;
 	//0.5 more than needed, due to: http://stackoverflow.com/a/8016669/3141234
 	//+0.5 same size as original, cleaner edge
 	//-0.5 is 2px taller/wider than original
-	if ((self.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
+	if ((self.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, -0.5, -0.5);
 	DLog(@"%@", NSStringFromRect(bounds));
 	//border
 	NSBezierPath *path = [self _popoverBezierPathWithRect: bounds];
