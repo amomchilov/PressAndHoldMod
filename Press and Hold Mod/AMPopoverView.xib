@@ -14,14 +14,14 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5" customClass="AMPopoverPanel">
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" transient="YES" ignoresCycle="YES"/>
-            <rect key="contentRect" x="196" y="240" width="31" height="46"/>
+            <rect key="contentRect" x="196" y="240" width="31" height="62"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="se5-gp-TjO" customClass="AMPopoverView">
-                <rect key="frame" x="0.0" y="0.0" width="31" height="46"/>
+                <rect key="frame" x="0.0" y="0.0" width="31" height="62"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOd-Va-YjH">
-                        <rect key="frame" x="9" y="15" width="279" height="17"/>
+                        <rect key="frame" x="9" y="23" width="279" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="#" id="ym6-iv-Xs7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>

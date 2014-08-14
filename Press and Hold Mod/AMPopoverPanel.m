@@ -21,7 +21,6 @@
 		[self setOpaque:NO];
 		[self setBackgroundColor:[NSColor clearColor]];
 		
-
 		//[self setBackgroundColor:[NSColor greenColor]];
 	}
 	return self;
