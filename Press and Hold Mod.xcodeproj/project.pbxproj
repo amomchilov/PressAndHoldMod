@@ -99,15 +99,15 @@
 		1131FEAA197A1BD500ADE59A /* AMKeyboardView */ = {
 			isa = PBXGroup;
 			children = (
-				1196E2EC198F3C3100155AD9 /* AMModifierButton.h */,
-				1196E2ED198F3C3100155AD9 /* AMModifierButton.m */,
-				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
-				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
 				110F438E197A0E8E00923AC3 /* AMKeyboardViewController.h */,
 				110F438F197A0E8E00923AC3 /* AMKeyboardViewController.m */,
 				1106AEAD1985C2D5003B5FBD /* AMKeyboardModel.h */,
 				1106AEAE1985C2D5003B5FBD /* AMKeyboardModel.m */,
+				11BA70F8197606CE00499416 /* AMKeyboardView.h */,
+				11BA70F9197606CE00499416 /* AMKeyboardView.m */,
 				1131FEA8197A1B4600ADE59A /* AMKeyboardView.xib */,
+				1196E2EC198F3C3100155AD9 /* AMModifierButton.h */,
+				1196E2ED198F3C3100155AD9 /* AMModifierButton.m */,
 			);
 			name = AMKeyboardView;
 			sourceTree = "<group>";
@@ -115,13 +115,13 @@
 		1131FEAB197A1BE400ADE59A /* AMPressAndHoldPref */ = {
 			isa = PBXGroup;
 			children = (
-				1131FEAA197A1BD500ADE59A /* AMKeyboardView */,
-				1131FEAC197B1B5800ADE59A /* AMPopover */,
 				11FBAF1B1975C5FB00F52CAF /* AMPressAndHoldPrefController.h */,
 				11FBAF1C1975C5FB00F52CAF /* AMPressAndHoldPrefController.m */,
 				11FBAF2E1975C95E00F52CAF /* AMPressAndHoldPlistModel.h */,
 				11FBAF2F1975C95E00F52CAF /* AMPressAndHoldPlistModel.m */,
 				11FBAF201975C5FB00F52CAF /* AMPressAndHoldPrefPane.xib */,
+				1131FEAA197A1BD500ADE59A /* AMKeyboardView */,
+				1131FEAC197B1B5800ADE59A /* AMPopover */,
 			);
 			name = AMPressAndHoldPref;
 			sourceTree = "<group>";
@@ -129,13 +129,13 @@
 		1131FEAC197B1B5800ADE59A /* AMPopover */ = {
 			isa = PBXGroup;
 			children = (
-				1150809519998A7D00AA89B2 /* AMPopoverView.h */,
-				1150809619998A7D00AA89B2 /* AMPopoverView.m */,
-				1131FEAD197B1BA200ADE59A /* AMPopoverPanel.h */,
-				1131FEAE197B1BA200ADE59A /* AMPopoverPanel.m */,
 				1131FEB1197B1C3500ADE59A /* AMPopoverController.h */,
 				1131FEB2197B1C3500ADE59A /* AMPopoverController.m */,
+				1131FEAD197B1BA200ADE59A /* AMPopoverPanel.h */,
+				1131FEAE197B1BA200ADE59A /* AMPopoverPanel.m */,
 				1131FEB3197B1C3500ADE59A /* AMPopoverView.xib */,
+				1150809519998A7D00AA89B2 /* AMPopoverView.h */,
+				1150809619998A7D00AA89B2 /* AMPopoverView.m */,
 			);
 			name = AMPopover;
 			sourceTree = "<group>";

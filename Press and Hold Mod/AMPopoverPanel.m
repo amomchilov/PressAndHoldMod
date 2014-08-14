@@ -7,7 +7,7 @@
 @implementation AMPopoverPanel
 
 #pragma mark NSWindow methods
-- (instancetype) initWithContentRect:(NSRect)contentRect
+- (instancetype) initWithContentRect:(NSRect)contentRect //might be redundant
 						   styleMask:(NSUInteger)aStyle
 							 backing:(NSBackingStoreType)bufferingType
 							   defer:(BOOL)flag {
@@ -20,6 +20,8 @@
 		_arrowEdge = NSMinYEdge;
 		[self setOpaque:NO];
 		[self setBackgroundColor:[NSColor clearColor]];
+		
+
 		//[self setBackgroundColor:[NSColor greenColor]];
 	}
 	return self;
@@ -51,6 +53,8 @@
 		case NSMaxYEdge: frameRect.origin.y -= _padding; break;
 		case NSMinYEdge: frameRect.origin.y += _padding; break;
 	}
+	
+	frameRect.origin.x -= 14; //temporary to center arrow
 	
 	[super setFrame:frameRect display:flag];
 }

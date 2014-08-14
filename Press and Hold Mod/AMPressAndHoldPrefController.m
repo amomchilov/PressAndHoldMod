@@ -26,12 +26,13 @@
 	[self updateInputSource];
 	
 	/*****Setup AMKeyboardView*****/
-    _keyboardController = [[AMKeyboardViewController alloc] initWithNibName:@"AMKeyboardView"
-																		 bundle:[self bundle]];
+    _keyboardController = [[AMKeyboardViewController alloc]
+						   initWithNibName:@"AMKeyboardView"
+						   bundle: self.bundle];
     _keyboardController.delegate = self;
-	self.keyboardView = (AMKeyboardView *) [_keyboardController view];
+	self.keyboardView = (AMKeyboardView *) _keyboardController.view;
 	
-	[self.keyboardView setFrame: self.keyboardPlaceHolder.frame];
+	self.keyboardView.frame = self.keyboardPlaceHolder.frame;
     [self.keyboardPlaceHolder removeFromSuperview];
 
 	[self.mainView addSubview: self.keyboardView];

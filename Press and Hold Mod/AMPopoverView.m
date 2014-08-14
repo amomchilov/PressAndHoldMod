@@ -6,6 +6,7 @@
 
 @implementation AMPopoverView
 
+#pragma mark NSView methods
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
 	//[[NSGraphicsContext currentContext] setShouldAntialias: NO];
@@ -14,10 +15,10 @@
 	//0.5 more than needed, due to: http://stackoverflow.com/a/8016669/3141234
 	//+0.5 same size as original, cleaner edge
 	//-0.5 is 2px taller/wider than original
-	if ((self.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, -0.5, -0.5);
+	if ((self.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
 	DLog(@"%@", NSStringFromRect(bounds));
-	//border
-	NSBezierPath *path = [self _popoverBezierPathWithRect: bounds];
+
+	NSBezierPath *path = [self customBezierPathWithRect: bounds];
 	[path setLineWidth: self.borderWidth];
 	[self.backgroundColor setFill];
 	[path fill];
@@ -25,6 +26,7 @@
 	[path stroke];
 }
 
+#pragma mark Other methods
 - (NSBezierPath *)_popoverBezierPathWithRect:(NSRect)rect {
 	const CGFloat radius = self.cornerRadius;
 	const CGFloat arrowWidth = self.arrowSize.width;
@@ -38,7 +40,8 @@
 	NSPoint arrowPoints[3];
 	
 	NSBezierPath *path = [NSBezierPath bezierPath];
-	[path setLineJoinStyle:NSRoundLineJoinStyle];
+	//[path setLineJoinStyle:NSRoundLineJoinStyle];
+	[path setLineJoinStyle:NSMiterLineJoinStyle];
 	
 	//Bottom left corner
 	[path appendBezierPathWithArcWithCenter:NSMakePoint(minX, minY) radius:radius startAngle:180 endAngle:270];
@@ -64,7 +67,7 @@
 		[path appendBezierPathWithPoints:arrowPoints count:3];
 	}
 		
-	// Top right corner
+	//Top right corner
 	[path appendBezierPathWithArcWithCenter:NSMakePoint(maxX, maxY) radius:radius startAngle:0 endAngle:90];
 	
 	//Top arrow
@@ -89,7 +92,37 @@
 	}
 	
 	[path closePath];
-	
 	return path;
 }
+
+- (NSBezierPath *)customBezierPathWithRect:(NSRect)rect {
+	
+	const CGFloat radius = self.cornerRadius;
+	const CGFloat arrowWidth = self.arrowSize.width;
+	const CGFloat arrowHeight = self.arrowSize.height;
+	const CGFloat inset = radius + arrowHeight;
+	const NSRect insetRect = NSInsetRect(rect, inset, inset);
+	const CGFloat minX = NSMinX(insetRect);
+	const CGFloat maxX = NSMaxX(insetRect);
+	const CGFloat minY = NSMinY(insetRect);
+	const CGFloat maxY = NSMaxY(insetRect);
+	
+	NSBezierPath *path = [NSBezierPath bezierPath];
+	[path setLineJoinStyle: NSRoundLineJoinStyle];
+	
+	NSPoint arrowTopLeftPoint = NSMakePoint(_arrowSize.height + _borderWidth + 10, _arrowSize.height);
+	NSPoint arrowPoints[] = {NSMakePoint(arrowTopLeftPoint.x, arrowTopLeftPoint.y),
+							 NSMakePoint(arrowTopLeftPoint.x + arrowWidth / 2, 0),
+							 NSMakePoint(arrowTopLeftPoint.x + arrowWidth, arrowTopLeftPoint.y)};
+	
+	[path appendBezierPathWithPoints: arrowPoints count: sizeof(arrowPoints)/sizeof(arrowPoints[0])];
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(maxX, minY) radius:radius startAngle:270 endAngle:360]; //Bottom right corner
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(maxX, maxY) radius:radius startAngle:0 endAngle:90]; //Top right corner
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(minX, maxY) radius:radius startAngle:90 endAngle:180]; //Top left corner
+	[path appendBezierPathWithArcWithCenter:NSMakePoint(minX, minY) radius:radius startAngle:180 endAngle:270]; //Bottom left corner
+	
+	[path closePath];
+	return path;
+}
+
 @end
