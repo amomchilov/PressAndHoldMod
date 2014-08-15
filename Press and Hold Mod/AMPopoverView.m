@@ -8,14 +8,16 @@
 
 #pragma mark NSView methods
 - (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-	//[[NSGraphicsContext currentContext] setShouldAntialias: NO];
 	
-	NSRect bounds = self.bounds;
+	[[NSGraphicsContext currentContext] saveGraphicsState];
+	
+    [super drawRect:dirtyRect];
+	
+	//NSRect bounds = self.bounds;
 	//0.5 more than needed, due to: http://stackoverflow.com/a/8016669/3141234
 	//+0.5 same size as original, cleaner edge
 	//-0.5 is 2px taller/wider than original
-	if ((self.panel.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
+	//if ((self.panel.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
 
 	NSBezierPath *path = [self popUpBezierPathWithRect: self.panel.contentRect
 												radius: self.panel.cornerRadius
@@ -28,7 +30,11 @@
 	[self.panel.viewBackgroundColor setFill];
 	[path fill];
 	[self.panel.borderColor setStroke];
+	[path setClip];
 	[path stroke];
+	
+	
+	[[NSGraphicsContext currentContext] restoreGraphicsState];
 }
 
 #pragma mark Other methods
@@ -103,7 +109,7 @@
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
 	}
-	self.temp = NSMakeRect(arrowPoints[1].x - 1, arrowPoints[1].y - 1, 2, 2);
+	
 	[path closePath];
 	return path;
 }

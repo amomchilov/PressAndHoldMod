@@ -40,7 +40,7 @@
 				arrowSize:(NSSize) newArrowSize
 				arrowEdge:(NSRectEdge) newArrowEdge
 			arrowPosition:(float) newArrowPosition {
-	
+	newBorderWidth *= 2; //border is originally centered on the edge, so half is hidden.
 	frame.size.height += newBorderWidth; //adjusts for thickeness of border
 	frame.size.width += newBorderWidth;
 	NSRect newContentRect = frame;
@@ -48,31 +48,31 @@
 	switch (self.arrowEdge = newArrowEdge) {
 		case NSMaxYEdge: //Up Arrow
 			if (newArrowPosition == -1) newArrowPosition = frame.size.width/2;
-			frame.size.height += newArrowSize.height + newBorderWidth / 2; //makes room for the arrow
+			frame.size.height += newArrowSize.height; //makes room for the arrow
 			frame.origin.y -= frame.size.height; //shifts the frame below the desired point
 			frame.origin.x -= newArrowPosition; //shifts horizontally so the arrow lines up with the desired point
 			break;
 			
 		case NSMinYEdge: //Down Arrow
 			if (newArrowPosition == -1) newArrowPosition = frame.size.width/2;
-			newContentRect.origin.y += newArrowSize.height + newBorderWidth / 2; //shifts the contentRect above the desired point
+			newContentRect.origin.y += newArrowSize.height; //shifts the contentRect above the desired point
 			
-			frame.size.height += newArrowSize.height + newBorderWidth / 2; //makes room for the arrow
+			frame.size.height += newArrowSize.height; //makes room for the arrow
 			frame.origin.x -= newArrowPosition; //shifts horizontally so the arrow lines up with the desired point
 			break;
 			
 		case NSMaxXEdge: //Right Arrow
 			if (newArrowPosition == -1) newArrowPosition = frame.size.height/2;
-			frame.size.width += newArrowSize.height + newBorderWidth / 2;  //makes room for the arrow
-			frame.origin.x -= frame.size.width + newBorderWidth / 2; //shifts the frame to the left of the desired point
+			frame.size.width += newArrowSize.height;  //makes room for the arrow
+			frame.origin.x -= frame.size.width; //shifts the frame to the left of the desired point
 			frame.origin.y -= newArrowPosition; //shifts vertically so the arrow lines up with the desired point
 			break;
 			
 		case NSMinXEdge: //Left Arrow
 			if (newArrowPosition == -1) newArrowPosition = frame.size.height/2;
-			newContentRect.origin.x += newArrowSize.height + newBorderWidth / 2; //shifts the contentRect to the right of the desired point
+			newContentRect.origin.x += newArrowSize.height; //shifts the contentRect to the right of the desired point
 			
-			frame.size.width += newArrowSize.height + newBorderWidth / 2;  //makes room for the arrow
+			frame.size.width += newArrowSize.height;  //makes room for the arrow
 			frame.origin.y -= newArrowPosition; //shifts vertically so the arrow lines up with the desired point
 			break;
 	}

@@ -8,6 +8,4 @@
 
 @interface AMPopoverView : NSView
 
-@property NSRect temp;
-
 @end
