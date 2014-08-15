@@ -36,24 +36,24 @@
 														 greenHex: 0xD7
 														  blueHex: 0xFE
 														 alphaHex: 0xFF];
-//		[self.windowAsAMPopoverPanel popoverWithFrame: frameRect
-//									  backgroundColor: [NSColor whiteColor]
-//										  borderColor: borderColor
-//										  borderWidth: 1
-//										 cornerRadius: 4
-//											arrowSize: NSMakeSize(9, 6)
-//											arrowEdge: NSMinYEdge
-//										arrowPosition: 10];
-		[self.windowAsAMPopoverPanel popoverWithFrame: NSMakeRect(senderRect.origin.x + senderRect.size.width / 2,
-																  senderRect.origin.y + senderRect.size.height/ 2,
-																  100, 100)
+		[self.windowAsAMPopoverPanel popoverWithFrame: frameRect
 									  backgroundColor: [NSColor whiteColor]
 										  borderColor: borderColor
-										  borderWidth: 0
-										 cornerRadius: 0
-											arrowSize: NSMakeSize(10, 10)
+										  borderWidth: 1
+										 cornerRadius: 4
+											arrowSize: NSMakeSize(9, 6)
 											arrowEdge: NSMinYEdge
-										arrowPosition: -1];
+										arrowPosition: 10];
+//		[self.windowAsAMPopoverPanel popoverWithFrame: NSMakeRect(senderRect.origin.x + senderRect.size.width / 2,
+//																  senderRect.origin.y + senderRect.size.height/ 2,
+//																  100, 100)
+//									  backgroundColor: [NSColor whiteColor]
+//										  borderColor: borderColor
+//										  borderWidth: 0
+//										 cornerRadius: 0
+//											arrowSize: NSMakeSize(10, 10)
+//											arrowEdge: NSMinYEdge
+//										arrowPosition: -1];
 	}
 
 	if (stringArray) {

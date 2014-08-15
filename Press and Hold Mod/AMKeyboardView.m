@@ -16,7 +16,6 @@
 		}
 	}
 	[self.delegate keyboard: self updateKeyTitlesWithModifiers: 0];
-	DLog(@"%@", self);
 }
 
 #pragma mark NSResponder methods

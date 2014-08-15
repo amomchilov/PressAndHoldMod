@@ -45,8 +45,6 @@
 						   arrowDirection:(NSRectEdge) arrowDirection
 				   arrowPositionAlongEdge:(float) arrowPosition
 								arrowSize:(NSSize) arrowSize {
-	
-//	const float inset = radius + arrowSize.height;
 	const CGFloat minX = NSMinX(rect);
 	const CGFloat maxX = NSMaxX(rect);
 	const CGFloat minY = NSMinY(rect);
@@ -64,48 +62,48 @@
 	[path setLineJoinStyle: NSRoundLineJoinStyle];	
 
 	//Bottom left corner
-	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX, minY) radius: radius startAngle: 180 endAngle: 270];
+	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX + radius, minY + radius) radius: radius startAngle: 180 endAngle: 270];
 	
 	//Bottom arrow
 	if (arrowDirection == NSMinYEdge) {
-		[t translateXBy: arrowPosition + minX + arrowSize.width / 2.0 yBy: minY - radius];
+		[t translateXBy: minX + arrowPosition + arrowSize.width / 2.0 yBy: minY];
 		[t rotateByDegrees: 180];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
 	}
 	
 	//Bottom right corner
-	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX, minY) radius: radius startAngle: 270 endAngle:   0];
+	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX - radius, minY + radius) radius: radius startAngle: 270 endAngle:   0];
 	
 	//Right arrow
 	if (arrowDirection == NSMaxXEdge) {
-		[t translateXBy: maxX + radius yBy: arrowPosition + minY  + arrowSize.width / 2.0];
+		[t translateXBy: maxX yBy: minY + arrowPosition + arrowSize.width / 2.0];
 		[t rotateByDegrees: 270];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
 	}
 	
 	//Top right corner
-	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX, maxY) radius: radius startAngle:   0 endAngle:  90];
+	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX - radius, maxY - radius) radius: radius startAngle:   0 endAngle:  90];
 	
 	//Top arrow
 	if (arrowDirection == NSMaxYEdge) {
-		[t translateXBy: arrowPosition + minX - arrowSize.width / 2.0 yBy: maxY + radius];
+		[t translateXBy: minX + arrowPosition - arrowSize.width / 2.0 yBy: maxY];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
 	}
 	
 	//Top left corner
-	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX, maxY) radius: radius startAngle:  90 endAngle: 180];
+	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX + radius, maxY - radius) radius: radius startAngle:  90 endAngle: 180];
 	
 	//Left arrow
 	if (arrowDirection == NSMinXEdge) {
-		[t translateXBy: minX - radius yBy: arrowPosition  + minY - arrowSize.width / 2.0];
+		[t translateXBy: minX yBy: minY + arrowPosition - arrowSize.width / 2.0];
 		[t rotateByDegrees: 90];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
 	}
-	
+	self.temp = NSMakeRect(arrowPoints[1].x - 1, arrowPoints[1].y - 1, 2, 2);
 	[path closePath];
 	return path;
 }
