@@ -15,53 +15,81 @@
 								styleMask:aStyle
 								  backing:bufferingType
 									defer:flag]) {
-		_padding = 6;
-		_borderWidth = 1;
-		_arrowEdge = NSMinYEdge;
 		[self setOpaque:NO];
 		[self setBackgroundColor:[NSColor clearColor]];
 		
-		//[self setBackgroundColor:[NSColor greenColor]];
+		[self setBackgroundColor:[NSColor greenColor]];
 	}
 	return self;
 }
 
-- (void) setContentView:(NSView *)contentView {
-	[super setContentView: contentView];
-	if (![contentView isKindOfClass: [AMPopoverView class]]) return;
-	AMPopoverView *view = (AMPopoverView *) contentView;
-	view.backgroundColor = [NSColor whiteColor];
-	view.borderColor = [NSColor colorWithCalibratedRedHex: 0xC2
-												 greenHex: 0xD7
-												  blueHex: 0xFE
-												 alphaHex: 0xFF];
-	view.borderWidth = _borderWidth;
-	view.cornerRadius = 4;
-	view.arrowSize = NSMakeSize(9, _padding);
-	view.arrowEdge = _arrowEdge;
-}
-
 - (BOOL) canBecomeKeyWindow { return YES; }
-
-- (void) setFrame:(NSRect)frameRect display:(BOOL)flag {
-	int insetWidth = -(_padding + _borderWidth); //negative inset is a psuedo outset
-	frameRect = NSInsetRect(frameRect, insetWidth, insetWidth);
-	switch (_arrowEdge) {
-		case NSMaxXEdge: frameRect.origin.x -= _padding; break;
-		case NSMinXEdge: frameRect.origin.x += _padding; break;
-		case NSMaxYEdge: frameRect.origin.y -= _padding; break;
-		case NSMinYEdge: frameRect.origin.y += _padding; break;
-	}
-	
-	frameRect.origin.x -= 14; //temporary to center arrow
-	
-	[super setFrame:frameRect display:flag];
-}
 
 #pragma mark NSResponder methods
 - (void)cancelOperation:(id)sender {
 	if ([self.delegate respondsToSelector:@selector(windowShouldClose:)]
 		&& [self.delegate windowShouldClose:self]) [self close];
+}
+
+#pragma mark other methods
+
+- (void) popoverWithFrame:(NSRect) frame
+		  backgroundColor:(NSColor *) newViewBackgroundColor
+			  borderColor:(NSColor *) newBorderColor
+			  borderWidth:(int) newBorderWidth
+			 cornerRadius:(float) newCornerRadius
+				arrowSize:(NSSize) newArrowSize
+				arrowEdge:(NSRectEdge) newArrowEdge
+			arrowPosition:(float) newArrowPosition {
+//	newArrowPosition = 10;
+	newArrowEdge = NSMaxXEdge;
+	
+	NSRect newContentRect = frame;
+	newContentRect.origin = NSZeroPoint;
+	switch (self.arrowEdge = newArrowEdge) {
+		case NSMaxYEdge: //Up Arrow
+			if (newArrowPosition == -1) newArrowPosition = frame.size.width/2;
+			//temp.size.height = frame.size.height;
+			frame.size.height += newArrowSize.height;
+			frame.origin.y -= frame.size.height;
+			frame.origin.x -= newArrowPosition;
+			
+			break;
+			
+		case NSMinYEdge: //Down Arrow
+			if (newArrowPosition == -1) newArrowPosition = frame.size.width/2;
+			//temp.size.height = frame.size.height;
+			newContentRect.origin.y += newArrowSize.height;
+			
+			frame.size.height += newArrowSize.height;
+			frame.origin.x -= newArrowPosition;
+			break;
+			
+		case NSMaxXEdge: //Right Arrow
+			if (newArrowPosition == -1) newArrowPosition = frame.size.height/2;
+			frame.size.width += newArrowSize.height;
+			frame.origin.x -= frame.size.width;
+			frame.origin.y -= newArrowPosition;
+			break;
+			
+		case NSMinXEdge: //Left Arrow
+			if (newArrowPosition == -1) newArrowPosition = frame.size.height/2;
+			newContentRect.origin.x += newArrowSize.height;
+			
+			frame.size.width += newArrowSize.height;
+			frame.origin.y -= newArrowPosition;
+			break;
+	}
+	
+	self.contentRect = newContentRect;
+	self.viewBackgroundColor = newViewBackgroundColor;
+	self.borderColor = newBorderColor;
+	self.borderWidth = newBorderWidth;
+	self.cornerRadius = newCornerRadius;
+	self.arrowSize = newArrowSize;
+	self.arrowPosition = newArrowPosition;
+	
+	[super setFrame: frame display: YES];
 }
 
 @end

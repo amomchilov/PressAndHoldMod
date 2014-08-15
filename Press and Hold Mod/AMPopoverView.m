@@ -15,40 +15,42 @@
 	//0.5 more than needed, due to: http://stackoverflow.com/a/8016669/3141234
 	//+0.5 same size as original, cleaner edge
 	//-0.5 is 2px taller/wider than original
-	if ((self.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
+	if ((self.panel.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
 
-	NSBezierPath *path = [self popUpBezierPathWithRect3: self.bounds
-												radius: self.cornerRadius
-											borderWith: self.borderWidth
-										arrowDirection: self.arrowEdge
-								arrowPositionAlongEdge: 10
-											 arrowSize: self.arrowSize];
-	[path setLineWidth: self.borderWidth];
-	[self.backgroundColor setFill];
+	NSBezierPath *path = [self popUpBezierPathWithRect: self.panel.contentRect
+												radius: self.panel.cornerRadius
+											borderWith: self.panel.borderWidth
+										arrowDirection: self.panel.arrowEdge
+								arrowPositionAlongEdge: self.panel.arrowPosition
+											 arrowSize: self.panel.arrowSize];
+	
+	[path setLineWidth: self.panel.borderWidth];
+	[self.panel.viewBackgroundColor setFill];
 	[path fill];
-	[self.borderColor setStroke];
+	[self.panel.borderColor setStroke];
 	[path stroke];
 }
 
 #pragma mark Other methods
 
+- (AMPopoverPanel *) panel {
+	return (AMPopoverPanel *) self.window;
+}
 
 
 
-
-- (NSBezierPath *)popUpBezierPathWithRect3:(NSRect) rect
-									radius:(float) radius
-								borderWith:(float) borderWidth
-							arrowDirection:(NSRectEdge) arrowDirection
-					arrowPositionAlongEdge:(float) arrowPosition
-								 arrowSize:(NSSize) arrowSize {
+- (NSBezierPath *)popUpBezierPathWithRect:(NSRect) rect
+								   radius:(float) radius
+							   borderWith:(float) borderWidth
+						   arrowDirection:(NSRectEdge) arrowDirection
+				   arrowPositionAlongEdge:(float) arrowPosition
+								arrowSize:(NSSize) arrowSize {
 	
-	const float inset = radius + arrowSize.height;
-	const NSRect insetRect = NSInsetRect(rect, inset, inset);
-	const CGFloat minX = NSMinX(insetRect);
-	const CGFloat maxX = NSMaxX(insetRect);
-	const CGFloat minY = NSMinY(insetRect);
-	const CGFloat maxY = NSMaxY(insetRect);
+//	const float inset = radius + arrowSize.height;
+	const CGFloat minX = NSMinX(rect);
+	const CGFloat maxX = NSMaxX(rect);
+	const CGFloat minY = NSMinY(rect);
+	const CGFloat maxY = NSMaxY(rect);
 	
 	//Arrow is oriented like: /\ with the points defined from right to left
 	NSPoint arrowPoints[] = {NSMakePoint(arrowSize.width, 0),						//bottom right point
@@ -66,7 +68,6 @@
 	
 	//Bottom arrow
 	if (arrowDirection == NSMinYEdge) {
-		if (arrowPosition == -1) arrowPosition = NSMidX(rect) - inset;
 		[t translateXBy: arrowPosition + minX + arrowSize.width / 2.0 yBy: minY - radius];
 		[t rotateByDegrees: 180];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
@@ -78,7 +79,6 @@
 	
 	//Right arrow
 	if (arrowDirection == NSMaxXEdge) {
-		if (arrowPosition == -1) arrowPosition = NSMidY(rect) - inset;
 		[t translateXBy: maxX + radius yBy: arrowPosition + minY  + arrowSize.width / 2.0];
 		[t rotateByDegrees: 270];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
@@ -90,7 +90,6 @@
 	
 	//Top arrow
 	if (arrowDirection == NSMaxYEdge) {
-		if (arrowPosition == -1) arrowPosition = NSMidX(rect) - inset;
 		[t translateXBy: arrowPosition + minX - arrowSize.width / 2.0 yBy: maxY + radius];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
@@ -101,7 +100,6 @@
 	
 	//Left arrow
 	if (arrowDirection == NSMinXEdge) {
-		if (arrowPosition == -1) arrowPosition = NSMidY(rect) - inset;
 		[t translateXBy: minX - radius yBy: arrowPosition  + minY - arrowSize.width / 2.0];
 		[t rotateByDegrees: 90];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
