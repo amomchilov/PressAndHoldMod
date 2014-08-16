@@ -40,9 +40,11 @@
 				arrowSize:(NSSize) newArrowSize
 				arrowEdge:(NSRectEdge) newArrowEdge
 			arrowPosition:(float) newArrowPosition {
+	
 	newBorderWidth *= 2; //border is originally centered on the edge, so half is hidden.
 	frame.size.height += newBorderWidth; //adjusts for thickeness of border
 	frame.size.width += newBorderWidth;
+	
 	NSRect newContentRect = frame;
 	newContentRect.origin = NSZeroPoint;
 	switch (self.arrowEdge = newArrowEdge) {
