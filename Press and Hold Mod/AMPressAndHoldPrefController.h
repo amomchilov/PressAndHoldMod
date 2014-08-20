@@ -9,6 +9,8 @@
 #import "AMKeyboardView.h"
 #import "AMPopoverController.h"
 
+/**
+ */
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
 	AMPopoverController *_popoverController;
 	AMKeyboardViewController *_keyboardController;

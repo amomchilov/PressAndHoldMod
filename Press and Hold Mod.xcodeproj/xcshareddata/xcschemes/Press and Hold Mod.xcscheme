@@ -60,6 +60,15 @@
       <PathRunnable
          FilePath = "/Applications/System Preferences.app">
       </PathRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "11FBAF081975C5FB00F52CAF"
+            BuildableName = "Press and Hold Mod.prefPane"
+            BlueprintName = "Press and Hold Mod"
+            ReferencedContainer = "container:Press and Hold Mod.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <CommandLineArguments>
          <CommandLineArgument
             argument = "$USER_LIBRARY_DIR/PreferencePanes/$FULL_PRODUCT_NAME"
@@ -89,5 +98,14 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "/usr/local/bin/appledoc \&#10;--project-name HereProjectName \&#10;--project-company &quot;HereProjectCompany&quot; \&#10;--company-id com.companyName \&#10;--keep-undocumented-objects \&#10;--keep-undocumented-members \&#10;--search-undocumented-doc \&#10;--exit-threshold 2 \&#10;--ignore .m \&#10;--output &quot;AppleDoc&quot; .">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>

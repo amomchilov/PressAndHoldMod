@@ -8,16 +8,9 @@
 
 #pragma mark NSView methods
 - (void)drawRect:(NSRect)dirtyRect {
+	[super drawRect:dirtyRect];
 	
 	[[NSGraphicsContext currentContext] saveGraphicsState];
-	
-    [super drawRect:dirtyRect];
-	
-	//NSRect bounds = self.bounds;
-	//0.5 more than needed, due to: http://stackoverflow.com/a/8016669/3141234
-	//+0.5 same size as original, cleaner edge
-	//-0.5 is 2px taller/wider than original
-	//if ((self.panel.borderWidth % 2) == 1) bounds = NSInsetRect(bounds, 0.5, 0.5);
 
 	NSBezierPath *path = [self popUpBezierPathWithRect: self.panel.contentRect
 												radius: self.panel.cornerRadius
@@ -42,8 +35,6 @@
 - (AMPopoverPanel *) panel {
 	return (AMPopoverPanel *) self.window;
 }
-
-
 
 - (NSBezierPath *)popUpBezierPathWithRect:(NSRect) rect
 								   radius:(float) radius

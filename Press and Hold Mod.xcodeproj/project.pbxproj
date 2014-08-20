@@ -263,6 +263,7 @@
 				11FBAF051975C5FB00F52CAF /* Headers */,
 				11FBAF061975C5FB00F52CAF /* Resources */,
 				11FBAF071975C5FB00F52CAF /* Rez */,
+				11B1FBF519A2FDBA006E4250 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -324,6 +325,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B1FBF519A2FDBA006E4250 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"HereProjectCompany\" \\\n--company-id com.companyName \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--search-undocumented-doc \\\n--exit-threshold 2 \\\n--ignore .m \\\n--output \"AppleDoc\" \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11FBAF031975C5FB00F52CAF /* Sources */ = {
