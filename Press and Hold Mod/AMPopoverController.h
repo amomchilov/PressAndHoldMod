@@ -4,7 +4,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AMPopoverPanel.h"
-#import "NSView+ActualBounds.h"
+#import "NSView+AMCatagory.h"
 
 /**
  @brief  A NSWindowController subclass which controls an AMPopoverPanel

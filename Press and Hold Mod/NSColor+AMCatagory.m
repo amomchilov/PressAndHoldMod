@@ -2,9 +2,9 @@
 //  Created by Jimmy Hough Jr on 7/21/14.
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
-#import "NSColor+HexColorCode.h"
+#import "NSColor+AMCatagory.h"
 
-@implementation NSColor (ViewDebugging)
+@implementation NSColor (AMCatagory)
 
 + (NSColor *)colorWithCalibratedRedHex:(Byte)redByte
 							  greenHex:(Byte)greenByte

@@ -2,12 +2,11 @@
 //  Created by Jimmy Hough Jr on 7/21/14.
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
-#import "NSView+ViewDebugging.h"
+#import "NSView+AMCatagory.h"
 
-@implementation NSView (ViewDebugging)
+@implementation NSView (AMCatagory)
 + (NSString *)hierarchicalDescriptionOfView:(NSView *)view
-                                      level:(NSUInteger)level
-{
+                                      level:(NSUInteger)level {
     
     // Ready the description string for this level
     NSMutableString * builtHierarchicalString = [NSMutableString string];
@@ -18,7 +17,7 @@
         [tabString appendString:@"\t"];
     
     // Get the view's title string if it has one
-    NSString * titleString = ([view respondsToSelector:@selector(title)]) ? [NSString stringWithFormat:@"%@", [NSString stringWithFormat:@"\"%@\" ", [(NSButton *)view title]]] : @"";
+    NSString * titleString = ([view respondsToSelector:@selector(title)]) ? [NSString stringWithFormat:@"\"%@\" ", [(NSButton *)view title]] : @"";
     NSString *frameString = NSStringFromRect([view frame]);
     
     // Append our own description at this level
@@ -32,15 +31,17 @@
     return builtHierarchicalString;
 }
 
-- (void)logHierarchy
-{
+- (void)logHierarchy {
     NSLog(@"%@", [NSView hierarchicalDescriptionOfView:self
                                                  level:0]);
 }
 
-
-//- (void)keyDown:(NSEvent *)theEvent
-//{
-//    DLog(@"%@", self.subviews);
-//}
+- (NSRect) actualBounds {
+	NSRect r = [self.window convertRectToScreen:[self convertRect:self.bounds toView:nil]];
+	NSEdgeInsets insets = self.alignmentRectInsets;
+	return NSMakeRect(r.origin.x + insets.left,
+					  r.origin.y + insets.bottom,
+					  r.size.width - insets.left - insets.right,
+					  r.size.height - insets.bottom - insets.top);
+}
 @end

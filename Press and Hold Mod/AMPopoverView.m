@@ -12,12 +12,12 @@
 	
 	[[NSGraphicsContext currentContext] saveGraphicsState];
 
-	NSBezierPath *path = [self popUpBezierPathWithRect: self.panel.contentRect
-												radius: self.panel.cornerRadius
-											borderWith: self.panel.borderWidth
-										arrowDirection: self.panel.arrowEdge
-								arrowPositionAlongEdge: self.panel.arrowPosition
-											 arrowSize: self.panel.arrowSize];
+	NSBezierPath *path = [AMPopoverView popUpBezierPathWithRect: self.panel.contentRect
+														 radius: self.panel.cornerRadius
+													 borderWith: self.panel.borderWidth
+													  arrowSize: self.panel.arrowSize
+													  arrowEdge: self.panel.arrowEdge
+										 arrowPositionAlongEdge: self.panel.arrowPosition];
 	
 	[path setLineWidth: self.panel.borderWidth];
 	[self.panel.viewBackgroundColor setFill];
@@ -31,21 +31,20 @@
 }
 
 #pragma mark Other methods
-
 - (AMPopoverPanel *) panel {
 	return (AMPopoverPanel *) self.window;
 }
 
-- (NSBezierPath *)popUpBezierPathWithRect:(NSRect) rect
++ (NSBezierPath *)popUpBezierPathWithRect:(NSRect) rect
 								   radius:(float) radius
 							   borderWith:(float) borderWidth
-						   arrowDirection:(NSRectEdge) arrowDirection
-				   arrowPositionAlongEdge:(float) arrowPosition
-								arrowSize:(NSSize) arrowSize {
-	const CGFloat minX = NSMinX(rect);
-	const CGFloat maxX = NSMaxX(rect);
-	const CGFloat minY = NSMinY(rect);
-	const CGFloat maxY = NSMaxY(rect);
+								arrowSize:(NSSize) arrowSize
+								arrowEdge:(NSRectEdge) arrowEdge
+				   arrowPositionAlongEdge:(float) arrowPosition {
+	const float minX = NSMinX(rect);
+	const float maxX = NSMaxX(rect);
+	const float minY = NSMinY(rect);
+	const float maxY = NSMaxY(rect);
 	
 	//Arrow is oriented like: /\ with the points defined from right to left
 	NSPoint arrowPoints[] = {NSMakePoint(arrowSize.width, 0),						//bottom right point
@@ -62,7 +61,7 @@
 	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX + radius, minY + radius) radius: radius startAngle: 180 endAngle: 270];
 	
 	//Bottom arrow
-	if (arrowDirection == NSMinYEdge) {
+	if (arrowEdge == NSMinYEdge) {
 		[t translateXBy: minX + arrowPosition + arrowSize.width / 2.0 yBy: minY];
 		[t rotateByDegrees: 180];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
@@ -73,7 +72,7 @@
 	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX - radius, minY + radius) radius: radius startAngle: 270 endAngle:   0];
 	
 	//Right arrow
-	if (arrowDirection == NSMaxXEdge) {
+	if (arrowEdge == NSMaxXEdge) {
 		[t translateXBy: maxX yBy: minY + arrowPosition + arrowSize.width / 2.0];
 		[t rotateByDegrees: 270];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
@@ -84,7 +83,7 @@
 	[path appendBezierPathWithArcWithCenter: NSMakePoint(maxX - radius, maxY - radius) radius: radius startAngle:   0 endAngle:  90];
 	
 	//Top arrow
-	if (arrowDirection == NSMaxYEdge) {
+	if (arrowEdge == NSMaxYEdge) {
 		[t translateXBy: minX + arrowPosition - arrowSize.width / 2.0 yBy: maxY];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
 		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
@@ -94,7 +93,7 @@
 	[path appendBezierPathWithArcWithCenter: NSMakePoint(minX + radius, maxY - radius) radius: radius startAngle:  90 endAngle: 180];
 	
 	//Left arrow
-	if (arrowDirection == NSMinXEdge) {
+	if (arrowEdge == NSMinXEdge) {
 		[t translateXBy: minX yBy: minY + arrowPosition - arrowSize.width / 2.0];
 		[t rotateByDegrees: 90];
 		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
