@@ -15,7 +15,7 @@
 	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of supported languages.
-	NSArray *userISPrefs = [AMLocaleUtilities userInputSourcePreferences]; //User's Input Source Preferences
+	NSArray *userISPrefs = [AMLocaleUtilities userLanguagePreferences]; //User's Input Source Preferences
 	NSArray *supportedLanguages = [_model sortedLanguageList]; //All supported languages
 	NSPredicate *intersectPredicate = [NSPredicate predicateWithFormat:@"SELF IN %@", supportedLanguages];
 	NSArray *filteresdUserISPrefs = [userISPrefs filteredArrayUsingPredicate:intersectPredicate]; //All supported User Input Source Preferences
