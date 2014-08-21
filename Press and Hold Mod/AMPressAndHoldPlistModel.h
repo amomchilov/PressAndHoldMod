@@ -7,12 +7,30 @@
 
 static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/";
 
-@interface AMPressAndHoldPlistModel : NSObject
+/**
+ A class that manages read/write access of .plist files of "Press and Hold.app" 
+ */
+@interface AMPressAndHoldPlistModel : NSObject {
+	NSMutableDictionary *_plistFiles;
+}
 
-@property NSMutableDictionary *plistFiles;
+/**
+ @brief The absolute path of the currently active plist
+ */
 @property NSString *activePlistFilePath;
 
+/**
+ @return A sorted array of all languages for which plists exist (sorted by caseInsensitiveCompare:)
+ */
 - (NSArray *) sortedLanguageList;
+
+/**
+ @brief Loads the approriate plist for the key
+ 
+ @param plistKey the locale code of the desired language (NSLocaleIdentifier)
+ 
+ @return the contents of the plist file's contents for the given plistKey
+ */
 - (NSString *) fileContentsForPlistKey: (NSString *) plistKey;
 - (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
 						CharacterKey: (NSString *) characterKey;

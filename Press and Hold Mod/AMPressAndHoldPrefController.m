@@ -21,8 +21,8 @@
 	NSArray *filteresdUserISPrefs = [userISPrefs filteredArrayUsingPredicate:intersectPredicate]; //All supported User Input Source Preferences
 	NSArray *sortedUserISPrefs = [filteresdUserISPrefs sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 	
-	[self.popUpButton addItemsWithTitles: sortedUserISPrefs];
-	[self.popUpButton selectItemWithTitle: filteresdUserISPrefs[0]];
+	[self.languagesPopUpButton addItemsWithTitles: sortedUserISPrefs];
+	[self.languagesPopUpButton selectItemWithTitle: filteresdUserISPrefs[0]];
 	[self updateInputSource];
 	
 	/*****Setup AMKeyboardView*****/
@@ -32,8 +32,8 @@
     _keyboardController.delegate = self;
 	self.keyboardView = (AMKeyboardView *) _keyboardController.view;
 	
-	self.keyboardView.frame = self.keyboardPlaceHolder.frame;
-    [self.keyboardPlaceHolder removeFromSuperview];
+	self.keyboardView.frame = _keyboardPlaceHolder.frame;
+    [_keyboardPlaceHolder removeFromSuperview];
 
 	[self.mainView addSubview: self.keyboardView];
 	
@@ -54,9 +54,9 @@
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
 - (void)didSelect {
-	[self.mainView.window performSelector:@selector(makeFirstResponder:)
-							   withObject:self.keyboardView
-							   afterDelay:0.0];
+	[self.mainView.window performSelector: @selector(makeFirstResponder:)
+							   withObject: self.keyboardView
+							   afterDelay: 0.0];
 }
 
 //Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
@@ -78,14 +78,6 @@
 	[self updateInputSource];
 }
 
-#pragma mark IBActions (testing)
-- (IBAction)testButton1Pressed:(NSButton *)sender {
-}
-
-- (IBAction)testButton2Pressed:(NSButton *)sender {
-	[_popoverController close];
-}
-
 #pragma mark Other methods
 - (void) resignKeyWindow {
 	[_popoverController close];
@@ -93,9 +85,9 @@
 }
 
 - (void) updateInputSource {
-	_currentPlist = self.popUpButton.titleOfSelectedItem;
+	_currentPlist = self.languagesPopUpButton.titleOfSelectedItem;
 	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
-	[self.textView setString: fileContents];
+	[_textView setString: fileContents];
 	
 	[_keyboardController rebuildKeyLayout];
 }

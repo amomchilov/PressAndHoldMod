@@ -29,21 +29,21 @@
 }
 
 - (NSArray *) sortedLanguageList {
-	return [[self.plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+	return [[_plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
 - (NSString *) fileContentsForPlistKey: (NSString *) key {
-	self.activePlistFilePath = [self.plistFiles objectForKey:key];
+	self.activePlistFilePath = [_plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
-	return [NSString stringWithContentsOfFile:self.activePlistFilePath
-							encoding:NSUTF8StringEncoding
-							error:nil];
+	return [NSString stringWithContentsOfFile: self.activePlistFilePath
+									 encoding: NSUTF8StringEncoding
+										error: nil];
 }
 
 - (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
 						CharacterKey: (NSString *) characterKey {
-	NSString *plistPath = [self.plistFiles objectForKey: plistKey];
+	NSString *plistPath = [_plistFiles objectForKey: plistKey];
 	NSDictionary *plistContents = [NSDictionary dictionaryWithContentsOfFile: plistPath];
 	
 	NSString *fullCharacterKey = [[NSString alloc] initWithFormat:@"Roman-Accent-%@", characterKey];
