@@ -27,7 +27,6 @@
 	return [self localeCodesToStrings: [NSLocale preferredLanguages]];
 }
 
-/**Fuck this ancient API.*/
 + (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags {
 	int result = 0;
 	if (eventModifierFlags & NSShiftKeyMask) result |= shiftKey;

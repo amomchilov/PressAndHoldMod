@@ -9,7 +9,7 @@
  @brief  This class contains various class methods for working with locale codes and language keys.
  */
 @interface AMLocaleUtilities : NSObject
-#warning expand to check for other keys
+//TODO:  expand to check for other keys
 
 /**
  @brief  Converts an locale code to a localized string in the user's current language
