@@ -26,23 +26,21 @@
 }
 
 - (void) showWindow:(NSView *)sender withStringArray: (NSArray*) stringArray {
-		NSRect senderRect = sender.actualBounds;
-		NSRect frameRect = NSMakeRect(senderRect.origin.x + senderRect.size.width / 2, //Horizontally centered with senderRect
-									  senderRect.origin.y + senderRect.size.height, //Top edge of senderRect
-									  3 + 26 * (stringArray.count/* + 1*/), //width needs work.
-									  45);
-		NSColor *borderColor = [NSColor colorWithCalibratedRedHex: 0xC2
-														 greenHex: 0xD7
-														  blueHex: 0xFE
-														 alphaHex: 0xFF];
-		[self.windowAsAMPopoverPanel popoverWithFrame: frameRect
-									  backgroundColor: [NSColor whiteColor]
-										  borderColor: borderColor
-										  borderWidth: 1
-										 cornerRadius: 4
-											arrowSize: NSMakeSize(9, 6)
-											arrowEdge: NSMinYEdge
-										arrowPosition: 10];
+
+	NSColor *borderColor = [NSColor colorWithCalibratedRedHex: 0xC2
+													 greenHex: 0xD7
+													  blueHex: 0xFE
+													 alphaHex: 0xFF];
+
+	[self.windowAsAMPopoverPanel popoverWithSize: NSMakeSize(3 + 26 * (stringArray.count + 1), 45) //TODO: width is fucked.
+										  onView: sender
+								 backgroundColor: [NSColor whiteColor]
+									 borderColor: borderColor
+									 borderWidth: 1
+									cornerRadius: 4
+									   arrowSize: NSMakeSize(9, 6)
+									   arrowEdge: NSMinYEdge
+								   arrowPosition: 10];
 
 	if (stringArray) {
 		NSMutableString *labelString = [NSMutableString stringWithCapacity: 18];

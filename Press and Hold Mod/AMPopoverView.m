@@ -12,7 +12,7 @@
 	
 	[[NSGraphicsContext currentContext] saveGraphicsState];
 
-	NSBezierPath *path = [AMPopoverView popUpBezierPathWithRect: self.panel.contentRect
+	NSBezierPath *path = [AMPopoverView popUpBezierPathWithRect: self.panel.popUpRect
 														 radius: self.panel.cornerRadius
 													 borderWith: self.panel.borderWidth
 													  arrowSize: self.panel.arrowSize
