@@ -14,7 +14,7 @@ const int modifierKeyCodes[] = {56, 63, 59, 58, 55, 54, 61, 60};
 
 @implementation AMKeyboardModel
 
-- (id) init {
+- (instancetype) init {
 	if (self = [super init]) {
 		[self rebuildKeyLayout];
 	}

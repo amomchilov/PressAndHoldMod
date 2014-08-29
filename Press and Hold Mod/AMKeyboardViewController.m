@@ -7,7 +7,8 @@
 @implementation AMKeyboardViewController
 
 #pragma mark NSViewController methods
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+
+- (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		self.viewAsAMKeyboardView.delegate = self;
 		_model = [[AMKeyboardModel alloc] init];

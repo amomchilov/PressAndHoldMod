@@ -8,7 +8,7 @@
 @implementation AMPopoverController
 
 #pragma mark NSWindowController methods
-//- (id)initWithWindow:(NSWindow *)window {
+//- (instancetype)initWithWindow:(NSWindow *)window {
 //	if (self = [super initWithWindow:window]) {
 //    }
 //    return self;

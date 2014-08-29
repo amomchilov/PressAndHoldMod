@@ -6,7 +6,7 @@
 
 @implementation AMPressAndHoldPlistModel
 
-- (id) init {
+- (instancetype) init {
 	if (self = [super init]) {
 		_plistFiles = [[NSMutableDictionary alloc] init];
 		
