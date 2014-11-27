@@ -12,17 +12,17 @@
 	
 	[[NSGraphicsContext currentContext] saveGraphicsState];
 
-	NSBezierPath *path = [AMPopoverView popUpBezierPathWithRect: self.panel.popUpRect
-														 radius: self.panel.cornerRadius
-													 borderWith: self.panel.borderWidth
-													  arrowSize: self.panel.arrowSize
-													  arrowEdge: self.panel.arrowEdge
-										 arrowPositionAlongEdge: self.panel.arrowPosition];
+	NSBezierPath *path = [AMPopoverView BezierPathWithRect: self.popUpRect
+													radius: self.cornerRadius
+												borderWith: self.borderWidth
+												 arrowSize: self.arrowSize
+												 arrowEdge: self.arrowEdge
+									arrowPositionAlongEdge: self.arrowPosition];
 	
-	[path setLineWidth: self.panel.borderWidth];
-	[self.panel.viewBackgroundColor setFill];
+	[path setLineWidth: self.borderWidth];
+	[self.backgroundColor setFill];
 	[path fill];
-	[self.panel.borderColor setStroke];
+	[self.borderColor setStroke];
 	[path setClip];
 	[path stroke];
 	
@@ -31,16 +31,13 @@
 }
 
 #pragma mark Other methods
-- (AMPopoverPanel *) panel {
-	return (AMPopoverPanel *) self.window;
-}
 
-+ (NSBezierPath *)popUpBezierPathWithRect:(NSRect) rect
-								   radius:(float) radius
-							   borderWith:(float) borderWidth
-								arrowSize:(NSSize) arrowSize
-								arrowEdge:(NSRectEdge) arrowEdge
-				   arrowPositionAlongEdge:(float) arrowPosition {
++ (NSBezierPath *) BezierPathWithRect:(NSRect) rect
+							   radius:(float) radius
+						   borderWith:(float) borderWidth
+							arrowSize:(NSSize) arrowSize
+							arrowEdge:(NSRectEdge) arrowEdge
+			   arrowPositionAlongEdge:(float) arrowPosition {
 	const float minX = NSMinX(rect);
 	const float maxX = NSMaxX(rect);
 	const float minY = NSMinY(rect);

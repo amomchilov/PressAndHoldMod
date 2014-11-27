@@ -12,7 +12,6 @@
 - (void)mainViewDidLoad {
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
-	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of supported languages.
 	NSArray *userISPrefs = [AMLocaleUtilities userLanguagePreferences]; //User's Input Source Preferences
@@ -38,7 +37,7 @@
 	[self.mainView addSubview: self.keyboardView];
 	
 	/*****Setup AMPopover*****/
-	_popoverController = [[AMPopoverController alloc] initWithWindowNibName:@"AMPopoverView"];
+	_popoverController = [[AMPopoverController alloc] initWithContentView: [[AMAccentCharPopoverView alloc] init]];
 
 	/*****Observe Input Source Changes*****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
@@ -86,8 +85,6 @@
 
 - (void) updateInputSource {
 	_currentPlist = self.languagesPopUpButton.titleOfSelectedItem;
-	NSString *fileContents = [_model fileContentsForPlistKey: _currentPlist];
-	[_textView setString: fileContents];
 	
 	[_keyboardController rebuildKeyLayout];
 }

@@ -17,9 +17,7 @@
 	AMKeyboardViewController *_keyboardController;
 	AMPressAndHoldPlistModel *_model;
 	
-	__weak IBOutlet NSView *_keyboardPlaceHolder;
-
-	__unsafe_unretained IBOutlet NSTextView *_textView;
+	__weak IBOutlet AMKeyboardView *_keyboardPlaceHolder;
 	
 	NSString *_currentPlist;
 }
