@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
 Path: /Users/Alexander/Library/Developer/Shared/Documentation/DocSets/com.companyName.Press-and-Hold-Mod.docset
-Time: 2014-11-27 21:27:57 +0000
+Time: 2015-01-02 06:25:12 +0000

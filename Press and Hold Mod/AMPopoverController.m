@@ -7,14 +7,6 @@
 
 @implementation AMPopoverController
 
-<<<<<<< Updated upstream
-#pragma mark NSWindowController methods
-//- (instancetype)initWithWindow:(NSWindow *)window {
-//	if (self = [super initWithWindow:window]) {
-//    }
-//    return self;
-//}
-=======
 #pragma mark initializers
 - (instancetype) initWithContentViewNib:(NSString *) nibName {
 	return [self initWithContentViewController: [[NSViewController alloc] initWithNibName: nibName
@@ -45,7 +37,6 @@
     }
     return self;
 }
->>>>>>> Stashed changes
 
 //- (void)windowDidLoad {
 //	DLog(@"");
