@@ -25,7 +25,7 @@
 	[self updateInputSource];
 	
 	/*****Setup AMKeyboardView*****/
-    _keyboardController = [[AMKeyboardViewController alloc]
+    _keyboardController = [[AMKeyboardVC alloc]
 						   initWithNibName:@"AMKeyboardView"
 						   bundle: self.bundle];
     _keyboardController.delegate = self;
@@ -37,7 +37,10 @@
 	[self.mainView addSubview: self.keyboardView];
 	
 	/*****Setup AMPopover*****/
-	_popoverController = [[AMPopoverController alloc] initWithContentView: [[AMAccentCharPopoverView alloc] init]];
+	NSViewController *popoverContentVC = [[NSViewController alloc] initWithNibName: @"AMCharPopover"
+																			bundle: self.bundle];
+	AMCharPopoverView *popoverContentV = (AMCharPopoverView *) popoverContentVC.view;
+	_popoverController = [[AMPopoverController alloc] initWithContentView: popoverContentV];
 
 	/*****Observe Input Source Changes*****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self

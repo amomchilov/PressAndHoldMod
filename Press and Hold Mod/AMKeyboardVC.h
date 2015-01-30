@@ -12,7 +12,7 @@
 /**
  A NSViewController subclass that manages an AMKeyboardView and AMKeyboardModel
  */
-@interface AMKeyboardViewController : NSViewController <AMKeyboardViewDelegate> {
+@interface AMKeyboardVC : NSViewController <AMKeyboardViewDelegate> {
 	AMKeyboardModel *_model;
 	BOOL lastShiftState;
 	BOOL lastFnState;

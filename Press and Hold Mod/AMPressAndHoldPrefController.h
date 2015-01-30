@@ -5,7 +5,7 @@
 #import <Cocoa/Cocoa.h>
 #import <PreferencePanes/PreferencePanes.h>
 #import "AMPressAndHoldPlistModel.h"
-#import "AMKeyboardViewController.h"
+#import "AMKeyboardVC.h"
 #import "AMKeyboardView.h"
 #import "AMPopoverController.h"
 
@@ -14,7 +14,7 @@
  */
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
 	AMPopoverController *_popoverController;
-	AMKeyboardViewController *_keyboardController;
+	AMKeyboardVC *_keyboardController;
 	AMPressAndHoldPlistModel *_model;
 	
 	__weak IBOutlet AMKeyboardView *_keyboardPlaceHolder;

@@ -5,17 +5,13 @@
 #import <Cocoa/Cocoa.h>
 #import "AMPopoverPanel.h"
 #import "AMPopoverView.h"
-#import "AMAccentCharPopoverView.h"
+#import "AMCharPopoverView.h"
 #import "NSView+AMCatagory.h"
 
 /**
  @brief  A NSWindowController subclass which controls an AMPopoverPanel
  */
 @interface AMPopoverController : NSWindowController <NSWindowDelegate>
-
-- (instancetype) initWithContentViewNib:(NSString *) nibName;
-
-- (instancetype) initWithContentViewController:(NSViewController *) vc;
 
 - (instancetype) initWithContentView:(AMPopoverView *) view;
 

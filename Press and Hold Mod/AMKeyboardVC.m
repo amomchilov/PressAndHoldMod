@@ -2,16 +2,17 @@
 //  Created by Alexander Momchilov on 2014-07-15.
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 
-#import "AMKeyboardViewController.h"
+#import "AMKeyboardVC.h"
 
-@implementation AMKeyboardViewController
+@implementation AMKeyboardVC
 
 #pragma mark NSViewController methods
 
-- (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype) initWithNibName:(NSString *)nibNameOrNil
+						  bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-		self.viewAsAMKeyboardView.delegate = self;
 		_model = [[AMKeyboardModel alloc] init];
+		self.viewAsAMKeyboardView.delegate = self;
     }
     return self;
 }

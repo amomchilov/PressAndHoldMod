@@ -8,23 +8,6 @@
 @implementation AMPopoverController
 
 #pragma mark initializers
-- (instancetype) initWithContentViewNib:(NSString *) nibName {
-	return [self initWithContentViewController: [[NSViewController alloc] initWithNibName: nibName
-																				   bundle: [NSBundle bundleForClass: self.class]]];
-}
-
-- (instancetype) initWithContentViewController:(NSViewController *) vc  {
-	NSView *v = vc.view;
-	if ([v.class isSubclassOfClass: AMPopoverView.class]) {
-		return [self initWithContentView: (AMPopoverView *) vc.view];
-	}
-	else {
-		@throw [NSException exceptionWithName: @"IllegalArugment"
-									   reason: @"AMPopoverController's AMPopoverPanel's contentView MUST be a subclass of AMPopoverView"
-									 userInfo: nil];
-	}
-}
-
 - (instancetype) initWithContentView:(AMPopoverView *) view {
 	AMPopoverPanel *w = [[AMPopoverPanel alloc] initWithContentRect: NSZeroRect
 														  styleMask: NSBorderlessWindowMask
