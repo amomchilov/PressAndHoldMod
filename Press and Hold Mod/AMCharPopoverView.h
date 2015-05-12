@@ -8,6 +8,6 @@
 
 #import "AMPopoverView.h"
 
-@interface AMAccentCharPopoverView : AMPopoverView
+@interface AMCharPopoverView : AMPopoverView
 
 @end

@@ -6,11 +6,16 @@
 
 
 @implementation AMPopoverController
-
+ 
 #pragma mark initializers
 - (instancetype) initWithContentViewNib:(NSString *) nibName {
+	return [self initWithContentViewNib: nibName
+								 Bundle: [NSBundle bundleForClass: self.class]];
+}
+
+- (instancetype) initWithContentViewNib:(NSString *) nibName Bundle:(NSBundle *) bundle {
 	return [self initWithContentViewController: [[NSViewController alloc] initWithNibName: nibName
-																				   bundle: [NSBundle bundleForClass: self.class]]];
+																				   bundle: bundle]];
 }
 
 - (instancetype) initWithContentViewController:(NSViewController *) vc  {

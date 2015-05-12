@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Alexander Momchilov. All rights reserved.
 //
 
-#import "AMAccentCharPopoverView.h"
+#import "AMCharPopoverView.h"
 
-@implementation AMAccentCharPopoverView
+@implementation AMCharPopoverView
 
 - (instancetype)initWithFrame:(NSRect)frame {
 	if (self = [super initWithFrame:frame]) {

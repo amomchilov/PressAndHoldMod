@@ -5,7 +5,7 @@
 #import <Cocoa/Cocoa.h>
 #import "AMPopoverPanel.h"
 #import "AMPopoverView.h"
-#import "AMAccentCharPopoverView.h"
+#import "AMCharPopoverView.h"
 #import "NSView+AMCatagory.h"
 
 /**
@@ -14,6 +14,8 @@
 @interface AMPopoverController : NSWindowController <NSWindowDelegate>
 
 - (instancetype) initWithContentViewNib:(NSString *) nibName;
+
+- (instancetype) initWithContentViewNib:(NSString *) nibName Bundle:(NSBundle *) bundle;
 
 - (instancetype) initWithContentViewController:(NSViewController *) vc;
 
@@ -41,7 +43,7 @@
  - The width is ALWAYS measured as the distance along the edg
  @param newArrowEdge           The edge onto which the arrow is protruding fro
  The AMPopoverPanel is automatically positioned behind the arro
- @param newArrowPosition       The position of the arrow along its edge (clockwise
+ @param newArrowPosition       The position of the arrow along its edge (clockwise)
  Set to -1 to have the arrow automatically center on its edg
  The AMPopoverPanel is automatically positioned to ensure the correct arrow placemen
  @param dislpay				   Determines if the window should display after creation

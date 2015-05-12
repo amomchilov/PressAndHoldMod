@@ -37,7 +37,7 @@
 	[self.mainView addSubview: self.keyboardView];
 	
 	/*****Setup AMPopover*****/
-	_popoverController = [[AMPopoverController alloc] initWithContentView: [[AMAccentCharPopoverView alloc] init]];
+	_popoverController = [[AMPopoverController alloc] initWithWindowNibName: @"AMCharPopover"];
 
 	/*****Observe Input Source Changes*****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
