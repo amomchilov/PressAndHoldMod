@@ -71,7 +71,8 @@ enum AMModifierKeyType;
  @param sender   the virtual key that sent the call
  @param event    the generated NSEvent for this key call
  */
-- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender ForEvent:(NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender
+		 ForEvent:(NSEvent *) event;
 
 - (void) keyboard:(AMKeyboardView *) keyboard
 	 ModifierDown:(NSEvent *) event

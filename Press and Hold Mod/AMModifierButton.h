@@ -11,8 +11,6 @@
 	BOOL _mouseEnabled;
 }
 
-@property long representedKeyMask;
-
 /**
  @brief Sets the visual and mouseEnabaled state of the button
  
