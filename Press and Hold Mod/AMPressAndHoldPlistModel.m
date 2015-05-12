@@ -12,15 +12,15 @@
 		
 		NSFileManager *fileManager = [NSFileManager defaultManager];
 		NSPredicate *plistPredicate = [NSPredicate predicateWithFormat:@"SELF like %@", @"Keyboard*.plist"];
-		NSArray *plistFileNames = [[fileManager contentsOfDirectoryAtPath:BASEPATH error:nil]
+		NSArray *plistFileNames = [[fileManager contentsOfDirectoryAtPath: BASEPATH error: nil]
 								   filteredArrayUsingPredicate: plistPredicate];
 		
 		for (NSString *plistFileName in plistFileNames) {
 			NSString *plistFileLocaleCode = [plistFileName substringWithRange: NSMakeRange(9, plistFileName.length - 9 - 6)];
 			NSString *localeName = [AMLocaleUtilities localeCodeToString: plistFileLocaleCode];
 			NSString *plistFilePath = [NSString stringWithFormat:@"%@%@", BASEPATH, plistFileName];
-			if (localeName)
-				[_plistFiles setObject: plistFilePath forKey:localeName];
+			if (localeName) [_plistFiles setObject: plistFilePath
+											forKey: localeName];
 //			else if ([plistFileLocaleCode isEqual: @"default"])
 //				[_plistFiles setObject:plistFilePath forKey:@"Default"];
 		}
@@ -29,7 +29,7 @@
 }
 
 - (NSArray *) sortedLanguageList {
-	return [[_plistFiles allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+	return [[_plistFiles allKeys] sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)];
 }
 
 - (NSString *) fileContentsForPlistKey: (NSString *) key {

@@ -21,7 +21,7 @@
 #pragma mark NSResponder methods
 - (BOOL)acceptsFirstResponder { return YES; }
 
-- (void)keyDown:(NSEvent *)event {
+- (void)keyDown:(NSEvent *) event {
 	[self.delegate keyboard: self keyDown: event];
 }
 
@@ -31,6 +31,7 @@
 
 #pragma mark Other methods
 - (void)virtualKeyDown:(NSButton *) sender {
+	DLog(@"%li", sender.tag);
 	[self.delegate keyboard: self virtualKeyDownFromButton: sender];
 }
 @end

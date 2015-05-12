@@ -24,7 +24,7 @@
 	[self.languagesPopUpButton selectItemWithTitle: filteresdUserISPrefs[0]];
 	[self updateInputSource];
 	
-	/*****Setup AMKeyboardView*****/
+	/***** Setup AMKeyboardView *****/
     _keyboardController = [[AMKeyboardVC alloc]
 						   initWithNibName:@"AMKeyboardView"
 						   bundle: self.bundle];
@@ -36,18 +36,18 @@
 
 	[self.mainView addSubview: self.keyboardView];
 	
-	/*****Setup AMPopover*****/
+	/***** Setup AMPopover *****/
 	NSViewController *popoverContentVC = [[NSViewController alloc] initWithNibName: @"AMCharPopover"
 																			bundle: self.bundle];
 	AMCharPopoverView *popoverContentV = (AMCharPopoverView *) popoverContentVC.view;
 	_popoverController = [[AMPopoverController alloc] initWithContentView: popoverContentV];
 
-	/*****Observe Input Source Changes*****/
+	/***** Observe Input Source Changes *****/
 	[[NSDistributedNotificationCenter defaultCenter] addObserver: self
 														selector: @selector(updateInputSource)
 															name: (NSString *)kTISNotifySelectedKeyboardInputSourceChanged
 														  object: nil];
-	/*****Observe changes to the popup's key window status *****/
+	/***** Observe changes to the popup's key window status *****/
 	[[NSNotificationCenter defaultCenter] addObserver: self
 											 selector: @selector(resignKeyWindow)
 												 name: NSWindowDidResignKeyNotification
@@ -55,7 +55,7 @@
 }
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
-- (void)didSelect {
+- (void) didSelect {
 	[self.mainView.window performSelector: @selector(makeFirstResponder:)
 							   withObject: self.keyboardView
 							   afterDelay: 0.0];
@@ -67,7 +67,8 @@
 }
 
 #pragma mark AMKeyboardViewControllerDelegate methods
-- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *)sender ForEvent:(NSEvent *)event {
+- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender
+		 ForEvent:(NSEvent *) event {
 	if ([AMLocaleUtilities isCharacterForKeycode: event.keyCode]) {
 		//NSLog(@"%@", event);
 		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];

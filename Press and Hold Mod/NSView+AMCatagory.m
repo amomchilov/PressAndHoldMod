@@ -9,12 +9,11 @@
                                       level:(NSUInteger)level {
     
     // Ready the description string for this level
-    NSMutableString * builtHierarchicalString = [NSMutableString string];
+    NSMutableString *builtHierarchicalString = [NSMutableString string];
     
     // Build the tab string for the current level's indentation
-    NSMutableString * tabString = [NSMutableString string];
-    for (NSUInteger i = 0; i <= level; i++)
-        [tabString appendString:@"\t"];
+    NSMutableString *tabString = [NSMutableString string];
+    for (NSUInteger i = 0; i <= level; i++) [tabString appendString:@"\t"];
     
     // Get the view's title string if it has one
     NSString * titleString = ([view respondsToSelector:@selector(title)]) ? [NSString stringWithFormat:@"\"%@\" ", [(NSButton *)view title]] : @"";

@@ -10,7 +10,7 @@
 @interface NSColor (AMCatagory)
 
 /**
- @brief  Creates an NSColour with Byte component (0-255).
+ @brief  Creates an NSColour with Byte components (0-255).
  
 
  @discussion This is especially useful for using hexidimal notation for creating colors.

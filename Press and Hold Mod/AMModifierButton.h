@@ -11,11 +11,15 @@
 	BOOL _mouseEnabled;
 }
 
+@property long representedKeyMask;
+
 /**
  @brief Sets the visual and mouseEnabaled state of the button
  
  @param state The new visual and mouseEnabled state
  */
 - (void) setMouseEnabledAndState:(BOOL) state;
+
+- (BOOL) isPressed;
 
 @end

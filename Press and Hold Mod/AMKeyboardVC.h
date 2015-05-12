@@ -7,6 +7,9 @@
 #import "AMKeyboardModel.h"
 #import "AMModifierButton.h"
 
+extern const int AMKeyMasks[];
+enum AMModifierKeyType;
+
 @protocol AMKeyboardViewControllerDelegate;
 
 /**
@@ -14,11 +17,6 @@
  */
 @interface AMKeyboardVC : NSViewController <AMKeyboardViewDelegate> {
 	AMKeyboardModel *_model;
-	BOOL lastShiftState;
-	BOOL lastFnState;
-	BOOL lastControlState;
-	BOOL lastOptionState;
-	BOOL lastCommandState;
 }
 
 /**
@@ -75,84 +73,12 @@
  */
 - (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender ForEvent:(NSEvent *) event;
 
-/**
- @brief Called when ⇧ (shift) is pressed
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyShiftDown: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard
+	 ModifierDown:(NSEvent *) event
+	  ModifierKey:(enum AMModifierKeyType) modifierKey;
 
-/**
- @brief Called when ⇧ (shift) is released
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyShiftUp: (NSEvent *) event;
-
-/**
- @brief  Called when Fn (function) is pressed
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyFnDown: (NSEvent *) event;
-
-/**
- @brief  Called when Fn (function) is released
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyFnUp: (NSEvent *) event;
-
-/**
- @brief  Called when ⌃ (control) is pressed
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyControlDown: (NSEvent *) event;
-
-/**
- @brief  Called when ⌃ (control) is released
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyControlUp: (NSEvent *) event;
-
-/**
- @brief  Called when ⌥ (option) is pressed
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyOptionDown: (NSEvent *) event;
-
-/**
- @brief  Called when ⌥ (option) is released
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyOptionUp: (NSEvent *) event;
-
-/**
- @brief  Called when ⌘ (command) is pressed
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyCommandDown: (NSEvent *) event;
-
-/**
- @brief  Called when ⌘ (command) is released
- 
- @param keyboard the AMKeyboardView that sent the call 
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard KeyCommandUp: (NSEvent *) event;
+- (void) keyboard:(AMKeyboardView *) keyboard
+	   ModifierUp:(NSEvent *) event
+	  ModifierKey:(enum AMModifierKeyType) modifierKey;
 
 @end

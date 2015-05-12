@@ -30,10 +30,21 @@ const int modifierKeyCodes[] = {56, 63, 59, 58, 55, 54, 61, 60};
 	for (int i = 0; i < sizeof(characterKeyCodes)/sizeof(characterKeyCodes[0]); i++) {
 		int keycode = characterKeyCodes[i];
 		NSNumber *key = [NSNumber numberWithInt: characterKeyCodes[i]];
-		[keyLayoutNoModifier setObject: [AMLocaleUtilities stringForKeyCode: keycode WithNSEventModifiers: 0] forKey: key];
-		[keyLayoutShift setObject: [AMLocaleUtilities stringForKeyCode: keycode WithNSEventModifiers: NSShiftKeyMask] forKey: key];
-		[keyLayoutOption setObject: [AMLocaleUtilities stringForKeyCode: keycode WithNSEventModifiers: NSAlternateKeyMask] forKey: key];
-		[keyLayoutShiftOption setObject: [AMLocaleUtilities stringForKeyCode: keycode WithNSEventModifiers: NSShiftKeyMask | NSAlternateKeyMask] forKey: key];
+		[keyLayoutNoModifier setObject: [AMLocaleUtilities stringForKeyCode: keycode
+													   WithNSEventModifiers: 0]
+								forKey: key];
+
+		[keyLayoutShift setObject: [AMLocaleUtilities stringForKeyCode: keycode
+												  WithNSEventModifiers: NSShiftKeyMask]
+						   forKey: key];
+
+		[keyLayoutOption setObject: [AMLocaleUtilities stringForKeyCode: keycode
+												   WithNSEventModifiers: NSAlternateKeyMask]
+							forKey: key];
+
+		[keyLayoutShiftOption setObject: [AMLocaleUtilities stringForKeyCode:
+										  keycode WithNSEventModifiers: NSShiftKeyMask | NSAlternateKeyMask]
+								 forKey: key];
 	}
 	self.keyLayouts = @{@(0) : keyLayoutNoModifier,
 						@(NSShiftKeyMask) : keyLayoutShift,
@@ -42,7 +53,8 @@ const int modifierKeyCodes[] = {56, 63, 59, 58, 55, 54, 61, 60};
 						
 }
 
-- (NSString *) stringForKeyCode: (int) keycode WithNSEventModifiers: (int) modifiers {
+- (NSString *) stringForKeyCode: (int) keycode
+		   WithNSEventModifiers: (int) modifiers {
 	NSNumber *maskedModifiers = @(modifiers & (NSShiftKeyMask | NSAlternateKeyMask));
 	return [[self.keyLayouts objectForKey: maskedModifiers] objectForKey: @(keycode)];
 }

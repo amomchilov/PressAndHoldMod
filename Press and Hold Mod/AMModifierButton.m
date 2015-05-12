@@ -13,16 +13,17 @@
     return self;
 }
 
-
 - (void)mouseDown:(NSEvent*)event{
-	if (_mouseEnabled) {
-		[super mouseDown:event];
-	}
+	if (_mouseEnabled) [super mouseDown:event];
 }
 
 - (void) setMouseEnabledAndState:(BOOL) state {
-	[self setState: state?NSOnState:NSOffState];
+	[self setState: state ? NSOnState : NSOffState];
 	_mouseEnabled = !state;
+}
+
+- (BOOL) isPressed {
+	return self.state == NSOffState;
 }
 
 @end
