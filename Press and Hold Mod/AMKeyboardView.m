@@ -9,29 +9,34 @@
 #pragma mark NSView methods
 - (void)awakeFromNib {
 	for (NSView *v in self.subviews) {
-		if ([v isKindOfClass:[NSButton class]]) {
+		if ([v isKindOfClass: NSButton.class]) {
 			NSButton *b = (NSButton *) v;
 			b.target = self;
-            b.action = @selector(virtualKeyDown:);
+			b.action = @selector(buttonAction:);
+			[b sendActionOn: NSLeftMouseDownMask | NSLeftMouseUpMask];
 		}
 	}
-	[self.delegate keyboard: self updateKeyTitlesWithModifiers: 0];
+//	[self.delegate keyboard: self updateKeyTitlesWithModifiers: 0];
 }
 
 #pragma mark NSResponder methods
 - (BOOL)acceptsFirstResponder { return YES; }
 
-- (void)keyDown:(NSEvent *) event {
-	[self.delegate keyboard: self keyDown: event];
+- (void) keyDown:(NSEvent *) event {
+	[self.delegate physicalKeyEvent: event];
 }
 
-- (void) flagsChanged:(NSEvent *)event {
-	[self.delegate keyboard: self flagsChanged: event];
+- (void) keyUp:(NSEvent *) event {
+	[self.delegate physicalKeyEvent: event];
+}
+
+- (void) flagsChanged:(NSEvent *) event {
+	[self.delegate flagsChanged: event];
 }
 
 #pragma mark Other methods
-- (void)virtualKeyDown:(NSButton *) sender {
-	DLog(@"%li", sender.tag);
-	[self.delegate keyboard: self virtualKeyDownFromButton: sender];
+- (void) buttonAction:(NSButton *) sender {
+	[self.delegate buttonAction: sender];
 }
+
 @end

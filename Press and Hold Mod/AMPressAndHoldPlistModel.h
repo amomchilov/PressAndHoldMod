@@ -32,7 +32,7 @@ static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.a
  @return the contents of the plist file's contents for the given plistKey
  */
 - (NSString *) fileContentsForPlistKey: (NSString *) plistKey;
-- (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
+- (NSArray *) stringArrayForPlistKey: (NSString *) plistName
 						CharacterKey: (NSString *) characterKey;
 
 @end

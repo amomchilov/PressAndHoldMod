@@ -5,8 +5,25 @@
 #import <Foundation/Foundation.h>
 #import "AMLocaleUtilities.h"
 
-extern const int characterKeyCodes[47];
-extern const int modifierKeyCodes[8];
+extern const size_t AMCharacterKeyCodes_Size;
+extern const unsigned short AMCharacterKeyCodes[];
+
+extern const size_t AMModifierKeyCodes_Size;
+extern const unsigned short AMModifierKeyCodes[];
+
+enum AMModifierKeyType {
+	AMLeftShift		= 56,
+	AMLeftFn		= 63,
+	AMLeftControl	= 59,
+	AMLeftOption	= 58,
+	AMLeftCommand	= 55,
+	AMRightShift	= 60,
+	AMRightControl	= 62,
+	AMRightOption	= 61,
+	AMRightCommand	= 54
+};
+
+extern const NSUInteger AMKeyMasks[];
 
 /**
  A class for storing the key labels of a keyboard, including key labels for when modifier keys are pressed.
@@ -47,6 +64,9 @@ extern const int modifierKeyCodes[8];
  @return The key label for the given parameters
  @warning This method can return nil for invalid keycode/modifiers
  */
-- (NSString *) stringForKeyCode: (int) keycode WithNSEventModifiers: (int) modifiers;
+- (NSString *) stringForKeyCode:(unsigned short) keycode
+		   WithNSEventModifiers:(unsigned int) modifiers;
 
+
++ (BOOL) isModifier:(unsigned short) keycode;
 @end

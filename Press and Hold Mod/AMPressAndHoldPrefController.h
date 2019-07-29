@@ -12,7 +12,7 @@
 /**
  Main class that controls a AMKeyboardViewController, AMKeyboardViewController and AMPressAndHoldPlistModel.
  */
-@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardViewControllerDelegate> {
+@interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardVCDelegate> {
 	AMPopoverController *_popoverController;
 	AMKeyboardVC *_keyboardController;
 	AMPressAndHoldPlistModel *_model;

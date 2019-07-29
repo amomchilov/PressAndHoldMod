@@ -71,7 +71,7 @@
  
  @warning Can return nil for invalid combinations of keycode/modifiers.
  */
-+ (NSString *) stringForKeyCode: (int)keycode WithNSEventModifiers:(int)modifiers;
++ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int) modifiers;
 
 /**
  @brief Checks wether a given keycode is a character key.

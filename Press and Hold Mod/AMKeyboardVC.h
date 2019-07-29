@@ -7,79 +7,37 @@
 #import "AMKeyboardModel.h"
 #import "AMModifierButton.h"
 
-extern const int AMKeyMasks[];
-enum AMModifierKeyType;
+@protocol AMKeyboardVCDelegate; //forward declaration
 
-@protocol AMKeyboardViewControllerDelegate;
-
-/**
- A NSViewController subclass that manages an AMKeyboardView and AMKeyboardModel
- */
 @interface AMKeyboardVC : NSViewController <AMKeyboardViewDelegate> {
 	AMKeyboardModel *_model;
+	BOOL *_modifierStates;
 }
 
-/**
- @brief A delegate to recieve call backs from the keyboard
- @see AMKeyboardViewControllerDelegate
- */
-@property (weak) id <AMKeyboardViewControllerDelegate> delegate;
+@property (weak) id <AMKeyboardVCDelegate> delegate;
 
-/**
- @return this NSViewController's view as an AMKeyboardView
- */
+#pragma mark Other methods
 - (AMKeyboardView *) viewAsAMKeyboardView;
-
-/**
- @brief Rebuilds this keyboard's key labels with the current language's character set
- */
 - (void) rebuildKeyLayout;
-
-/**
- @brief  Updates this keyboard's key labels to respond to the given modifier code
- 
- @param modifiers the modifiers encoded in the same way as NSEvent's modifierFlags
- */
 - (void) updateKeyTitlesWithModifiers:(int) modifiers;
-
-/**
- @brief  Sets the state of an AMModifierButton with the given keycode to state
- 
- @param state   the state to put the AMModifierButton in
- @param keycode the keycode of the AMModifierButton whose state is to be changed
- */
-- (void) setModifierState:(BOOL) state ForKeyCode:(int) keycode;
-
-/**
- @brief  Updates this keyboard's key labels to the default state, and releases all AMModifierButtons
- */
-- (void) resetModifierKeyStates;
 
 @end
 
-/**
- @brief A protocol that must be conformed to by the delegate to recieve AMKeyboardView events
- */
-@protocol AMKeyboardViewControllerDelegate <NSObject>
+
+@protocol AMKeyboardVCDelegate <NSObject>
 
 @optional
 
-/**
- @brief Called when a virtual key is pressed
- 
- @param keyboard the AMKeyboardView that sent the call
- @param sender   the virtual key that sent the call
- @param event    the generated NSEvent for this key call
- */
-- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender
-		 ForEvent:(NSEvent *) event;
+- (void) keyDown:(NSEvent *) event
+	  fromButton:(NSButton *) button;
 
-- (void) keyboard:(AMKeyboardView *) keyboard
-	 ModifierDown:(NSEvent *) event
-	  ModifierKey:(enum AMModifierKeyType) modifierKey;
+- (void) keyUp:(NSEvent *) event
+	fromButton:(NSButton *) button;
 
-- (void) keyboard:(AMKeyboardView *) keyboard
-	   ModifierUp:(NSEvent *) event
-	  ModifierKey:(enum AMModifierKeyType) modifierKey;
+- (void) modDown:(NSEvent *) event
+	  fromButton:(NSButton *) button;
+
+- (void) modUp:(NSEvent *) event
+	fromButton:(NSButton *) button;
 
 @end

@@ -47,7 +47,7 @@
 	NSPoint arrowPoints[] = {NSMakePoint(arrowSize.width, 0),						//bottom right point
 							 NSMakePoint(arrowSize.width / 2, arrowSize.height),	//tip
 							 NSZeroPoint};											//bottom left point
-	Byte arrowPointsCount = sizeof(arrowPoints)/sizeof(arrowPoints[0]);
+	Byte arrowPoints_Size = sizeof(arrowPoints)/sizeof(*arrowPoints);
 	
 	NSAffineTransform *t = [NSAffineTransform transform];
 	
@@ -61,8 +61,8 @@
 	if (arrowEdge == NSMinYEdge) {
 		[t translateXBy: minX + arrowPosition + arrowSize.width / 2.0 yBy: minY];
 		[t rotateByDegrees: 180];
-		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
-		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
+		for (int i = 0; i < arrowPoints_Size; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
+		[path appendBezierPathWithPoints: arrowPoints count: arrowPoints_Size];
 	}
 	
 	//Bottom right corner
@@ -72,8 +72,8 @@
 	if (arrowEdge == NSMaxXEdge) {
 		[t translateXBy: maxX yBy: minY + arrowPosition + arrowSize.width / 2.0];
 		[t rotateByDegrees: 270];
-		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
-		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
+		for (int i = 0; i < arrowPoints_Size; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
+		[path appendBezierPathWithPoints: arrowPoints count: arrowPoints_Size];
 	}
 	
 	//Top right corner
@@ -82,8 +82,8 @@
 	//Top arrow
 	if (arrowEdge == NSMaxYEdge) {
 		[t translateXBy: minX + arrowPosition - arrowSize.width / 2.0 yBy: maxY];
-		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
-		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
+		for (int i = 0; i < arrowPoints_Size; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
+		[path appendBezierPathWithPoints: arrowPoints count: arrowPoints_Size];
 	}
 	
 	//Top left corner
@@ -93,8 +93,8 @@
 	if (arrowEdge == NSMinXEdge) {
 		[t translateXBy: minX yBy: minY + arrowPosition - arrowSize.width / 2.0];
 		[t rotateByDegrees: 90];
-		for (int i = 0; i < arrowPointsCount; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
-		[path appendBezierPathWithPoints: arrowPoints count: arrowPointsCount];
+		for (int i = 0; i < arrowPoints_Size; i ++) arrowPoints[i] = [t transformPoint: arrowPoints[i]];
+		[path appendBezierPathWithPoints: arrowPoints count: arrowPoints_Size];
 	}
 	
 	[path closePath];

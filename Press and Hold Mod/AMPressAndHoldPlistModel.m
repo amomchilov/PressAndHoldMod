@@ -41,9 +41,9 @@
 										error: nil];
 }
 
-- (NSArray *) stringArrayForPlistKey: (NSString *) plistKey
+- (NSArray *) stringArrayForPlistKey: (NSString *) plistName
 						CharacterKey: (NSString *) characterKey {
-	NSString *plistPath = [_plistFiles objectForKey: plistKey];
+	NSString *plistPath = [_plistFiles objectForKey: plistName];
 	NSDictionary *plistContents = [NSDictionary dictionaryWithContentsOfFile: plistPath];
 	
 	NSString *fullCharacterKey = [[NSString alloc] initWithFormat:@"Roman-Accent-%@", characterKey];

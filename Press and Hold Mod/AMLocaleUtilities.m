@@ -37,11 +37,12 @@
 }
 
 /** magical code based off of shortcutrecorder */
-+ (NSString *) stringForKeyCode: (int)keycode WithNSEventModifiers:(int)modifiers {
++ (NSString *) stringForKeyCode:(int) keycode
+				  WithModifiers:(int) modifiers {
 	if (keycode < 0) return nil;
 	TISInputSourceRef tisSource = TISCopyCurrentKeyboardInputSource();
 	if (!tisSource) return nil;
-	
+
 	CFDataRef layoutData = (CFDataRef)TISGetInputSourceProperty(tisSource, kTISPropertyUnicodeKeyLayoutData);
 	
 	CFRelease(tisSource);
@@ -76,13 +77,14 @@
 }
 
 + (BOOL) isCharacterForKeycode: (int) keycode {
-	if (0 <= keycode
-		&& keycode <= 50
+	if (0 <= keycode && keycode <= 50
 		&& keycode != 10
 		&& keycode != 36
 		&& keycode != 48
 		&& keycode != 49) return YES;
 	return NO;
 }
+
+#warning move above method.
 
 @end

@@ -4,12 +4,12 @@
 
 #import "AMPressAndHoldPrefController.h"
 #import "AMLocaleUtilities.h"
-
+#import <objc/runtime.h>
 
 @implementation AMPressAndHoldPrefController
 
 #pragma mark NSPreferencePane methods
-- (void)mainViewDidLoad {
+- (void) mainViewDidLoad {
     //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
 	/*****Setup main views*****/
@@ -37,8 +37,9 @@
 	[self.mainView addSubview: self.keyboardView];
 	
 	/***** Setup AMPopover *****/
-	NSViewController *popoverContentVC = [[NSViewController alloc] initWithNibName: @"AMCharPopover"
-																			bundle: self.bundle];
+	NSViewController *popoverContentVC =
+		[[NSViewController alloc] initWithNibName: @"AMCharPopover"
+										   bundle: self.bundle];
 	AMCharPopoverView *popoverContentV = (AMCharPopoverView *) popoverContentVC.view;
 	_popoverController = [[AMPopoverController alloc] initWithContentView: popoverContentV];
 
@@ -56,9 +57,11 @@
 
 //Notifies the receiver that the main application has just displayed the preference pane’s main view.
 - (void) didSelect {
+	/* Below is the most unorthadox hack to solve the most fucking annoying issue. For some magical reason, something else claims first responder status after didSelect, so first responder status is obtained after a tiny delay.
+	 */
 	[self.mainView.window performSelector: @selector(makeFirstResponder:)
 							   withObject: self.keyboardView
-							   afterDelay: 0.0];
+							   afterDelay: 0.01];
 }
 
 //Notifies the receiver that the main application is about to stop displaying the preference pane’s main view.
@@ -66,13 +69,13 @@
 	[_popoverController close];
 }
 
-#pragma mark AMKeyboardViewControllerDelegate methods
-- (void) keyboard:(AMKeyboardView *) keyboard virtualKeyDownFromButton:(NSButton *) sender
-		 ForEvent:(NSEvent *) event {
+#pragma mark AMKeyboardVCDelegate methods
+- (void) keyDown:(NSEvent *) event
+	  fromButton:(NSButton *) button {
 	if ([AMLocaleUtilities isCharacterForKeycode: event.keyCode]) {
 		//NSLog(@"%@", event);
-		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: [sender title]];
-		[_popoverController showWindow: sender withStringArray: stringArray];
+		NSArray *stringArray = [_model stringArrayForPlistKey: _currentPlist CharacterKey: button.title];
+		[_popoverController showWindow: button withStringArray: stringArray];
 	}
 }
 
@@ -84,13 +87,13 @@
 #pragma mark Other methods
 - (void) resignKeyWindow {
 	[_popoverController close];
-	[_keyboardController resetModifierKeyStates];
+//	[_keyboardController resetModifierKeyStates];
 }
 
 - (void) updateInputSource {
 	_currentPlist = self.languagesPopUpButton.titleOfSelectedItem;
 	
-	[_keyboardController rebuildKeyLayout];
+//	[_keyboardController rebuildKeyLayout];
 }
 
 
