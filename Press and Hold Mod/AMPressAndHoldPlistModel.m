@@ -33,10 +33,10 @@
 }
 
 - (NSString *) fileContentsForPlistKey: (NSString *) key {
-	self.activePlistFilePath = [_plistFiles objectForKey:key];
+	NSString *activePlistFilePath = [_plistFiles objectForKey:key];
 	
 	//set the text view to a dictionary with the contents of the plist
-	return [NSString stringWithContentsOfFile: self.activePlistFilePath
+	return [NSString stringWithContentsOfFile: activePlistFilePath
 									 encoding: NSUTF8StringEncoding
 										error: nil];
 }

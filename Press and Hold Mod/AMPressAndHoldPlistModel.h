@@ -10,12 +10,7 @@
 
 static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/";
 
-@protocol AMPressAndHoldPlistModelProtocol
-	/**
-	 @brief The absolute path of the currently active plist
-	 */
-	@property NSString *activePlistFilePath;
-	
+@protocol AMPressAndHoldPlistModelProtocol	
 	/**
 	 @return A sorted array of all languages for which plists exist (sorted by caseInsensitiveCompare:)
 	 */
@@ -39,11 +34,6 @@ CharacterKey: (NSString *) characterKey;
 @interface AMPressAndHoldPlistModel : NSObject <AMPressAndHoldPlistModelProtocol> {
 	NSMutableDictionary *_plistFiles;
 }
-
-/**
- @brief The absolute path of the currently active plist
- */
-@property NSString *activePlistFilePath;
 
 /**
  @return A sorted array of all languages for which plists exist (sorted by caseInsensitiveCompare:)
