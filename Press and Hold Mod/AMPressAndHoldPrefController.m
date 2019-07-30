@@ -10,8 +10,8 @@
 
 #pragma mark NSPreferencePane methods
 - (void) mainViewDidLoad {
-    //create new model object
 	_model = [[AMPressAndHoldPlistModel alloc] init];
+	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of supported languages.
 	NSArray *userISPrefs = [AMLocaleUtilities userLanguagePreferences]; //User's Input Source Preferences

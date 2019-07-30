@@ -15,7 +15,7 @@
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardVCDelegate> {
 	AMPopoverController *_popoverController;
 	AMKeyboardVC *_keyboardController;
-	AMPressAndHoldPlistModel *_model;
+	__strong id<AMPressAndHoldPlistModelProtocol> _model;
 	
 	__weak IBOutlet AMKeyboardView *_keyboardPlaceHolder;
 	
