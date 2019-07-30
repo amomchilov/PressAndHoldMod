@@ -11,6 +11,8 @@
             continueAfterRunningActions = "No"
             symbolName = "-[NSWindow makeFirstResponder:]"
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -21,6 +23,8 @@
             continueAfterRunningActions = "No"
             symbolName = "-[NSResponder becomeFirstResponder]"
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,13 +44,25 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Press and Hold Mod/AMKeyboardVC.m"
-            timestampString = "452979230.110053"
+            timestampString = "454179487.860824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-keyboard:virtualKeyDownFromButton:"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-flagsChanged:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "objc_msgSend"
+            moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
