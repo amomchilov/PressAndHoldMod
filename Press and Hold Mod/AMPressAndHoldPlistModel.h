@@ -5,7 +5,10 @@
 #import <Foundation/Foundation.h>
 #import "AMLocaleUtilities.h"
 
-static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/";
+// For older versions of OS X:
+//static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/";
+
+static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/";
 
 /**
  A class that manages read/write access of .plist files of "Press and Hold.app" 
