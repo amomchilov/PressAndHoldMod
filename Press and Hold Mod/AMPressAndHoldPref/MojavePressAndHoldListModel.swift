@@ -26,8 +26,7 @@ class MojavePressAndHoldListModel: NSObject, AMPressAndHoldPlistModelProtocol {
 			let localeCode = String(filename.dropFirst("Keyboard-".count).dropLast(".plist".count))
 			return AMLocaleUtilities.localeCode(to: localeCode)
 		}
-		
-		
+
 		self.plistFilesByLocaleName = Dictionary(uniqueKeysWithValues:
 			plistURLs.lazy.compactMap { url -> (key: String, value: URL)? in
 				guard let localeName = extractLocaleName(fromPlistURL: url) else { return nil }
