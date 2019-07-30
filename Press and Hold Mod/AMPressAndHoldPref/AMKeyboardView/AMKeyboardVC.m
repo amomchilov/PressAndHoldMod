@@ -123,10 +123,9 @@
 
 - (void) combinedModEvent:(NSEvent *) event
 			   fromButton:(NSButton *) button {
+	[self updateKeyTitlesWithModifiers: event.modifierFlags];
+	
 	switch (event.type) {
-
-		[self updateKeyTitlesWithModifiers: event.modifierFlags];
-
 		case NSKeyUp:
 			if ([self.delegate respondsToSelector: @selector(modDown:fromButton:)])
 				[self.delegate modDown: event fromButton: button];
