@@ -59,8 +59,7 @@
 
  @return "Text Input Source Service" style modfier flags for the given parameters
  */
-+ (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags;
-
++ (unsigned int) convertCocoaFlagsToCarbonForFlags:(NSEventModifierFlags) eventModifierFlags;
 /**
  @brief Gets the key label for the specified keycode and modifiers (Cocoa/NSEvent style), for the user's current input source/
 
@@ -71,7 +70,7 @@
  
  @warning Can return nil for invalid combinations of keycode/modifiers.
  */
-+ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(int) modifiers;
++ (NSString *) stringForKeyCode: (int)keycode WithModifiers:(NSEventModifierFlags) modifiers;
 
 /**
  @brief Checks wether a given keycode is a character key.

@@ -27,8 +27,8 @@
 	return [self localeCodesToStrings: [NSLocale preferredLanguages]];
 }
 
-+ (int) convertCocoaFlagsToCarbonForFlags:(int) eventModifierFlags {
-	int result = 0;
++ (unsigned int) convertCocoaFlagsToCarbonForFlags:(NSEventModifierFlags) eventModifierFlags {
+	unsigned int result = 0;
 	if (eventModifierFlags & NSShiftKeyMask) result |= shiftKey;
 	if (eventModifierFlags & NSControlKeyMask) result |= controlKey;
 	if (eventModifierFlags & NSAlternateKeyMask) result |= optionKey;
@@ -38,7 +38,7 @@
 
 /** magical code based off of shortcutrecorder */
 + (NSString *) stringForKeyCode:(int) keycode
-				  WithModifiers:(int) modifiers {
+				  WithModifiers:(NSEventModifierFlags) modifiers {
 	if (keycode < 0) return nil;
 	TISInputSourceRef tisSource = TISCopyCurrentKeyboardInputSource();
 	if (!tisSource) return nil;
@@ -57,14 +57,14 @@
 	if (!layoutData) return nil;
 	
 	const UCKeyboardLayout *keyLayout = (const UCKeyboardLayout *)CFDataGetBytePtr(layoutData);
-	modifiers = ([self convertCocoaFlagsToCarbonForFlags: modifiers] >> 8) & 0xFF;
+	unsigned int carbonModifierFlags = ([self convertCocoaFlagsToCarbonForFlags: modifiers] >> 8) & 0xFF;
 	UInt32 keysDown = 0;
 	UniCharCount length = 4, realLength;
 	UniChar chars[4];
 	OSStatus err = UCKeyTranslate(keyLayout,
 								  keycode,
 								  kUCKeyActionDisplay,
-								  modifiers,
+								  carbonModifierFlags,
 								  LMGetKbdType(),
 								  kUCKeyTranslateNoDeadKeysBit,
 								  &keysDown,

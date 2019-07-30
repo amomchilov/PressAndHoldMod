@@ -84,7 +84,7 @@
 				 windowNumber: window.windowNumber
 					  context: window.graphicsContext
 				   characters: [AMLocaleUtilities stringForKeyCode: keyCode
-											  WithModifiers: flags]
+											  WithModifiers: (NSEventModifierFlags) flags]
   charactersIgnoringModifiers: [AMLocaleUtilities stringForKeyCode: keyCode
 											  WithModifiers: 0]
 					isARepeat: NO

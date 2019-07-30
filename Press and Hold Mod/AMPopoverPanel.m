@@ -10,7 +10,7 @@ const NSRectEdge AMNoEdge = CGRectMaxYEdge + 1;
 
 #pragma mark NSWindow methods
 - (instancetype) initWithContentRect:(NSRect)contentRect //might be redundant
-						   styleMask:(NSUInteger)aStyle
+						   styleMask:(NSWindowStyleMask)aStyle
 							 backing:(NSBackingStoreType)bufferingType
 							   defer:(BOOL)flag {
 	if (self = [super initWithContentRect:contentRect
