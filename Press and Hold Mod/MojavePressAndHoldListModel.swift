@@ -8,47 +8,50 @@
 
 import Foundation
 
-fileprivate let mojavePath = "/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/"
+fileprivate let mojaveURL = URL(fileURLWithPath:
+	"/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/", isDirectory: false)
 
 class MojavePressAndHoldListModel: NSObject, AMPressAndHoldPlistModelProtocol {
-	let plistFiles: [String: String]
+	let plistFilesByLocaleName: [String: URL]
 	
 	override init() {
+		let plistURLs = try! FileManager.default.contentsOfDirectory(
+				at: mojaveURL,
+				includingPropertiesForKeys: [.nameKey],
+				options: .skipsHiddenFiles
+			).filter { $0.lastPathComponent.starts(with: "Keyboard") && $0.pathExtension == "plist" }
 		
-		
-		var plistFiles = [String: String]()
-		
-		let fm = FileManager.default
-		let plistPredicate = NSPredicate.init(format: "SELF like %@", "Keyboard*.plist")
-		let plistFilenames = try! (fm.contentsOfDirectory(atPath: mojavePath) as NSArray).filtered(using: plistPredicate) as! [NSString]
-		
-		for plistFilename in plistFilenames {
-			let plistFileLocaleCode = plistFilename.substring(with: NSRange(location: 9, length: plistFilename.length - 9 - 6))
-			let localeName = AMLocaleUtilities.localeCode(to: plistFileLocaleCode)
-			let plistFilePath = mojavePath + (plistFilename as String)
-			if let localeName = localeName {
-				plistFiles[localeName] = plistFilePath
-			}
+		func extractLocaleName(fromPlistURL plistURL: URL) -> String? {
+			let filename = plistURL.lastPathComponent
+			let localeCode = String(filename.dropFirst("Keyboard-".count).dropLast(".plist".count))
+			return AMLocaleUtilities.localeCode(to: localeCode)
 		}
 		
-		self.plistFiles = plistFiles
+		
+		self.plistFilesByLocaleName = Dictionary(uniqueKeysWithValues:
+			plistURLs.lazy.compactMap { url -> (key: String, value: URL)? in
+				guard let localeName = extractLocaleName(fromPlistURL: url) else { return nil }
+				return (key: localeName, value: url)
+			}
+		)
 		
 		super.init()
 	}
 	
 	func sortedLanguageList() -> [Any] {
-		return self.plistFiles.keys.sorted(by: { $0.caseInsensitiveCompare($1) == .orderedAscending })
+		return self.plistFilesByLocaleName
+			.keys
+			.sorted(by: { $0.caseInsensitiveCompare($1) == .orderedAscending })
 	}
 	
 	func fileContents(forPlistKey plistKey: String) -> String {
-		let activePlistFilePath = self.plistFiles[plistKey]!
-		let activePlistFileURL = URL(fileURLWithPath: activePlistFilePath, isDirectory: false)
+		let activePlistFileURL = self.plistFilesByLocaleName[plistKey]!
 		return try! String(contentsOf: activePlistFileURL, encoding: .utf8);
 	}
 	
 	func stringArray(forPlistKey plistName: String, characterKey: String) -> [Any] {
-		let plistPath = self.plistFiles[plistName]!
-		let plistContents = NSDictionary(contentsOfFile: plistPath)!
+		let plistPath = self.plistFilesByLocaleName[plistName]!
+		let plistContents = NSDictionary(contentsOf: plistPath)!
 	
 		guard let characterDict = plistContents["Roman-Accent-\(characterKey)"] as? NSDictionary,
 			let keycapsString = characterDict["Keycaps"] as? String else {
