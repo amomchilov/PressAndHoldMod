@@ -10,7 +10,7 @@
 #import "AMPopoverController.h"
 
 /**
- Main class that controls a AMKeyboardViewController, AMKeyboardViewController and AMPressAndHoldPlistModel.
+ Main class that controls a AMKeyboardViewController, AMKeyboardViewController and AMPressAndHoldPlistModelProtocol.
  */
 @interface AMPressAndHoldPrefController : NSPreferencePane <AMKeyboardVCDelegate> {
 	AMPopoverController *_popoverController;
@@ -50,7 +50,7 @@
 /**
  @brief Refreshes the keyboard's labels with new language's characters, and loads the new language's plist file.
  
- @see [AMPressAndHoldPlistModel fileContentsForPlistKey:]
+ @see [AMPressAndHoldPlistModelProtocol fileContentsForPlistKey:]
  @see [AMKeyboardViewController rebuildKeyLayout]
  */
 - (void) updateInputSource;

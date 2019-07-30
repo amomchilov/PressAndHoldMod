@@ -7,6 +7,7 @@
 
 // For older versions of OS X:
 //static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/";
+NS_ASSUME_NONNULL_BEGIN
 
 static NSString *const BASEPATH = @"/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/";
 
@@ -52,3 +53,5 @@ CharacterKey: (NSString *) characterKey;
 						CharacterKey: (NSString *) characterKey;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -4,13 +4,14 @@
 
 #import "AMPressAndHoldPrefController.h"
 #import "AMLocaleUtilities.h"
+#import <Press_and_Hold_Mod-Swift.h>
 #import <objc/runtime.h>
 
 @implementation AMPressAndHoldPrefController
 
 #pragma mark NSPreferencePane methods
 - (void) mainViewDidLoad {
-	_model = [[AMPressAndHoldPlistModel alloc] init];
+	_model = [[MojavePressAndHoldListModel alloc] init];
 	
 	/*****Setup main views*****/
 	//populate drop down menu with the array of supported languages.
